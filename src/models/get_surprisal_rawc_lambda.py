@@ -121,7 +121,7 @@ def run_checkpoint(model_name: str, revision: str, tokenizer, df: pd.DataFrame,
     
     print(f"  Loading checkpoint: {checkpoint_str}")
     model = AutoModelForCausalLM.from_pretrained(
-        model_name, revision=checkpoint_str
+        model_name, revision=checkpoint_str, use_safetensors=False
     ).to(device)
     model.eval()
     
