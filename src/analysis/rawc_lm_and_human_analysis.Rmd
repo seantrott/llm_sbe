@@ -1,0 +1,820 @@
+---
+title: "RAW-C Data: Psychometric Predictive Power"
+author: "Sean Trott"
+date: "2-23-2026"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "png")
+```
+
+
+# Setup
+
+Load libraries
+
+```{r setup}
+library(tidyverse)
+library(lme4)
+library(broom.mixed)
+library(lmerTest)
+library(furrr)
+```
+
+
+# Load data
+
+**TODO**: Also compare to PPP for cosine distance over time.
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/llm_sbe/src/analysis")
+
+# df_pythia = read_csv("../../data/processed/rawc/pythia-14m_surprisals.csv")
+### First, load all pythia models
+directory_path <- "../../data/processed/rawc/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_pythia_models <- bind_rows(csv_list) %>%
+  mutate(model_shorthand = sub("^EleutherAI/", "", model)) 
+nrow(df_pythia_models)
+table(df_pythia_models$model_shorthand)
+
+
+### Load human dominance data
+df_dominance = read_csv("../../data/human/dominance_norms_with_order.csv")
+
+
+### Load human experiments
+df_human_full_e1 = read_csv("../../data/human/polysemy_s1_final.csv") %>%
+  select(Word, string, rt, log_rt, correct_response, version_with_order,
+         subject, prior_rt, prior_accuracy) %>%
+  mutate(experiment = "Experiment 1")
+nrow(df_human_full_e1)
+df_human_full_e2 = read_csv("../../data/human/polysemy_s2_final.csv") %>%
+  select(Word, string, rt, log_rt, correct_response, version_with_order,
+         subject, prior_rt, prior_accuracy) %>%
+  mutate(experiment = "Experiment 2")
+nrow(df_human_full_e2)
+
+df_human_all = df_human_full_e2 %>%
+  bind_rows(df_human_full_e1)
+nrow(df_human_all)
+
+
+
+
+### Merge data
+## TODO: Check this
+df_human_with_lm_full = df_pythia_models %>%
+  # filter(checkpoint == 143000) %>%
+  inner_join(df_human_all)
+
+
+### Now human with dominance
+df_human_with_lm_dominance = df_pythia_models %>%
+  inner_join(df_dominance) %>%
+  inner_join(df_human_all)
+
+
+##### CENTER PREDICTORS
+df_human_with_lm_full <- df_human_with_lm_full %>%
+  mutate(
+    ambiguity_c = if_else(ambiguity_type == "Polysemy", 0.5, -0.5),
+    # dominance_z = scale(dominance_right)[,1],
+    same_label = if_else(same == TRUE, "Same Sense", "Different Sense"),
+    same_c = if_else(same == TRUE, 0.5, -0.5),
+    surprisal_z = scale(target_surprisal_mean)
+  )
+
+df_human_with_lm_dominance <- df_human_with_lm_dominance %>%
+  mutate(
+    ambiguity_c = if_else(ambiguity_type == "Polysemy", 0.5, -0.5),
+    dominance_z = scale(dominance_right)[,1],
+    same_label = if_else(same == TRUE, "Same Sense", "Different Sense"),
+    surprisal_z = scale(target_surprisal_mean)
+  )
+
+
+```
+
+
+
+# Pre-registered analyses
+
+Here, we run and report pre-registered analyses focusing on the ability of surprisal to account for experimental variables, i.e., sense dominance and the existence of a sense boundary.
+
+In each case, we examine the impact on RT and also on accuracy.
+
+## RQ2: Does surprisal account for dominance effect?
+
+
+```{r}
+
+plan(multisession, workers = 7)
+
+# --- Prep data once ---
+df_prepped <- df_human_with_lm_dominance %>%
+  mutate(
+    ambiguity_c = if_else(ambiguity_type == "Polysemy", 0.5, -0.5),
+    dominance_z = scale(dominance_right)[,1]
+  ) %>%
+  group_by(model, model_shorthand, n_params, checkpoint) %>%
+  mutate(surprisal_z = scale(target_surprisal_mean)[,1]) %>%
+  ungroup()
+
+# --- Helper: fit one group ---
+fit_rq2_rt <- function(.x) {
+  meta <- .x %>% distinct(model, model_shorthand, n_params, checkpoint) %>% slice(1)
+  
+  full <- tryCatch(
+    lmer(log_rt ~ dominance_z + ambiguity_c + surprisal_z +
+           (1|subject) + (1|target) + (1|word) + (1|experiment),
+         data = .x, REML = FALSE),
+    error = function(e) NULL)
+  reduced <- tryCatch(
+    lmer(log_rt ~ ambiguity_c + surprisal_z +
+           (1|subject) + (1|target) + (1|word) + (1|experiment),
+         data = .x, REML = FALSE),
+    error = function(e) NULL)
+  lrt <- if (!is.null(full) && !is.null(reduced)) anova(full, reduced) else NULL
+  
+  tibble(
+    model            = meta$model,
+    model_shorthand  = meta$model_shorthand,
+    n_params         = meta$n_params,
+    checkpoint       = meta$checkpoint,
+    rq2_rt_dom_beta    = if (!is.null(full)) fixef(full)["dominance_z"] else NA_real_,
+    rq2_rt_dom_se      = if (!is.null(full)) sqrt(diag(vcov(full)))["dominance_z"] else NA_real_,
+    rq2_rt_surp_beta   = if (!is.null(full)) fixef(full)["surprisal_z"] else NA_real_,
+    rq2_rt_surp_se     = if (!is.null(full)) sqrt(diag(vcov(full)))["surprisal_z"] else NA_real_,
+    rq2_rt_lrt_chi2    = if (!is.null(lrt)) lrt$Chisq[2] else NA_real_,
+    rq2_rt_lrt_p       = if (!is.null(lrt)) lrt$`Pr(>Chisq)`[2] else NA_real_,
+    rq2_rt_aic_full    = if (!is.null(full)) AIC(full) else NA_real_,
+    rq2_rt_aic_reduced = if (!is.null(reduced)) AIC(reduced) else NA_real_,
+    rq2_rt_aic_delta   = rq2_rt_aic_reduced - rq2_rt_aic_full
+  )
+}
+
+fit_rq2_acc <- function(.x) {
+  meta <- .x %>% distinct(model, model_shorthand, n_params, checkpoint) %>% slice(1)
+  
+  full <- tryCatch(
+    glmer(correct_response ~ dominance_z + ambiguity_c + surprisal_z +
+            (1|subject) + (1|target) + (1|word) + (1|experiment),
+          data = .x, family = binomial, nAGQ = 0,
+          control = glmerControl(optimizer = "bobyqa")),
+    error = function(e) NULL)
+  reduced <- tryCatch(
+    glmer(correct_response ~ ambiguity_c + surprisal_z +
+            (1|subject) + (1|target) + (1|word) + (1|experiment),
+          data = .x, family = binomial, nAGQ = 0,
+          control = glmerControl(optimizer = "bobyqa")),
+    error = function(e) NULL)
+  lrt <- if (!is.null(full) && !is.null(reduced)) anova(full, reduced) else NULL
+  
+  tibble(
+    model            = meta$model,
+    model_shorthand  = meta$model_shorthand,
+    n_params         = meta$n_params,
+    checkpoint       = meta$checkpoint,
+    rq2_acc_dom_beta    = if (!is.null(full)) fixef(full)["dominance_z"] else NA_real_,
+    rq2_acc_dom_se      = if (!is.null(full)) sqrt(diag(vcov(full)))["dominance_z"] else NA_real_,
+    rq2_acc_surp_beta   = if (!is.null(full)) fixef(full)["surprisal_z"] else NA_real_,
+    rq2_acc_surp_se     = if (!is.null(full)) sqrt(diag(vcov(full)))["surprisal_z"] else NA_real_,
+    rq2_acc_lrt_chi2    = if (!is.null(lrt)) lrt$Chisq[2] else NA_real_,
+    rq2_acc_lrt_p       = if (!is.null(lrt)) lrt$`Pr(>Chisq)`[2] else NA_real_,
+    rq2_acc_aic_full    = if (!is.null(full)) AIC(full) else NA_real_,
+    rq2_acc_aic_reduced = if (!is.null(reduced)) AIC(reduced) else NA_real_,
+    rq2_acc_aic_delta   = rq2_acc_aic_reduced - rq2_acc_aic_full
+  )
+}
+
+# --- Helper: run with checkpoint saving ---
+run_with_checkpoint <- function(groups, fit_fn, save_path) {
+  # Load previous progress
+  completed <- if (file.exists(save_path)) readRDS(save_path) else tibble()
+  
+  if (nrow(completed) > 0) {
+    message(sprintf("Loaded %d completed fits from %s", nrow(completed), save_path))
+  }
+  
+  # Filter to remaining groups
+  remaining <- keep(groups, function(.x) {
+    meta <- .x %>% distinct(model_shorthand, checkpoint) %>% slice(1)
+    !any(completed$model_shorthand == meta$model_shorthand & 
+         completed$checkpoint == meta$checkpoint)
+  })
+  
+  message(sprintf("%d groups remaining out of %d total", length(remaining), length(groups)))
+  
+  if (length(remaining) == 0) {
+    message("All groups already completed!")
+    return(completed)
+  }
+  
+  # Run in batches so we can save periodically
+  batch_size <- 7  # save after every batch
+  batches <- split(remaining, ceiling(seq_along(remaining) / batch_size))
+  
+  for (i in seq_along(batches)) {
+    message(sprintf("Batch %d/%d (%d fits)...", i, length(batches), length(batches[[i]])))
+    
+    batch_results <- future_map(batches[[i]], fit_fn, .progress = TRUE) %>% bind_rows()
+    completed <- bind_rows(completed, batch_results)
+    saveRDS(completed, save_path)
+    
+    message(sprintf("  Saved. %d/%d total complete.", nrow(completed), length(groups)))
+  }
+  
+  completed %>% arrange(n_params, checkpoint)
+}
+
+# --- Split groups ---
+rt_groups <- df_prepped %>%
+  filter(correct_response == TRUE) %>%
+  group_by(model, model_shorthand, n_params, checkpoint) %>%
+  group_split()
+
+acc_groups <- df_prepped %>%
+  mutate(correct_response = as.numeric(correct_response)) %>%
+  group_by(model, model_shorthand, n_params, checkpoint) %>%
+  group_split()
+
+# --- Run! ---
+message("=== Running RQ2 RT models ===")
+developmental_results_rq2_rt <- run_with_checkpoint(
+  rt_groups, fit_rq2_rt, "rq2_rt_checkpoint.rds"
+)
+
+message("=== Running RQ2 Accuracy models ===")
+developmental_results_rq2_acc <- run_with_checkpoint(
+  acc_groups, fit_rq2_acc, "rq2_acc_checkpoint.rds"
+)
+
+# --- Save final results ---
+saveRDS(developmental_results_rq2_rt, "developmental_results_rq2_rt.rds")
+saveRDS(developmental_results_rq2_acc, "developmental_results_rq2_acc.rds")
+
+
+
+
+```
+
+
+
+
+### RQ6: Developmental trajectory
+
+```{r}
+developmental_results_rq2_rt %>%
+  ggplot(aes(x = checkpoint,
+             y = rq2_rt_surp_beta,
+             color = reorder(model_shorthand, n_params))) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  geom_point(size = 4, alpha = .4) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "Coefficient (Surprisal)",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+  scale_shape_manual(values = c("FALSE" = 1, "TRUE" = 16),
+                     labels = c("n.s.", "p < .05"),
+                     name = NULL) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom") +
+  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+                                                begin = 0.8, end = 0.15))
+
+developmental_results_rq2_rt %>%
+  ggplot(aes(x = checkpoint,
+             y = rq2_rt_aic_delta,
+             color = reorder(model_shorthand, n_params))) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  geom_point(size = 4, alpha = .4) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "AIC Delta (with vs. without Dominance)",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+  scale_shape_manual(values = c("FALSE" = 1, "TRUE" = 16),
+                     labels = c("n.s.", "p < .05"),
+                     name = NULL) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom") +
+  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+                                                begin = 0.8, end = 0.15))
+
+developmental_results_rq2_rt %>%
+  ggplot(aes(x = checkpoint,
+             y = rq2_rt_lrt_chi2,
+             color = reorder(model_shorthand, n_params))) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  geom_point(size = 4, alpha = .4) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "X^2 (with vs. without Dominance)",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+  scale_shape_manual(values = c("FALSE" = 1, "TRUE" = 16),
+                     labels = c("n.s.", "p < .05"),
+                     name = NULL) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom") +
+  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+                                                begin = 0.8, end = 0.15))
+```
+
+
+
+
+```{r}
+# --- RT models (correct responses only) ---
+developmental_results_rq2_rt <- df_human_with_lm_dominance %>%
+  filter(correct_response == TRUE) %>%
+  mutate(
+    ambiguity_c = if_else(ambiguity_type == "Polysemy", 0.5, -0.5),
+    dominance_z = scale(dominance_right)[,1],
+    surprisal_z = scale(target_surprisal_mean)[,1]
+  ) %>%
+  group_by(model, model_shorthand, n_params, checkpoint) %>%
+  group_map(~ {
+    full <- tryCatch(
+      lmer(log_rt ~ dominance_z + ambiguity_c + surprisal_z +
+             (1|subject) + (1|target) + (1|word) + (1|experiment),
+           data = .x, REML = FALSE),
+      error = function(e) NULL)
+    reduced <- tryCatch(
+      lmer(log_rt ~ ambiguity_c + surprisal_z +
+             (1|subject) + (1|target) + (1|word) + (1|experiment),
+           data = .x, REML = FALSE),
+      error = function(e) NULL)
+    lrt <- if (!is.null(full) && !is.null(reduced)) anova(full, reduced) else NULL
+
+    tibble(
+      model            = .y$model,
+      model_shorthand  = .y$model_shorthand,
+      n_params         = .y$n_params,
+      checkpoint       = .y$checkpoint,
+      rq2_rt_dom_beta    = if (!is.null(full)) fixef(full)["dominance_z"] else NA_real_,
+      rq2_rt_dom_se      = if (!is.null(full)) sqrt(diag(vcov(full)))["dominance_z"] else NA_real_,
+      rq2_rt_surp_beta   = if (!is.null(full)) fixef(full)["surprisal_z"] else NA_real_,
+      rq2_rt_surp_se     = if (!is.null(full)) sqrt(diag(vcov(full)))["surprisal_z"] else NA_real_,
+      rq2_rt_lrt_chi2    = if (!is.null(lrt)) lrt$Chisq[2] else NA_real_,
+      rq2_rt_lrt_p       = if (!is.null(lrt)) lrt$`Pr(>Chisq)`[2] else NA_real_,
+      rq2_rt_aic_full    = if (!is.null(full)) AIC(full) else NA_real_,
+      rq2_rt_aic_reduced = if (!is.null(reduced)) AIC(reduced) else NA_real_,
+      rq2_rt_aic_delta   = rq2_rt_aic_reduced - rq2_rt_aic_full
+    )
+  }) %>%
+  bind_rows() %>%
+  arrange(n_params, checkpoint)
+
+
+
+### TODO: Check below
+
+# --- Accuracy models (all responses) ---
+developmental_results_rq2_acc <- df_human_with_lm_dominance %>%
+  mutate(
+    ambiguity_c = if_else(ambiguity_type == "Polysemy", 0.5, -0.5),
+    dominance_z = scale(dominance_right)[,1],
+    surprisal_z = scale(surprisal)[,1],
+    correct_response = as.numeric(correct_response)
+  ) %>%
+  group_by(model, model_shorthand, n_params, checkpoint) %>%
+  group_map(~ {
+    full <- tryCatch(
+      glmer(correct_response ~ dominance_z + ambiguity_c + surprisal_z +
+              (1|subject) + (1|target) + (1|word) + (1|experiment),
+            data = .x, family = binomial),
+      error = function(e) NULL)
+    reduced <- tryCatch(
+      glmer(correct_response ~ ambiguity_c + surprisal_z +
+              (1|subject) + (1|target) + (1|word) + (1|experiment),
+            data = .x, family = binomial),
+      error = function(e) NULL)
+    lrt <- if (!is.null(full) && !is.null(reduced)) anova(full, reduced) else NULL
+
+    tibble(
+      model            = .y$model,
+      model_shorthand  = .y$model_shorthand,
+      n_params         = .y$n_params,
+      checkpoint       = .y$checkpoint,
+      rq2_acc_dom_beta    = if (!is.null(full)) fixef(full)["dominance_z"] else NA_real_,
+      rq2_acc_dom_se      = if (!is.null(full)) sqrt(diag(vcov(full)))["dominance_z"] else NA_real_,
+      rq2_acc_surp_beta   = if (!is.null(full)) fixef(full)["surprisal_z"] else NA_real_,
+      rq2_acc_surp_se     = if (!is.null(full)) sqrt(diag(vcov(full)))["surprisal_z"] else NA_real_,
+      rq2_acc_lrt_chi2    = if (!is.null(lrt)) lrt$Chisq[2] else NA_real_,
+      rq2_acc_lrt_p       = if (!is.null(lrt)) lrt$`Pr(>Chisq)`[2] else NA_real_,
+      rq2_acc_aic_full    = if (!is.null(full)) AIC(full) else NA_real_,
+      rq2_acc_aic_reduced = if (!is.null(reduced)) AIC(reduced) else NA_real_,
+      rq2_acc_aic_delta   = rq2_acc_aic_reduced - rq2_acc_aic_full
+    )
+  }) %>%
+  bind_rows() %>%
+  arrange(n_params, checkpoint)
+```
+
+
+
+## RQ4: Does surprisal account for the sense boundary effect?
+
+
+
+
+
+
+# Analyses
+
+## RQs 1-2: Does surprisal track sense dominance?
+
+### RQ 1
+
+```{r}
+### Dominance analysis
+df_merged = df_pythia %>%
+  inner_join(df_dominance)
+
+df_merged = df_merged %>%
+  mutate(Target = case_when(
+    dominance_right > .5 ~ "Dominant",
+    dominance_right < -.5 ~ "Subordinate",
+    dominance_right >= -.5 & dominance_right <= .5 ~ "Neutral"
+  ))
+
+
+### How does surprisal track dominance of target
+mod_full = lmer(data = df_merged,
+             final_token_surprisal ~ ambiguity_type + dominance_right +
+             (1 | word),
+             REML = FALSE)
+mod_reduced = lmer(data = df_merged,
+             final_token_surprisal ~ ambiguity_type + # dominance_right +
+             (1 | word),
+             REML = FALSE)
+anova(mod_full, mod_reduced)
+```
+
+### RQ 2
+
+Does surprisal account for dominance effect in humans?
+
+
+**TODO**: Maybe store human analyses in a separate .Rmd for ease.
+
+```{r}
+df_merged_all_human = df_human_all %>%
+  inner_join(df_merged)
+
+
+mod_rt_full = lmer(log_rt ~ dominance_right + ambiguity_type + final_token_surprisal + 
+                (1|subject) + (1|target) + (1|word) + (1|experiment),
+              data = df_merged_all_human %>% filter(correct_response == TRUE),
+              REML = FALSE)
+
+mod_rt_reduced = lmer(log_rt ~ ambiguity_type + final_token_surprisal + 
+                (1|subject) + (1|target) + (1|word) + (1|experiment),
+              data = df_merged_all_human %>% filter(correct_response == TRUE),
+              REML = FALSE)
+
+anova(mod_rt_full, mod_rt_reduced)
+summary(mod_rt_full)
+
+
+
+mod_accuracy_full = glmer(correct_response ~ dominance_right + 
+                            ambiguity_type + 
+                            final_token_surprisal + 
+                (1|subject) + (1|target) + (1|word) + (1|experiment),
+              data = df_merged_all_human,
+              family = binomial())
+
+
+mod_accuracy_reduced = glmer(correct_response ~ # dominance_right + 
+                            ambiguity_type + 
+                            final_token_surprisal + 
+                (1|subject) + (1|target) + (1|word) + (1|experiment),
+              data = df_merged_all_human,
+              family = binomial())
+
+anova(mod_accuracy_full, mod_accuracy_reduced)
+summary(mod_accuracy_full)
+
+```
+
+
+
+
+
+```{r}
+df_pythia %>%
+  group_by(same, ambiguity_type) %>%
+  summarise(
+    mean_surprisal = mean(target_surprisal_mean, na.rm = TRUE),
+    se_surprisal = sd(target_surprisal_mean, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  ) %>%
+  ggplot(aes(x = same,
+             y = mean_surprisal,
+             color = ambiguity_type)) +
+  geom_pointrange(aes(ymin = mean_surprisal - se_surprisal,
+                      ymax = mean_surprisal + se_surprisal),
+                  position = position_dodge(width = 0.2),
+                  size = 0.5) +
+  labs(x = "Same meaning",
+       y = "Target sentence mean surprisal",
+       color = "Ambiguity type") +
+  theme_minimal()
+
+df_pythia %>%
+  group_by(same, ambiguity_type) %>%
+  summarise(
+    mean_surprisal = mean(final_token_surprisal, na.rm = TRUE),
+    se_surprisal = sd(final_token_surprisal, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  ) %>%
+  ggplot(aes(x = same,
+             y = mean_surprisal,
+             color = ambiguity_type)) +
+  geom_pointrange(aes(ymin = mean_surprisal - se_surprisal,
+                      ymax = mean_surprisal + se_surprisal),
+                  position = position_dodge(width = 0.2),
+                  size = 0.5) +
+  labs(x = "Same meaning",
+       y = "Final token surprisal",
+       color = "Ambiguity type") +
+  theme_minimal()
+
+
+
+
+### Dominance analysis
+df_merged = df_pythia %>%
+  inner_join(df_dominance)
+
+df_merged = df_merged %>%
+  mutate(Target = case_when(
+    dominance_right > .5 ~ "Dominant",
+    dominance_right < -.5 ~ "Subordinate",
+    dominance_right >= -.5 & dominance_right <= .5 ~ "Neutral"
+  ))
+
+
+
+
+df_merged %>%
+  ggplot(aes(x = Target,
+             y = final_token_surprisal,
+             color = ambiguity_type)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95)) +
+  labs(x = "Target Dominance",
+       y = "Target sentence mean surprisal",
+       color = "Ambiguity Type") +
+  theme_minimal() +
+  facet_wrap(~Class)
+
+
+
+### How does surprisal track dominance of target
+summary(lmer(data = df_merged,
+             final_token_surprisal ~ ambiguity_type + dominance_right +
+               (1 | word)))
+
+
+
+df_merged_human = df_human_e1 %>%
+  inner_join(df_merged)
+
+
+summary(lmer(data = df_merged_human,
+             correct_response ~ ambiguity_type * dominance_right + target_surprisal_mean +
+               (1 | word) +
+               (1 | target)))
+
+
+summary(lmer(data = df_merged_human,
+             log_rt ~ ambiguity_type * dominance_right + target_surprisal_mean +
+               (1 | word) +
+               (1 | target)))
+
+
+df_merged_human %>%
+  ggplot(aes(x = target_surprisal_mean,
+             y = log_rt)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_minimal()
+
+df_merged_human %>%
+  ggplot(aes(x = dominance_right,
+             y = log_rt)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_minimal()
+
+df <- df_merged_human %>%
+  mutate(
+    ambiguity_c = if_else(ambiguity_type == "Polysemy", 0.5, -0.5),
+    dominance_z = scale(dominance_right)[,1],
+    surprisal_z = scale(target_surprisal_mean)[,1]
+  )
+
+# --- Fit models ---
+
+# Without surprisal
+m_rt_no_surp  <- lmer(log_rt ~ ambiguity_c * dominance_z + (1|word) + (1|target), data = df)
+m_acc_no_surp <- lmer(correct_response ~ ambiguity_c * dominance_z + (1|word) + (1|target), data = df)
+
+# With surprisal
+m_rt_surp  <- lmer(log_rt ~ ambiguity_c * dominance_z + surprisal_z + (1|word) + (1|target), data = df)
+m_acc_surp <- lmer(correct_response ~ ambiguity_c * dominance_z + surprisal_z + (1|word) + (1|target), data = df)
+
+# --- Extract and combine ---
+all_coefs <- bind_rows(
+  tidy(m_rt_no_surp, conf.int = TRUE)  %>% mutate(model = "Without surprisal", dv = "log RT"),
+  tidy(m_rt_surp, conf.int = TRUE)     %>% mutate(model = "With surprisal",    dv = "log RT"),
+  tidy(m_acc_no_surp, conf.int = TRUE) %>% mutate(model = "Without surprisal", dv = "Accuracy"),
+  tidy(m_acc_surp, conf.int = TRUE)    %>% mutate(model = "With surprisal",    dv = "Accuracy")
+) %>%
+  filter(effect == "fixed", term != "(Intercept)")
+
+# --- Plot ---
+all_coefs %>%
+  ggplot(aes(x = term, y = estimate, color = model)) +
+  geom_pointrange(aes(ymin = conf.low, ymax = conf.high),
+                  position = position_dodge(width = 0.3)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  facet_wrap(~ dv, scales = "free_x") +
+  labs(y = "Estimate (standardized)", x = NULL, color = NULL) +
+  coord_flip() +
+  theme_minimal()
+
+
+
+
+#### Extract sense-level dominance
+df_merged = df_merged %>%
+  mutate(
+    # Target is the second element: M1_a_M2_b → M2, M2_b_M1_a → M1
+    target_meaning = str_extract(version_with_order, "M[12](?=_[ab]$)")
+  )
+
+sense_surprisal <- df_merged %>%
+  group_by(word, target_meaning) %>%
+  summarise(
+    mean_surprisal = mean(target_surprisal_mean, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(names_from = target_meaning,
+              values_from = mean_surprisal,
+              names_prefix = "surprisal_") %>%
+  mutate(
+    surprisal_diff = surprisal_M2 - surprisal_M1
+  )
+
+sense_dominance <- df_merged %>%
+  group_by(word, target_meaning) %>%
+  summarise(
+    mean_dominance = mean(dominance_right, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(names_from = target_meaning,
+              values_from = mean_dominance,
+              names_prefix = "dominance_") %>%
+  mutate(
+    dominance_diff = dominance_M2 - dominance_M1
+  )
+
+# Join and correlate
+sense_level <- sense_surprisal %>%
+  inner_join(sense_dominance, by = "word")
+
+cor.test(sense_level$dominance_diff, sense_level$surprisal_diff)
+
+# Visualize
+sense_level %>%
+  ggplot(aes(x = dominance_diff, y = surprisal_diff)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  labs(x = "Human dominance (M2 - M1)",
+       y = "Surprisal (M2 - M1)") +
+  theme_minimal()
+
+
+### all human
+df_merged_all_human = df_human_e1 %>%
+  inner_join(df_pythia) %>%
+  mutate(surprisal_z = scale(target_surprisal_mean, scale = FALSE))
+
+summary(lmer(data = df_merged_all_human,
+             log_rt ~ same + 
+               ambiguity_type +
+               surprisal_z +
+               (1 | word) +
+               (1 | target)))
+
+
+summary(lmer(data = df_merged_all_human,
+             correct_response ~ same + 
+               ambiguity_type +
+               target_surprisal_mean +
+               (1 | word) +
+               (1 | target)))
+
+
+### Plot effect size
+# Standardize continuous predictors
+# Standardize predictors
+df <- df_merged_all_human %>%
+  mutate(
+    same_c = if_else(same, 0.5, -0.5),
+    ambiguity_c = if_else(ambiguity_type == "Polysemy", 0.5, -0.5),
+    surprisal_z = scale(target_surprisal_mean)[,1]
+  )
+
+# --- Fit models ---
+
+# RT
+m_rt_no_surp <- lmer(log_rt ~ same_c + ambiguity_c + (1|word) + (1|target), data = df)
+m_rt_surp    <- lmer(log_rt ~ same_c + ambiguity_c + surprisal_z + (1|word) + (1|target), data = df)
+
+# Accuracy
+m_acc_no_surp <- lmer(correct_response ~ same_c + ambiguity_c + (1|word) + (1|target), data = df)
+m_acc_surp    <- lmer(correct_response ~ same_c + ambiguity_c + surprisal_z + (1|word) + (1|target), data = df)
+
+# --- Extract and combine ---
+all_coefs <- bind_rows(
+  tidy(m_rt_no_surp, conf.int = TRUE)  %>% mutate(model = "Without surprisal", dv = "log RT"),
+  tidy(m_rt_surp, conf.int = TRUE)     %>% mutate(model = "With surprisal",    dv = "log RT"),
+  tidy(m_acc_no_surp, conf.int = TRUE) %>% mutate(model = "Without surprisal", dv = "Accuracy"),
+  tidy(m_acc_surp, conf.int = TRUE)    %>% mutate(model = "With surprisal",    dv = "Accuracy")
+) %>%
+  filter(effect == "fixed", term != "(Intercept)")
+
+# --- Plot ---
+all_coefs %>%
+  ggplot(aes(x = term, y = estimate, color = model)) +
+  geom_pointrange(aes(ymin = conf.low, ymax = conf.high),
+                  position = position_dodge(width = 0.3)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  facet_wrap(~ dv, scales = "free_x") +
+  labs(y = "Estimate (standardized)", x = NULL, color = NULL) +
+  coord_flip() +
+  theme_minimal()
+
+
+
+
+
+### Full human data
+df_merged_all_human = df_human_full %>%
+  inner_join(df_pythia)
+
+
+
+### TO DO: Decide whether to include prior RT/accuracy?
+summary(lmer(data = df_merged_all_human,
+             log_rt ~ same + ambiguity_type +
+               target_surprisal_mean +
+               (1 | word) +
+               (1 | subject) +
+               (1 | target)))
+
+
+summary(glmer(data = df_merged_all_human,
+             correct_response ~ same + 
+               ambiguity_type +
+               # prior_accuracy +
+               target_surprisal_mean +
+               (1 | word) +
+               (1 | subject) +
+               (1 | target),
+             family = binomial()))
+
+
+```
+
+
+

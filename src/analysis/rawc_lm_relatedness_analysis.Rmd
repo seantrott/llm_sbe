@@ -1,0 +1,160 @@
+---
+title: "RAW-C Data: LM Analysis"
+author: "Sean Trott"
+date: "2-23-2026"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "png")
+```
+
+
+# Setup
+
+Load libraries
+
+```{r setup}
+library(tidyverse)
+library(lme4)
+library(broom.mixed)
+library(lmerTest)
+```
+
+
+# Load data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/llm_sbe/src/analysis")
+
+# df_pythia = read_csv("../../data/processed/rawc/pythia-14m_surprisals.csv")
+### First, load all pythia models
+directory_path <- "../../data/processed/rawc/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_pythia_models <- bind_rows(csv_list) %>%
+  mutate(model_shorthand = sub("^EleutherAI/", "", model)) 
+nrow(df_pythia_models)
+table(df_pythia_models$model_shorthand)
+
+### Load human dominance data
+df_rawc = read_csv("../../data/human/raw-c_with_dominance.csv")
+
+
+### Merge data
+df_merged = df_pythia_models %>%
+  inner_join(df_rawc)
+
+
+```
+
+
+# Does surprisal predict relatedness?
+
+```{r}
+df_pythia_models_summ = df_pythia_models %>%
+  group_by(model_shorthand, n_params, checkpoint, 
+           word, version, same) %>%
+  summarise(m_surprisal = mean(target_surprisal_mean)) %>%
+  inner_join(df_rawc)
+
+
+df_r2_surprisal = df_pythia_models_summ %>%
+  group_by(model_shorthand, n_params, checkpoint) %>%
+  summarise(r = cor(m_surprisal, mean_relatedness),
+            r2_surprisal = r**2)
+
+
+
+df_r2 %>%
+  ggplot(aes(x = checkpoint,
+             y = r2,
+             color = reorder(model_shorthand, n_params))) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  geom_point(size = 4, alpha = .4) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "R2 (Relatedness ~ Surprisal)",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+  scale_shape_manual(values = c("FALSE" = 1, "TRUE" = 16),
+                     labels = c("n.s.", "p < .05"),
+                     name = NULL) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom") +
+  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+                                                begin = 0.8, end = 0.15))
+```
+
+
+## Compare to cosine distance
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/entangled_meanings/src/analysis/")
+directory_path <- "../../data/processed/rawc/pythia/distances/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_pythia_models_distance <- bind_rows(csv_list)
+table(df_pythia_models_distance$mpath)
+
+df_pythia_models_distance = df_pythia_models_distance %>%
+  mutate(checkpoint = step)
+
+
+### Get best r2
+df_best_r2 = df_pythia_models_distance %>% 
+  filter(Layer > 0) %>%
+  group_by(mpath, revision, checkpoint, Layer, n_params) %>%
+  summarise(r = cor(Distance, mean_relatedness, method = "pearson"),
+            r2_distance = r ** 2) %>%
+  group_by(mpath, checkpoint, n_params) %>%
+  slice_max(r2_distance, n = 1) %>%  
+  mutate(model_shorthand = sub("^EleutherAI/", "", mpath)) 
+
+
+
+df_merged = df_r2_surprisal %>%
+  select(model_shorthand, n_params, checkpoint, r2_surprisal) %>%
+  inner_join(df_best_r2 %>% select(model_shorthand,
+                                   checkpoint, r2_distance)) %>%
+  mutate(distance_surprisal_ratio = r2_distance / r2_surprisal)
+
+
+df_merged %>%
+  pivot_longer(cols = c(r2_surprisal, r2_distance),
+               names_to = "Predictor", values_to = "R2") %>%
+  ggplot(aes(x = checkpoint,
+             y = R2,
+             color = Predictor)) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  geom_point(size = 4, alpha = .4) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "R2",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+  scale_shape_manual(values = c("FALSE" = 1, "TRUE" = 16),
+                     labels = c("n.s.", "p < .05"),
+                     name = NULL) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom") +
+  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+                                                begin = 0.8, end = 0.15)) +
+  facet_wrap(~reorder(model_shorthand, n_params))
+
+```
+

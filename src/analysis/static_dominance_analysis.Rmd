@@ -1,0 +1,162 @@
+---
+title: "Priming analysis: SBE"
+author: "Sean Trott"
+date: "2-23-2026"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "png")
+```
+
+
+# Setup
+
+Load libraries
+
+```{r setup}
+library(tidyverse)
+library(lme4)
+library(broom.mixed)
+library(lmerTest)
+```
+
+
+# Load data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/llm_sbe/src/analysis")
+
+df_pythia = read_csv("../../data/processed/static_dominance/static_dominance_pythia-14m.csv")
+
+df_pythia = read_csv("../../data/processed/static_dominance/static_dominance_pythia-2.8b.csv")
+
+df_dominance = read_csv("../../data/human/dominance_norms_with_order.csv")
+
+```
+
+
+# Analysis
+
+```{r}
+### Summarize by m1/m2
+df_human_dominance <- df_dominance %>%
+  mutate(
+    target_meaning = str_extract(version_with_order, "M[12](?=_[ab]$)")
+  ) %>%
+  group_by(word, target_meaning) %>%
+  summarise(
+    mean_dominance = mean(dominance_right, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(names_from = target_meaning,
+              values_from = mean_dominance,
+              names_prefix = "dominance_") %>%
+  mutate(
+    human_dom_diff = dominance_M1 - dominance_M2
+  )
+
+### Summarize by m1/m2 for pythia
+df_static_summary <- df_pythia %>%
+  group_by(word, target_word, ambiguity_type, meaning) %>%
+  summarise(
+    mean_cosine = mean(cosine_sim, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(names_from = meaning,
+              values_from = mean_cosine,
+              names_prefix = "cosine_") %>%
+  mutate(
+    cosine_diff_M1_M2 = cosine_M1 - cosine_M2
+  )
+
+
+# Join
+df_compare <- df_static_summary %>%
+  inner_join(df_human_dominance, by = "word")
+nrow(df_compare)
+
+# Correlation
+cor.test(df_compare$cosine_diff_M1_M2, df_compare$human_dom_diff)
+
+# Plot
+df_compare %>%
+  ggplot(aes(x = human_dom_diff, y = cosine_diff_M1_M2)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  labs(x = "Human dominance (M1 - M2)",
+       y = "Static embedding cosine (M1 - M2)") +
+  theme_minimal()
+
+
+
+### Merge with priming
+df_priming_with_static <- df_merged %>%
+  filter(same == FALSE) %>%
+  mutate(
+    target_meaning = str_extract(version_with_order, "M[12](?=_[ab]$)")
+  ) %>%
+  left_join(df_static_summary, by = "word") %>%
+  mutate(
+    # Target's static dominance: positive = target sense is more dominant
+    target_static_dominance = if_else(target_meaning == "M1",
+                                      cosine_diff_M1_M2,
+                                      -cosine_diff_M1_M2)
+  )
+
+
+# Join static dominance onto priming data
+df_with_static <- df_merged %>%
+  filter(same == FALSE) %>%
+  mutate(
+    target_meaning = str_extract(version_with_order, "M[12](?=_[ab]$)")
+  ) %>%
+  left_join(df_static_summary) %>%
+  mutate(
+    target_static_dominance = if_else(target_meaning == "M1",
+                                      cosine_diff_M1_M2,
+                                      -cosine_diff_M1_M2)
+  )
+
+# Standardize for comparison
+df_with_static <- df_with_static %>%
+  mutate(
+    dominance_z = scale(dominance_right)[,1],
+    static_dom_z = scale(target_static_dominance)[,1]
+  )
+
+# 1. Human dominance predicting LM surprisal
+m_human <- lmer(target_surprisal_mean ~ dominance_z + ambiguity_type + 
+                  (1|word), data = df_with_static)
+
+# 2. LLM static dominance predicting LM surprisal
+m_static <- lmer(target_surprisal_mean ~ static_dom_z +ambiguity_type + 
+                   (1|word), data = df_with_static)
+
+# 3. Both
+m_both <- lmer(target_surprisal_mean ~ dominance_z + static_dom_z +ambiguity_type + 
+                 (1|word), data = df_with_static)
+
+summary(m_human)
+summary(m_static)
+summary(m_both)
+
+# Compare model fits
+anova(m_human, m_both)
+anova(m_static, m_both)
+
+AIC(m_human, m_static, m_both)
+
+
+cor.test(df_with_static$target_surprisal_mean, df_with_static$dominance_z)
+cor.test(df_with_static$target_surprisal_mean, df_with_static$static_dom_z)
+
+
+```
+
+
+

@@ -1,0 +1,1249 @@
+Word,stimulus,string,same,version_with_order,ambiguity_type,log_rt,correct_response
+act,It was a comedic act.<p>,act,False,M1_a_M2_b,Polysemy,6.894743613888888,1.0
+act,It was a comedic act.<p>,act,False,M1_b_M2_b,Polysemy,6.6683558455,1.0
+act,It was a comedic act.<p>,act,True,M2_a_M2_b,Polysemy,6.716878318333333,1.0
+act,It was a desperate act.<p>,act,False,M2_a_M1_a,Polysemy,7.0434343012500005,1.0
+act,It was a desperate act.<p>,act,False,M2_b_M1_a,Polysemy,6.96708359425,1.0
+act,It was a desperate act.<p>,act,True,M1_b_M1_a,Polysemy,6.698747878545455,1.0
+act,It was a humane act.<p>,act,False,M2_a_M1_b,Polysemy,6.813191494571428,1.0
+act,It was a humane act.<p>,act,False,M2_b_M1_b,Polysemy,6.8958286055454545,1.0
+act,It was a humane act.<p>,act,True,M1_a_M1_b,Polysemy,6.7081649089,1.0
+act,It was a magic act.<p>,act,False,M1_a_M2_a,Polysemy,7.0350431828,0.8
+act,It was a magic act.<p>,act,False,M1_b_M2_a,Polysemy,7.001229776625,1.0
+act,It was a magic act.<p>,act,True,M2_b_M2_a,Polysemy,6.844029553333333,1.0
+appeal,He had a legal appeal.<p>,appeal,False,M1_a_M2_a,Polysemy,7.058270307444444,0.7777777777777778
+appeal,He had a legal appeal.<p>,appeal,False,M1_b_M2_a,Polysemy,7.361823996,0.75
+appeal,He had a legal appeal.<p>,appeal,True,M2_b_M2_a,Polysemy,6.8772708595,1.0
+appeal,He had a pending appeal.<p>,appeal,False,M1_a_M2_b,Polysemy,7.210015377222222,0.5555555555555556
+appeal,He had a pending appeal.<p>,appeal,False,M1_b_M2_b,Polysemy,7.633525079857143,0.2857142857142857
+appeal,He had a pending appeal.<p>,appeal,True,M2_a_M2_b,Polysemy,7.132068645833333,0.9166666666666666
+appeal,He had a universal appeal.<p>,appeal,False,M2_a_M1_a,Polysemy,7.112824615,0.8333333333333334
+appeal,He had a universal appeal.<p>,appeal,False,M2_b_M1_a,Polysemy,6.937606359888889,0.7777777777777778
+appeal,He had a universal appeal.<p>,appeal,True,M1_b_M1_a,Polysemy,7.039322800636364,0.8181818181818182
+appeal,He had an undefinable appeal.<p>,appeal,False,M2_a_M1_b,Polysemy,7.557337511857143,0.8571428571428571
+appeal,He had an undefinable appeal.<p>,appeal,False,M2_b_M1_b,Polysemy,7.2152692435,0.75
+appeal,He had an undefinable appeal.<p>,appeal,True,M1_a_M1_b,Polysemy,7.368484435,0.5714285714285714
+atmosphere,It was a gaseous atmosphere.<p>,atmosphere,False,M1_a_M2_a,Polysemy,7.276668928428571,0.5714285714285714
+atmosphere,It was a gaseous atmosphere.<p>,atmosphere,False,M1_b_M2_a,Polysemy,7.23871953075,1.0
+atmosphere,It was a gaseous atmosphere.<p>,atmosphere,True,M2_b_M2_a,Polysemy,6.9637577467,0.9
+atmosphere,It was a hostile atmosphere.<p>,atmosphere,False,M2_a_M1_b,Polysemy,7.2500672258888885,1.0
+atmosphere,It was a hostile atmosphere.<p>,atmosphere,False,M2_b_M1_b,Polysemy,6.8922500275,1.0
+atmosphere,It was a hostile atmosphere.<p>,atmosphere,True,M1_a_M1_b,Polysemy,6.762139992428572,1.0
+atmosphere,It was a polluted atmosphere.<p>,atmosphere,False,M1_a_M2_b,Polysemy,7.005941529499999,0.7
+atmosphere,It was a polluted atmosphere.<p>,atmosphere,False,M1_b_M2_b,Polysemy,6.902506209444444,0.8888888888888888
+atmosphere,It was a polluted atmosphere.<p>,atmosphere,True,M2_a_M2_b,Polysemy,6.840011413428571,0.8571428571428571
+atmosphere,It was a tense atmosphere.<p>,atmosphere,False,M2_a_M1_a,Polysemy,6.991745863571429,0.8571428571428571
+atmosphere,It was a tense atmosphere.<p>,atmosphere,False,M2_b_M1_a,Polysemy,7.1050413992,1.0
+atmosphere,It was a tense atmosphere.<p>,atmosphere,True,M1_b_M1_a,Polysemy,6.876987434666667,1.0
+bail,He bailed out the defendant.<p>,bailed,False,M2_a_M1_b,Homonymy,7.172189723444443,0.8888888888888888
+bail,He bailed out the defendant.<p>,bailed,False,M2_b_M1_b,Homonymy,6.957474906375,0.875
+bail,He bailed out the defendant.<p>,bailed,True,M1_a_M1_b,Homonymy,7.14229351,0.6
+bail,He bailed out the liquid.<p>,bailed,False,M1_a_M2_b,Homonymy,7.049390684333333,0.0
+bail,He bailed out the liquid.<p>,bailed,False,M1_b_M2_b,Homonymy,7.292205218833334,0.0
+bail,He bailed out the liquid.<p>,bailed,True,M2_a_M2_b,Homonymy,6.888240286888889,0.1111111111111111
+bail,He bailed out the prisoner.<p>,bailed,False,M2_a_M1_a,Homonymy,7.190136677000001,1.0
+bail,He bailed out the prisoner.<p>,bailed,False,M2_b_M1_a,Homonymy,7.0771645755999995,1.0
+bail,He bailed out the prisoner.<p>,bailed,True,M1_b_M1_a,Homonymy,7.347700153,1.0
+bail,He bailed out the water.<p>,bailed,False,M1_a_M2_a,Homonymy,6.900818365499999,0.1
+bail,He bailed out the water.<p>,bailed,False,M1_b_M2_a,Homonymy,7.1288305028,0.0
+bail,He bailed out the water.<p>,bailed,True,M2_b_M2_a,Homonymy,7.211058814625,0.625
+band,It was a country band.<p>,band,False,M1_a_M2_b,Homonymy,6.876727150066667,1.0
+band,It was a country band.<p>,band,False,M1_b_M2_b,Homonymy,6.844201969923077,0.8461538461538461
+band,It was a country band.<p>,band,True,M2_a_M2_b,Homonymy,7.015037442777778,0.8888888888888888
+band,It was a gold band.<p>,band,False,M2_a_M1_a,Homonymy,7.11646851,1.0
+band,It was a gold band.<p>,band,False,M2_b_M1_a,Homonymy,7.060010572714285,0.8571428571428571
+band,It was a gold band.<p>,band,True,M1_b_M1_a,Homonymy,6.893441432714285,0.7142857142857143
+band,It was a jazz band.<p>,band,False,M1_a_M2_a,Homonymy,6.57631305,1.0
+band,It was a jazz band.<p>,band,False,M1_b_M2_a,Homonymy,6.853228280733333,1.0
+band,It was a jazz band.<p>,band,True,M2_b_M2_a,Homonymy,6.679734750166666,1.0
+band,It was a rubber band.<p>,band,False,M2_a_M1_b,Homonymy,6.7118356015,0.75
+band,It was a rubber band.<p>,band,False,M2_b_M1_b,Homonymy,6.845006396285714,1.0
+band,It was a rubber band.<p>,band,True,M1_a_M1_b,Homonymy,6.739993676222222,1.0
+bank,He banked the cash.<p>,banked,False,M1_a_M2_b,Homonymy,6.9786010392857145,0.8571428571428571
+bank,He banked the cash.<p>,banked,False,M1_b_M2_b,Homonymy,7.1751575625,0.6
+bank,He banked the cash.<p>,banked,True,M2_a_M2_b,Homonymy,7.102605677,1.0
+bank,He banked the helicopter.<p>,banked,False,M2_a_M1_b,Homonymy,7.1952541672857135,0.0
+bank,He banked the helicopter.<p>,banked,False,M2_b_M1_b,Homonymy,7.093466116625,0.125
+bank,He banked the helicopter.<p>,banked,True,M1_a_M1_b,Homonymy,6.7800581235,0.0
+bank,He banked the money.<p>,banked,False,M1_a_M2_a,Homonymy,6.986909968272728,0.8181818181818182
+bank,He banked the money.<p>,banked,False,M1_b_M2_a,Homonymy,6.919138348857143,0.8571428571428571
+bank,He banked the money.<p>,banked,True,M2_b_M2_a,Homonymy,6.908497580142857,0.7142857142857143
+bank,He banked the plane.<p>,banked,False,M2_a_M1_a,Homonymy,7.050614462,0.4
+bank,He banked the plane.<p>,banked,False,M2_b_M1_a,Homonymy,7.188041286,0.14285714285714285
+bank,He banked the plane.<p>,banked,True,M1_b_M1_a,Homonymy,7.076387004,0.0
+barrier,There was a concrete barrier.<p>,barrier,False,M2_a_M1_b,Polysemy,7.046812402166666,0.8333333333333334
+barrier,There was a concrete barrier.<p>,barrier,False,M2_b_M1_b,Polysemy,7.020460328333333,0.6666666666666666
+barrier,There was a concrete barrier.<p>,barrier,True,M1_a_M1_b,Polysemy,6.935033197714286,0.8571428571428571
+barrier,There was a language barrier.<p>,barrier,False,M1_a_M2_a,Polysemy,6.868948599,1.0
+barrier,There was a language barrier.<p>,barrier,False,M1_b_M2_a,Polysemy,6.964994756375,1.0
+barrier,There was a language barrier.<p>,barrier,True,M2_b_M2_a,Polysemy,6.5710849069,1.0
+barrier,There was a police barrier.<p>,barrier,False,M2_a_M1_a,Polysemy,7.0376019055,1.0
+barrier,There was a police barrier.<p>,barrier,False,M2_b_M1_a,Polysemy,6.977195966000001,1.0
+barrier,There was a police barrier.<p>,barrier,True,M1_b_M1_a,Polysemy,6.73261778075,0.875
+barrier,There was a religious barrier.<p>,barrier,False,M1_a_M2_b,Polysemy,7.162711869888889,0.7777777777777778
+barrier,There was a religious barrier.<p>,barrier,False,M1_b_M2_b,Polysemy,7.1205379389090915,0.5454545454545454
+barrier,There was a religious barrier.<p>,barrier,True,M2_a_M2_b,Polysemy,7.061291114,0.875
+bat,He saw a baseball bat.<p>,bat,False,M1_a_M2_b,Homonymy,6.935991055833333,1.0
+bat,He saw a baseball bat.<p>,bat,False,M1_b_M2_b,Homonymy,7.041653405,1.0
+bat,He saw a baseball bat.<p>,bat,True,M2_a_M2_b,Homonymy,6.765754126,1.0
+bat,He saw a fruit bat.<p>,bat,False,M2_a_M1_b,Homonymy,7.048895471384616,0.7692307692307693
+bat,He saw a fruit bat.<p>,bat,False,M2_b_M1_b,Homonymy,7.1187819613,0.4
+bat,He saw a fruit bat.<p>,bat,True,M1_a_M1_b,Homonymy,7.004699841333333,0.6666666666666666
+bat,He saw a furry bat.<p>,bat,False,M2_a_M1_a,Homonymy,6.944633189799999,0.5
+bat,He saw a furry bat.<p>,bat,False,M2_b_M1_a,Homonymy,7.1672611713,0.7
+bat,He saw a furry bat.<p>,bat,True,M1_b_M1_a,Homonymy,6.935932882142858,1.0
+bat,He saw a wooden bat.<p>,bat,False,M1_a_M2_a,Homonymy,6.9602688046,1.0
+bat,He saw a wooden bat.<p>,bat,False,M1_b_M2_a,Homonymy,7.340637224142857,0.7142857142857143
+bat,He saw a wooden bat.<p>,bat,True,M2_b_M2_a,Homonymy,7.20147694775,1.0
+beam,He saw the balance beam.<p>,beam,False,M1_a_M2_b,Polysemy,7.033939038461539,0.7692307692307693
+beam,He saw the balance beam.<p>,beam,False,M1_b_M2_b,Polysemy,7.234187270923077,0.6923076923076923
+beam,He saw the balance beam.<p>,beam,True,M2_a_M2_b,Polysemy,6.996895310833334,1.0
+beam,He saw the bright beam.<p>,beam,False,M2_a_M1_b,Polysemy,7.011232559363637,0.9090909090909091
+beam,He saw the bright beam.<p>,beam,False,M2_b_M1_b,Polysemy,7.068692650200001,1.0
+beam,He saw the bright beam.<p>,beam,True,M1_a_M1_b,Polysemy,6.976161466799999,1.0
+beam,He saw the laser beam.<p>,beam,False,M2_a_M1_a,Polysemy,6.890908559857143,0.8571428571428571
+beam,He saw the laser beam.<p>,beam,False,M2_b_M1_a,Polysemy,6.826192201333334,1.0
+beam,He saw the laser beam.<p>,beam,True,M1_b_M1_a,Polysemy,6.861084055,1.0
+beam,He saw the wood beam.<p>,beam,False,M1_a_M2_a,Polysemy,6.952753910625,1.0
+beam,He saw the wood beam.<p>,beam,False,M1_b_M2_a,Polysemy,7.184488426111112,0.7777777777777778
+beam,He saw the wood beam.<p>,beam,True,M2_b_M2_a,Polysemy,7.04156714775,1.0
+block,She had a mental block.<p>,block,False,M1_a_M2_a,Polysemy,6.901976877333333,1.0
+block,She had a mental block.<p>,block,False,M1_b_M2_a,Polysemy,6.95317038,0.8
+block,She had a mental block.<p>,block,True,M2_b_M2_a,Polysemy,6.894918137888889,1.0
+block,She had a toy block.<p>,block,False,M2_a_M1_a,Polysemy,6.937853949166667,0.8333333333333334
+block,She had a toy block.<p>,block,False,M2_b_M1_a,Polysemy,7.359442659111112,0.7777777777777778
+block,She had a toy block.<p>,block,True,M1_b_M1_a,Polysemy,6.9917997132,1.0
+block,She had a wooden block.<p>,block,False,M2_a_M1_b,Polysemy,6.8598681345,1.0
+block,She had a wooden block.<p>,block,False,M2_b_M1_b,Polysemy,7.18637687,0.5
+block,She had a wooden block.<p>,block,True,M1_a_M1_b,Polysemy,6.984357733,1.0
+block,She had a writer's block.<p>,block,False,M1_a_M2_b,Polysemy,7.021164719090908,0.9090909090909091
+block,She had a writer's block.<p>,block,False,M1_b_M2_b,Polysemy,6.692605569571429,1.0
+block,She had a writer's block.<p>,block,True,M2_a_M2_b,Polysemy,6.569846180000001,1.0
+blood,He has coagulated blood.<p>,blood,False,M2_a_M1_a,Polysemy,6.9802602545,0.375
+blood,He has coagulated blood.<p>,blood,False,M2_b_M1_a,Polysemy,7.51703018375,0.75
+blood,He has coagulated blood.<p>,blood,True,M1_b_M1_a,Polysemy,7.0791951035,0.75
+blood,He has noble blood.<p>,blood,False,M1_a_M2_a,Polysemy,7.051382730285715,0.5714285714285714
+blood,He has noble blood.<p>,blood,False,M1_b_M2_a,Polysemy,7.168868352454546,0.5454545454545454
+blood,He has noble blood.<p>,blood,True,M2_b_M2_a,Polysemy,6.554338374333334,1.0
+blood,He has royal blood.<p>,blood,False,M1_a_M2_b,Polysemy,6.994134277399999,0.8
+blood,He has royal blood.<p>,blood,False,M1_b_M2_b,Polysemy,6.725886006,0.8333333333333334
+blood,He has royal blood.<p>,blood,True,M2_a_M2_b,Polysemy,6.768713928625,1.0
+blood,He has thin blood.<p>,blood,False,M2_a_M1_b,Polysemy,6.958151881416666,0.9166666666666666
+blood,He has thin blood.<p>,blood,False,M2_b_M1_b,Polysemy,6.9113149236249996,0.5
+blood,He has thin blood.<p>,blood,True,M1_a_M1_b,Polysemy,7.0598027906,0.9
+board,It was the executive board.<p>,board,False,M1_a_M2_a,Polysemy,7.147018897714285,1.0
+board,It was the executive board.<p>,board,False,M1_b_M2_a,Polysemy,6.8476772668,0.8
+board,It was the executive board.<p>,board,True,M2_b_M2_a,Polysemy,6.793449552,1.0
+board,It was the ironing board.<p>,board,False,M2_a_M1_a,Polysemy,6.923194026142857,0.7142857142857143
+board,It was the ironing board.<p>,board,False,M2_b_M1_a,Polysemy,6.882669446,1.0
+board,It was the ironing board.<p>,board,True,M1_b_M1_a,Polysemy,6.918868664375,1.0
+board,It was the school board.<p>,board,False,M1_a_M2_b,Polysemy,7.076138767833334,1.0
+board,It was the school board.<p>,board,False,M1_b_M2_b,Polysemy,6.961485943,1.0
+board,It was the school board.<p>,board,True,M2_a_M2_b,Polysemy,6.931109406875,1.0
+board,It was the wooden board.<p>,board,False,M2_a_M1_b,Polysemy,7.0251035707,0.7
+board,It was the wooden board.<p>,board,False,M2_b_M1_b,Polysemy,7.005667632571429,1.0
+board,It was the wooden board.<p>,board,True,M1_a_M1_b,Polysemy,6.7188646586,1.0
+book,He had a best-selling book.<p>,book,False,M2_a_M1_a,Polysemy,7.0089484155,1.0
+book,He had a best-selling book.<p>,book,False,M2_b_M1_a,Polysemy,7.023869274,1.0
+book,He had a best-selling book.<p>,book,True,M1_b_M1_a,Polysemy,6.984573347454545,1.0
+book,He had a heavy book.<p>,book,False,M1_a_M2_a,Polysemy,6.825786826222222,1.0
+book,He had a heavy book.<p>,book,False,M1_b_M2_a,Polysemy,6.63987305176923,1.0
+book,He had a heavy book.<p>,book,True,M2_b_M2_a,Polysemy,6.90639155475,1.0
+book,He had a leather-bound book.<p>,book,False,M1_a_M2_b,Polysemy,7.161139563692307,0.8461538461538461
+book,He had a leather-bound book.<p>,book,False,M1_b_M2_b,Polysemy,7.019644661125,0.875
+book,He had a leather-bound book.<p>,book,True,M2_a_M2_b,Polysemy,7.169550832333333,1.0
+book,He had a popular book.<p>,book,False,M2_a_M1_b,Polysemy,6.807444573777778,0.8888888888888888
+book,He had a popular book.<p>,book,False,M2_b_M1_b,Polysemy,6.90613503325,1.0
+book,He had a popular book.<p>,book,True,M1_a_M1_b,Polysemy,6.828053516461538,1.0
+break,He broke the dish.<p>,broke,False,M2_a_M1_b,Polysemy,6.878652028249999,1.0
+break,He broke the dish.<p>,broke,False,M2_b_M1_b,Polysemy,6.937564266857143,1.0
+break,He broke the dish.<p>,broke,True,M1_a_M1_b,Polysemy,6.788464972333333,1.0
+break,He broke the glass.<p>,broke,False,M2_a_M1_a,Polysemy,6.6554726079375,1.0
+break,He broke the glass.<p>,broke,False,M2_b_M1_a,Polysemy,6.7558766530000005,1.0
+break,He broke the glass.<p>,broke,True,M1_b_M1_a,Polysemy,6.9525115736666665,1.0
+break,He broke the law.<p>,broke,False,M1_a_M2_a,Polysemy,6.797290787,1.0
+break,He broke the law.<p>,broke,False,M1_b_M2_a,Polysemy,6.625628654799999,1.0
+break,He broke the law.<p>,broke,True,M2_b_M2_a,Polysemy,6.890780796,1.0
+break,He broke the promise.<p>,broke,False,M1_a_M2_b,Polysemy,6.743907052875,1.0
+break,He broke the promise.<p>,broke,False,M1_b_M2_b,Polysemy,6.523398071600001,1.0
+break,He broke the promise.<p>,broke,True,M2_a_M2_b,Polysemy,6.7313951995,1.0
+breakfast,They ate a family breakfast.<p>,breakfast,False,M1_a_M2_a,Polysemy,6.948041088111111,0.8888888888888888
+breakfast,They ate a family breakfast.<p>,breakfast,False,M1_b_M2_a,Polysemy,7.006803297599999,0.8
+breakfast,They ate a family breakfast.<p>,breakfast,True,M2_b_M2_a,Polysemy,6.622423156,1.0
+breakfast,They ate a lonely breakfast.<p>,breakfast,False,M1_a_M2_b,Polysemy,7.354996391818182,0.7272727272727273
+breakfast,They ate a lonely breakfast.<p>,breakfast,False,M1_b_M2_b,Polysemy,7.273640429285714,0.7142857142857143
+breakfast,They ate a lonely breakfast.<p>,breakfast,True,M2_a_M2_b,Polysemy,7.242012718,0.625
+breakfast,They ate a nutritious breakfast.<p>,breakfast,False,M2_a_M1_b,Polysemy,6.80295677325,0.875
+breakfast,They ate a nutritious breakfast.<p>,breakfast,False,M2_b_M1_b,Polysemy,6.781314785,1.0
+breakfast,They ate a nutritious breakfast.<p>,breakfast,True,M1_a_M1_b,Polysemy,6.8200057755,1.0
+breakfast,They ate a pancake breakfast.<p>,breakfast,False,M2_a_M1_a,Polysemy,6.939591589545454,0.8181818181818182
+breakfast,They ate a pancake breakfast.<p>,breakfast,False,M2_b_M1_a,Polysemy,6.883083679888888,0.6666666666666666
+breakfast,They ate a pancake breakfast.<p>,breakfast,True,M1_b_M1_a,Polysemy,7.154688998727273,0.45454545454545453
+call,They called the debt.<p>,called,False,M1_a_M2_b,Polysemy,7.128757709,0.25
+call,They called the debt.<p>,called,False,M1_b_M2_b,Polysemy,6.903977803166666,0.16666666666666666
+call,They called the debt.<p>,called,True,M2_a_M2_b,Polysemy,7.051950297,0.5
+call,They called the landlord.<p>,called,False,M2_a_M1_a,Polysemy,6.915577326375,1.0
+call,They called the landlord.<p>,called,False,M2_b_M1_a,Polysemy,6.9491077644,1.0
+call,They called the landlord.<p>,called,True,M1_b_M1_a,Polysemy,6.884000348333333,1.0
+call,They called the loan.<p>,called,False,M1_a_M2_a,Polysemy,7.0398688972,0.4
+call,They called the loan.<p>,called,False,M1_b_M2_a,Polysemy,7.137015283,0.16666666666666666
+call,They called the loan.<p>,called,True,M2_b_M2_a,Polysemy,6.87840203925,0.5
+call,They called the police.<p>,called,False,M2_a_M1_b,Polysemy,6.8305579881,1.0
+call,They called the police.<p>,called,False,M2_b_M1_b,Polysemy,6.9019547088749995,1.0
+call,They called the police.<p>,called,True,M1_a_M1_b,Polysemy,6.738110897555555,1.0
+cape,It was a flowing cape.<p>,cape,False,M2_a_M1_b,Homonymy,7.0174060448,0.9
+cape,It was a flowing cape.<p>,cape,False,M2_b_M1_b,Homonymy,7.147384152933333,0.6666666666666666
+cape,It was a flowing cape.<p>,cape,True,M1_a_M1_b,Homonymy,6.834627191,0.0
+cape,It was a red cape.<p>,cape,False,M2_a_M1_a,Homonymy,6.7575287610000006,0.9090909090909091
+cape,It was a red cape.<p>,cape,False,M2_b_M1_a,Homonymy,6.8241967019,0.9
+cape,It was a red cape.<p>,cape,True,M1_b_M1_a,Homonymy,7.099171902222222,1.0
+cape,It was a rocky cape.<p>,cape,False,M1_a_M2_a,Homonymy,7.146830950111111,0.3333333333333333
+cape,It was a rocky cape.<p>,cape,False,M1_b_M2_a,Homonymy,7.012368523818182,0.36363636363636365
+cape,It was a rocky cape.<p>,cape,True,M2_b_M2_a,Homonymy,7.30852498975,0.25
+cape,It was an island cape.<p>,cape,False,M1_a_M2_b,Homonymy,6.8416596363333335,0.0
+cape,It was an island cape.<p>,cape,False,M1_b_M2_b,Homonymy,7.079058441166667,0.3333333333333333
+cape,It was an island cape.<p>,cape,True,M2_a_M2_b,Homonymy,7.449615863999999,0.3333333333333333
+cast,She cast a glow.<p>,cast,False,M2_a_M1_b,Polysemy,7.072027619428572,0.7142857142857143
+cast,She cast a glow.<p>,cast,False,M2_b_M1_b,Polysemy,6.5678346020000005,0.8
+cast,She cast a glow.<p>,cast,True,M1_a_M1_b,Polysemy,7.070086356142857,0.5
+cast,She cast a shadow.<p>,cast,False,M2_a_M1_a,Polysemy,6.7516367731999996,1.0
+cast,She cast a shadow.<p>,cast,False,M2_b_M1_a,Polysemy,6.818211693583333,1.0
+cast,She cast a shadow.<p>,cast,True,M1_b_M1_a,Polysemy,6.8836966533999995,1.0
+cast,She cast a spear.<p>,cast,False,M1_a_M2_a,Polysemy,7.017995703714286,0.7142857142857143
+cast,She cast a spear.<p>,cast,False,M1_b_M2_a,Polysemy,7.163281213125,0.625
+cast,She cast a spear.<p>,cast,True,M2_b_M2_a,Polysemy,7.395478223666667,0.3333333333333333
+cast,She cast a stone.<p>,cast,False,M1_a_M2_b,Polysemy,7.163468759200001,1.0
+cast,She cast a stone.<p>,cast,False,M1_b_M2_b,Polysemy,7.1207589252500005,0.25
+cast,She cast a stone.<p>,cast,True,M2_a_M2_b,Polysemy,6.9532586912,0.6
+cause,It was a main cause.<p>,cause,False,M1_a_M2_a,Polysemy,7.31238031725,0.75
+cause,It was a main cause.<p>,cause,False,M1_b_M2_a,Polysemy,6.861199709,1.0
+cause,It was a main cause.<p>,cause,True,M2_b_M2_a,Polysemy,6.682546105833333,1.0
+cause,It was a political cause.<p>,cause,False,M2_a_M1_b,Polysemy,6.982923580909091,1.0
+cause,It was a political cause.<p>,cause,False,M2_b_M1_b,Polysemy,6.877830781199999,1.0
+cause,It was a political cause.<p>,cause,True,M1_a_M1_b,Polysemy,6.889467566142857,1.0
+cause,It was a primary cause.<p>,cause,False,M1_a_M2_b,Polysemy,6.8295573781000005,0.9
+cause,It was a primary cause.<p>,cause,False,M1_b_M2_b,Polysemy,6.949155673666667,1.0
+cause,It was a primary cause.<p>,cause,True,M2_a_M2_b,Polysemy,6.847526808833333,1.0
+cause,It was a worthy cause.<p>,cause,False,M2_a_M1_a,Polysemy,6.888556254666667,1.0
+cause,It was a worthy cause.<p>,cause,False,M2_b_M1_a,Polysemy,6.967319268111111,0.8888888888888888
+cause,It was a worthy cause.<p>,cause,True,M1_b_M1_a,Polysemy,6.680333750571428,1.0
+cell,It was a brain cell.<p>,cell,False,M2_a_M1_b,Polysemy,6.744505428833333,1.0
+cell,It was a brain cell.<p>,cell,False,M2_b_M1_b,Polysemy,6.769783076333333,1.0
+cell,It was a brain cell.<p>,cell,True,M1_a_M1_b,Polysemy,6.502932574,1.0
+cell,It was a jail cell.<p>,cell,False,M1_a_M2_b,Polysemy,7.141245122,1.0
+cell,It was a jail cell.<p>,cell,False,M1_b_M2_b,Polysemy,6.8056062593333335,0.9333333333333333
+cell,It was a jail cell.<p>,cell,True,M2_a_M2_b,Polysemy,6.849205851857143,1.0
+cell,It was a prison cell.<p>,cell,False,M1_a_M2_a,Polysemy,6.83314098425,1.0
+cell,It was a prison cell.<p>,cell,False,M1_b_M2_a,Polysemy,6.880833326888888,0.8888888888888888
+cell,It was a prison cell.<p>,cell,True,M2_b_M2_a,Polysemy,6.64614310409091,1.0
+cell,It was a skin cell.<p>,cell,False,M2_a_M1_a,Polysemy,6.938348584428572,1.0
+cell,It was a skin cell.<p>,cell,False,M2_b_M1_a,Polysemy,6.795275150399999,1.0
+cell,It was a skin cell.<p>,cell,True,M1_b_M1_a,Polysemy,6.884713262833333,1.0
+charm,She had a devilish charm.<p>,charm,False,M2_a_M1_a,Polysemy,6.841486939153847,0.8461538461538461
+charm,She had a devilish charm.<p>,charm,False,M2_b_M1_a,Polysemy,7.13893787925,0.75
+charm,She had a devilish charm.<p>,charm,True,M1_b_M1_a,Polysemy,6.976694199571428,0.8571428571428571
+charm,She had a gold charm.<p>,charm,False,M1_a_M2_a,Polysemy,7.163382045,1.0
+charm,She had a gold charm.<p>,charm,False,M1_b_M2_a,Polysemy,7.032477764999999,0.6666666666666666
+charm,She had a gold charm.<p>,charm,True,M2_b_M2_a,Polysemy,6.974994889066666,0.9333333333333333
+charm,She had a good-luck charm.<p>,charm,False,M1_a_M2_b,Polysemy,6.8994534356666675,1.0
+charm,She had a good-luck charm.<p>,charm,False,M1_b_M2_b,Polysemy,6.872744328916667,0.8333333333333334
+charm,She had a good-luck charm.<p>,charm,True,M2_a_M2_b,Polysemy,6.890815924125,1.0
+charm,She had a natural charm.<p>,charm,False,M2_a_M1_b,Polysemy,6.9138115888,1.0
+charm,She had a natural charm.<p>,charm,False,M2_b_M1_b,Polysemy,6.640353928,1.0
+charm,She had a natural charm.<p>,charm,True,M1_a_M1_b,Polysemy,6.604602339428571,1.0
+check,He checked the alibi.<p>,checked,False,M1_a_M2_a,Polysemy,7.003276907333333,0.6666666666666666
+check,He checked the alibi.<p>,checked,False,M1_b_M2_a,Polysemy,7.0953573287500005,0.5
+check,He checked the alibi.<p>,checked,True,M2_b_M2_a,Polysemy,7.062037250583334,0.8333333333333334
+check,He checked the engine.<p>,checked,False,M2_a_M1_a,Polysemy,6.7362012473999995,1.0
+check,He checked the engine.<p>,checked,False,M2_b_M1_a,Polysemy,6.788791431199999,1.0
+check,He checked the engine.<p>,checked,True,M1_b_M1_a,Polysemy,6.710050522111111,1.0
+check,He checked the facts.<p>,checked,False,M1_a_M2_b,Polysemy,6.691488436999999,1.0
+check,He checked the facts.<p>,checked,False,M1_b_M2_b,Polysemy,6.633089537333333,1.0
+check,He checked the facts.<p>,checked,True,M2_a_M2_b,Polysemy,6.655381975199999,1.0
+check,He checked the oven.<p>,checked,False,M2_a_M1_b,Polysemy,7.014635855125,1.0
+check,He checked the oven.<p>,checked,False,M2_b_M1_b,Polysemy,6.826484046111111,1.0
+check,He checked the oven.<p>,checked,True,M1_a_M1_b,Polysemy,6.7785684355,1.0
+chicken,They liked the clucking chicken.<p>,chicken,False,M1_a_M2_a,Polysemy,7.089929724461539,0.5384615384615384
+chicken,They liked the clucking chicken.<p>,chicken,False,M1_b_M2_a,Polysemy,7.103134864199999,0.2
+chicken,They liked the clucking chicken.<p>,chicken,True,M2_b_M2_a,Polysemy,7.095518062875,0.875
+chicken,They liked the juicy chicken.<p>,chicken,False,M2_a_M1_a,Polysemy,7.40506932275,1.0
+chicken,They liked the juicy chicken.<p>,chicken,False,M2_b_M1_a,Polysemy,7.153083123166667,1.0
+chicken,They liked the juicy chicken.<p>,chicken,True,M1_b_M1_a,Polysemy,6.896084532875,1.0
+chicken,They liked the pet chicken.<p>,chicken,False,M1_a_M2_b,Polysemy,7.0439247755,1.0
+chicken,They liked the pet chicken.<p>,chicken,False,M1_b_M2_b,Polysemy,7.1518733231428575,0.8571428571428571
+chicken,They liked the pet chicken.<p>,chicken,True,M2_a_M2_b,Polysemy,7.012387243999999,1.0
+chicken,They liked the roasted chicken.<p>,chicken,False,M2_a_M1_b,Polysemy,6.8782500917142855,1.0
+chicken,They liked the roasted chicken.<p>,chicken,False,M2_b_M1_b,Polysemy,7.185975437428572,1.0
+chicken,They liked the roasted chicken.<p>,chicken,True,M1_a_M1_b,Polysemy,6.8564627684,1.0
+class,It was a boring class.<p>,class,False,M1_a_M2_a,Polysemy,6.816690114111111,1.0
+class,It was a boring class.<p>,class,False,M1_b_M2_a,Polysemy,6.840205392571428,1.0
+class,It was a boring class.<p>,class,True,M2_b_M2_a,Polysemy,6.8849329292,1.0
+class,It was a misbehaving class.<p>,class,False,M2_a_M1_b,Polysemy,7.013140838125,0.625
+class,It was a misbehaving class.<p>,class,False,M2_b_M1_b,Polysemy,7.059681097,1.0
+class,It was a misbehaving class.<p>,class,True,M1_a_M1_b,Polysemy,7.247710689000001,0.7272727272727273
+class,It was a perceptive class.<p>,class,False,M2_a_M1_a,Polysemy,7.3423057141250005,0.375
+class,It was a perceptive class.<p>,class,False,M2_b_M1_a,Polysemy,6.907925524888889,0.7777777777777778
+class,It was a perceptive class.<p>,class,True,M1_b_M1_a,Polysemy,7.561363033454546,0.6363636363636364
+class,It was a stimulating class.<p>,class,False,M1_a_M2_b,Polysemy,6.847165845636363,0.9090909090909091
+class,It was a stimulating class.<p>,class,False,M1_b_M2_b,Polysemy,7.0920791255,0.75
+class,It was a stimulating class.<p>,class,True,M2_a_M2_b,Polysemy,7.0645692816666665,1.0
+clear,He cleared the desk.<p>,cleared,False,M2_a_M1_a,Polysemy,6.986615851400001,0.9
+clear,He cleared the desk.<p>,cleared,False,M2_b_M1_a,Polysemy,6.708471337090909,1.0
+clear,He cleared the desk.<p>,cleared,True,M1_b_M1_a,Polysemy,6.749901279111111,1.0
+clear,He cleared the path.<p>,cleared,False,M1_a_M2_a,Polysemy,6.6975525496,1.0
+clear,He cleared the path.<p>,cleared,False,M1_b_M2_a,Polysemy,6.770745139714286,1.0
+clear,He cleared the path.<p>,cleared,True,M2_b_M2_a,Polysemy,7.13368303125,0.75
+clear,He cleared the road.<p>,cleared,False,M1_a_M2_b,Polysemy,6.773103925399999,1.0
+clear,He cleared the road.<p>,cleared,False,M1_b_M2_b,Polysemy,6.67385601125,1.0
+clear,He cleared the road.<p>,cleared,True,M2_a_M2_b,Polysemy,6.7925244335,1.0
+clear,He cleared the shelf.<p>,cleared,False,M2_a_M1_b,Polysemy,6.7061585395000005,1.0
+clear,He cleared the shelf.<p>,cleared,False,M2_b_M1_b,Polysemy,6.998337304666666,1.0
+clear,He cleared the shelf.<p>,cleared,True,M1_a_M1_b,Polysemy,6.7508446695454545,1.0
+clip,It was a film clip.<p>,clip,False,M2_a_M1_a,Homonymy,6.881011448333333,0.75
+clip,It was a film clip.<p>,clip,False,M2_b_M1_a,Homonymy,6.9991110113333335,1.0
+clip,It was a film clip.<p>,clip,True,M1_b_M1_a,Homonymy,6.829329120625,1.0
+clip,It was a hair clip.<p>,clip,False,M1_a_M2_a,Homonymy,6.760670552222222,0.8888888888888888
+clip,It was a hair clip.<p>,clip,False,M1_b_M2_a,Homonymy,6.863506630444444,0.8888888888888888
+clip,It was a hair clip.<p>,clip,True,M2_b_M2_a,Homonymy,6.8269267583,1.0
+clip,It was a metal clip.<p>,clip,False,M1_a_M2_b,Homonymy,6.9261896992,0.8
+clip,It was a metal clip.<p>,clip,False,M1_b_M2_b,Homonymy,7.0041827405,0.625
+clip,It was a metal clip.<p>,clip,True,M2_a_M2_b,Homonymy,7.16339513225,1.0
+clip,It was a video clip.<p>,clip,False,M2_a_M1_b,Homonymy,6.994717425142857,1.0
+clip,It was a video clip.<p>,clip,False,M2_b_M1_b,Homonymy,6.682361649833333,1.0
+clip,It was a video clip.<p>,clip,True,M1_a_M1_b,Homonymy,6.689950445799999,1.0
+clog,The choreographer clogged.<p>,clogged,False,M2_a_M1_b,Polysemy,7.107179812999999,0.16666666666666666
+clog,The choreographer clogged.<p>,clogged,False,M2_b_M1_b,Polysemy,7.0591358095,0.0
+clog,The choreographer clogged.<p>,clogged,True,M1_a_M1_b,Polysemy,7.266905971857143,0.42857142857142855
+clog,The dancer clogged.<p>,clogged,False,M2_a_M1_a,Polysemy,7.114617738545454,0.18181818181818182
+clog,The dancer clogged.<p>,clogged,False,M2_b_M1_a,Polysemy,6.913046509833333,0.0
+clog,The dancer clogged.<p>,clogged,True,M1_b_M1_a,Polysemy,6.974663072083334,0.5
+clog,The pipe clogged.<p>,clogged,False,M1_a_M2_a,Polysemy,6.879148482125,1.0
+clog,The pipe clogged.<p>,clogged,False,M1_b_M2_a,Polysemy,6.779124031,1.0
+clog,The pipe clogged.<p>,clogged,True,M2_b_M2_a,Polysemy,6.816790454875,0.875
+clog,The sink clogged.<p>,clogged,False,M1_a_M2_b,Polysemy,6.857723256142857,1.0
+clog,The sink clogged.<p>,clogged,False,M1_b_M2_b,Polysemy,6.8815633604999995,0.5
+clog,The sink clogged.<p>,clogged,True,M2_a_M2_b,Polysemy,7.264599509,1.0
+cold,It was a chest cold.<p>,cold,False,M1_a_M2_a,Polysemy,7.0936194964,0.6
+cold,It was a chest cold.<p>,cold,False,M1_b_M2_a,Polysemy,7.07255669,0.4166666666666667
+cold,It was a chest cold.<p>,cold,True,M2_b_M2_a,Polysemy,6.8319184082857145,0.7142857142857143
+cold,It was a common cold.<p>,cold,False,M1_a_M2_b,Polysemy,6.9116658892,1.0
+cold,It was a common cold.<p>,cold,False,M1_b_M2_b,Polysemy,6.9709316887499995,1.0
+cold,It was a common cold.<p>,cold,True,M2_a_M2_b,Polysemy,6.839448668599999,1.0
+cold,It was a freezing cold.<p>,cold,False,M2_a_M1_b,Polysemy,7.166356208545454,0.5454545454545454
+cold,It was a freezing cold.<p>,cold,False,M2_b_M1_b,Polysemy,6.909748696444444,0.7777777777777778
+cold,It was a freezing cold.<p>,cold,True,M1_a_M1_b,Polysemy,7.1392511705,0.6666666666666666
+cold,It was an icy cold.<p>,cold,False,M2_a_M1_a,Polysemy,6.934201387,1.0
+cold,It was an icy cold.<p>,cold,False,M2_b_M1_a,Polysemy,7.189845233714286,0.2857142857142857
+cold,It was an icy cold.<p>,cold,True,M1_b_M1_a,Polysemy,7.3339481182499995,0.5
+column,It was a concrete column.<p>,column,False,M1_a_M2_a,Polysemy,7.156680357100001,0.8
+column,It was a concrete column.<p>,column,False,M1_b_M2_a,Polysemy,7.473745614666666,0.5
+column,It was a concrete column.<p>,column,True,M2_b_M2_a,Polysemy,7.0451807755,1.0
+column,It was a gossip column.<p>,column,False,M2_a_M1_a,Polysemy,6.935683843125,0.625
+column,It was a gossip column.<p>,column,False,M2_b_M1_a,Polysemy,6.8265962096,0.4
+column,It was a gossip column.<p>,column,True,M1_b_M1_a,Polysemy,6.931729207666667,0.8333333333333334
+column,It was a marble column.<p>,column,False,M1_a_M2_b,Polysemy,7.142121588249999,0.5
+column,It was a marble column.<p>,column,False,M1_b_M2_b,Polysemy,6.82763469075,0.5
+column,It was a marble column.<p>,column,True,M2_a_M2_b,Polysemy,6.882584406636363,0.6363636363636364
+column,It was a sports column.<p>,column,False,M2_a_M1_b,Polysemy,7.3313863515,1.0
+column,It was a sports column.<p>,column,False,M2_b_M1_b,Polysemy,7.183913399714285,0.8571428571428571
+column,It was a sports column.<p>,column,True,M1_a_M1_b,Polysemy,6.684622131714286,1.0
+company,He liked the investment company.<p>,company,False,M2_a_M1_a,Polysemy,7.306972673199999,1.0
+company,He liked the investment company.<p>,company,False,M2_b_M1_a,Polysemy,7.219380634,1.0
+company,He liked the investment company.<p>,company,True,M1_b_M1_a,Polysemy,7.033752732416667,1.0
+company,He liked the pharmaceutical company.<p>,company,False,M2_a_M1_b,Polysemy,7.144964504444443,0.6666666666666666
+company,He liked the pharmaceutical company.<p>,company,False,M2_b_M1_b,Polysemy,7.237086738625,1.0
+company,He liked the pharmaceutical company.<p>,company,True,M1_a_M1_b,Polysemy,7.258947986600001,1.0
+company,He liked the pleasant company.<p>,company,False,M1_a_M2_a,Polysemy,7.328541516,1.0
+company,He liked the pleasant company.<p>,company,False,M1_b_M2_a,Polysemy,7.133208354,0.8
+company,He liked the pleasant company.<p>,company,True,M2_b_M2_a,Polysemy,6.74993777375,0.875
+company,He liked the polite company.<p>,company,False,M1_a_M2_b,Polysemy,7.185068185909091,0.45454545454545453
+company,He liked the polite company.<p>,company,False,M1_b_M2_b,Polysemy,7.194754150727272,0.7272727272727273
+company,He liked the polite company.<p>,company,True,M2_a_M2_b,Polysemy,6.87300595725,0.75
+cone,It was a sugar cone.<p>,cone,False,M2_a_M1_b,Polysemy,6.7418219495,1.0
+cone,It was a sugar cone.<p>,cone,False,M2_b_M1_b,Polysemy,7.1470885762,0.6
+cone,It was a sugar cone.<p>,cone,True,M1_a_M1_b,Polysemy,6.693490318666666,1.0
+cone,It was a traffic cone.<p>,cone,False,M1_a_M2_b,Polysemy,6.925283990384615,1.0
+cone,It was a traffic cone.<p>,cone,False,M1_b_M2_b,Polysemy,6.695749242285714,0.8571428571428571
+cone,It was a traffic cone.<p>,cone,True,M2_a_M2_b,Polysemy,6.9977562174,1.0
+cone,It was a waffle cone.<p>,cone,False,M2_a_M1_a,Polysemy,7.028315643625,0.875
+cone,It was a waffle cone.<p>,cone,False,M2_b_M1_a,Polysemy,6.842393909777778,0.8888888888888888
+cone,It was a waffle cone.<p>,cone,True,M1_b_M1_a,Polysemy,6.595673313142858,1.0
+cone,It was an orange cone.<p>,cone,False,M1_a_M2_a,Polysemy,7.1222333686,0.6
+cone,It was an orange cone.<p>,cone,False,M1_b_M2_a,Polysemy,6.9859136051999995,1.0
+cone,It was an orange cone.<p>,cone,True,M2_b_M2_a,Polysemy,6.9202404275000005,1.0
+contribution,He made a charitable contribution.<p>,contribution,False,M2_a_M1_a,Polysemy,6.817768796555556,1.0
+contribution,He made a charitable contribution.<p>,contribution,False,M2_b_M1_a,Polysemy,6.8994114958571435,1.0
+contribution,He made a charitable contribution.<p>,contribution,True,M1_b_M1_a,Polysemy,6.901794510888889,1.0
+contribution,He made a scholarly contribution.<p>,contribution,False,M1_a_M2_a,Polysemy,7.027233535666667,0.5833333333333334
+contribution,He made a scholarly contribution.<p>,contribution,False,M1_b_M2_a,Polysemy,6.7760924224000005,1.0
+contribution,He made a scholarly contribution.<p>,contribution,True,M2_b_M2_a,Polysemy,6.8091990715833335,1.0
+contribution,He made a voluntary contribution.<p>,contribution,False,M2_a_M1_b,Polysemy,6.8905394950000005,1.0
+contribution,He made a voluntary contribution.<p>,contribution,False,M2_b_M1_b,Polysemy,7.3113188211999995,1.0
+contribution,He made a voluntary contribution.<p>,contribution,True,M1_a_M1_b,Polysemy,6.930155938428571,1.0
+contribution,He made a well-written contribution.<p>,contribution,False,M1_a_M2_b,Polysemy,7.12361705775,0.625
+contribution,He made a well-written contribution.<p>,contribution,False,M1_b_M2_b,Polysemy,7.0048147087777775,0.6666666666666666
+contribution,He made a well-written contribution.<p>,contribution,True,M2_a_M2_b,Polysemy,7.230965346700001,0.8
+count,That was the correct count.<p>,count,False,M1_a_M2_b,Homonymy,6.91674854,0.7142857142857143
+count,That was the correct count.<p>,count,False,M1_b_M2_b,Homonymy,7.005606196142857,1.0
+count,That was the correct count.<p>,count,True,M2_a_M2_b,Homonymy,6.991807645909091,1.0
+count,That was the final count.<p>,count,False,M1_a_M2_a,Homonymy,6.751511117500001,1.0
+count,That was the final count.<p>,count,False,M1_b_M2_a,Homonymy,6.834555304666666,0.8333333333333334
+count,That was the final count.<p>,count,True,M2_b_M2_a,Homonymy,6.9212945935,1.0
+count,That was the noble count.<p>,count,False,M2_a_M1_a,Homonymy,7.163077531142858,0.42857142857142855
+count,That was the noble count.<p>,count,False,M2_b_M1_a,Homonymy,7.074671533,0.14285714285714285
+count,That was the noble count.<p>,count,True,M1_b_M1_a,Homonymy,6.984795295545454,0.9090909090909091
+count,That was the vengeful count.<p>,count,False,M2_a_M1_b,Homonymy,7.3011162175,0.25
+count,That was the vengeful count.<p>,count,False,M2_b_M1_b,Homonymy,7.359869061333334,0.3333333333333333
+count,That was the vengeful count.<p>,count,True,M1_a_M1_b,Homonymy,7.621044812571428,0.5714285714285714
+course,It was a charted course.<p>,course,False,M1_a_M2_a,Polysemy,7.082373946428571,0.2857142857142857
+course,It was a charted course.<p>,course,False,M1_b_M2_a,Polysemy,7.096339285625,0.625
+course,It was a charted course.<p>,course,True,M2_b_M2_a,Polysemy,7.143380515,0.8
+course,It was a collision course.<p>,course,False,M1_a_M2_b,Polysemy,7.1226225455000005,0.375
+course,It was a collision course.<p>,course,False,M1_b_M2_b,Polysemy,7.0491010401250005,0.625
+course,It was a collision course.<p>,course,True,M2_a_M2_b,Polysemy,7.254673370333332,0.6666666666666666
+course,It was a pass-fail course.<p>,course,False,M2_a_M1_b,Polysemy,6.806887346666667,1.0
+course,It was a pass-fail course.<p>,course,False,M2_b_M1_b,Polysemy,7.105710266,0.9
+course,It was a pass-fail course.<p>,course,True,M1_a_M1_b,Polysemy,6.967277272142858,1.0
+course,It was an introductory course.<p>,course,False,M2_a_M1_a,Polysemy,7.117160111625,1.0
+course,It was an introductory course.<p>,course,False,M2_b_M1_a,Polysemy,6.974988304285715,1.0
+course,It was an introductory course.<p>,course,True,M1_b_M1_a,Polysemy,7.043983271166667,1.0
+cross,He crossed a friend.<p>,crossed,False,M1_a_M2_b,Polysemy,7.1085144294000004,0.8
+cross,He crossed a friend.<p>,crossed,False,M1_b_M2_b,Polysemy,6.933777814200001,0.6
+cross,He crossed a friend.<p>,crossed,True,M2_a_M2_b,Polysemy,6.7584258534,0.9
+cross,He crossed a road.<p>,crossed,False,M2_a_M1_a,Polysemy,6.812501612,1.0
+cross,He crossed a road.<p>,crossed,False,M2_b_M1_a,Polysemy,6.718149935111111,1.0
+cross,He crossed a road.<p>,crossed,True,M1_b_M1_a,Polysemy,6.713680398666667,0.9166666666666666
+cross,He crossed a room.<p>,crossed,False,M2_a_M1_b,Polysemy,7.012191572428571,0.8571428571428571
+cross,He crossed a room.<p>,crossed,False,M2_b_M1_b,Polysemy,6.697326204,0.8571428571428571
+cross,He crossed a room.<p>,crossed,True,M1_a_M1_b,Polysemy,6.7899969322,1.0
+cross,He crossed an enemy.<p>,crossed,False,M1_a_M2_a,Polysemy,7.0205915196,0.8666666666666667
+cross,He crossed an enemy.<p>,crossed,False,M1_b_M2_a,Polysemy,6.89699499725,1.0
+cross,He crossed an enemy.<p>,crossed,True,M2_b_M2_a,Polysemy,6.935749253999999,0.8
+date,It was a blind date.<p>,date,False,M2_a_M1_b,Polysemy,6.6022452886666665,1.0
+date,It was a blind date.<p>,date,False,M2_b_M1_b,Polysemy,6.666881657,1.0
+date,It was a blind date.<p>,date,True,M1_a_M1_b,Polysemy,6.625829534875,1.0
+date,It was a dinner date.<p>,date,False,M2_a_M1_a,Polysemy,6.977100681555555,0.8888888888888888
+date,It was a dinner date.<p>,date,False,M2_b_M1_a,Polysemy,6.774138862666667,1.0
+date,It was a dinner date.<p>,date,True,M1_b_M1_a,Polysemy,6.794341611166666,1.0
+date,It was a historical date.<p>,date,False,M1_a_M2_b,Polysemy,7.065139397333334,0.7777777777777778
+date,It was a historical date.<p>,date,False,M1_b_M2_b,Polysemy,7.2677238472,1.0
+date,It was a historical date.<p>,date,True,M2_a_M2_b,Polysemy,6.9884161128,1.0
+date,It was an expiration date.<p>,date,False,M1_a_M2_a,Polysemy,6.999146574857143,0.5714285714285714
+date,It was an expiration date.<p>,date,False,M1_b_M2_a,Polysemy,7.061329799666667,0.8333333333333334
+date,It was an expiration date.<p>,date,True,M2_b_M2_a,Polysemy,6.770009167571429,1.0
+degree,It was about associate degrees.<p>,degrees,False,M1_a_M2_a,Polysemy,6.83608176325,0.25
+degree,It was about associate degrees.<p>,degrees,False,M1_b_M2_a,Polysemy,7.3583015277142865,0.5714285714285714
+degree,It was about associate degrees.<p>,degrees,True,M2_b_M2_a,Polysemy,6.990669480125,1.0
+degree,It was about college degrees.<p>,degrees,False,M1_a_M2_b,Polysemy,7.43334503276923,0.46153846153846156
+degree,It was about college degrees.<p>,degrees,False,M1_b_M2_b,Polysemy,7.130186613166667,0.6666666666666666
+degree,It was about college degrees.<p>,degrees,True,M2_a_M2_b,Polysemy,6.73022767,1.0
+degree,It was about fifty degrees.<p>,degrees,False,M2_a_M1_b,Polysemy,6.8819273504545455,0.9090909090909091
+degree,It was about fifty degrees.<p>,degrees,False,M2_b_M1_b,Polysemy,6.9509302457999995,1.0
+degree,It was about fifty degrees.<p>,degrees,True,M1_a_M1_b,Polysemy,6.884633719,1.0
+degree,It was about forty degrees.<p>,degrees,False,M2_a_M1_a,Polysemy,7.210751145916666,0.8333333333333334
+degree,It was about forty degrees.<p>,degrees,False,M2_b_M1_a,Polysemy,7.234511456666667,1.0
+degree,It was about forty degrees.<p>,degrees,True,M1_b_M1_a,Polysemy,6.991299924800001,1.0
+design,They liked the architectural design.<p>,design,False,M1_a_M2_b,Polysemy,7.038825012,1.0
+design,They liked the architectural design.<p>,design,False,M1_b_M2_b,Polysemy,6.962383177833334,1.0
+design,They liked the architectural design.<p>,design,True,M2_a_M2_b,Polysemy,6.892698702125,1.0
+design,They liked the floral design.<p>,design,False,M2_a_M1_a,Polysemy,6.814591244857143,1.0
+design,They liked the floral design.<p>,design,False,M2_b_M1_a,Polysemy,7.016781977,1.0
+design,They liked the floral design.<p>,design,True,M1_b_M1_a,Polysemy,6.9838557105714285,0.8571428571428571
+design,They liked the geometric design.<p>,design,False,M2_a_M1_b,Polysemy,7.021268259181818,1.0
+design,They liked the geometric design.<p>,design,False,M2_b_M1_b,Polysemy,6.9364138986,0.9
+design,They liked the geometric design.<p>,design,True,M1_a_M1_b,Polysemy,6.924038769428571,1.0
+design,They liked the product design.<p>,design,False,M1_a_M2_a,Polysemy,6.6695038005,1.0
+design,They liked the product design.<p>,design,False,M1_b_M2_a,Polysemy,6.828513720727273,0.9090909090909091
+design,They liked the product design.<p>,design,True,M2_b_M2_a,Polysemy,6.821300147461538,1.0
+dinner,They liked the anniversary dinner.<p>,dinner,False,M1_a_M2_b,Polysemy,6.83975486275,1.0
+dinner,They liked the anniversary dinner.<p>,dinner,False,M1_b_M2_b,Polysemy,6.932405646714286,0.9285714285714286
+dinner,They liked the anniversary dinner.<p>,dinner,True,M2_a_M2_b,Polysemy,7.0810797726666665,1.0
+dinner,They liked the formal dinner.<p>,dinner,False,M1_a_M2_a,Polysemy,6.820789172888889,1.0
+dinner,They liked the formal dinner.<p>,dinner,False,M1_b_M2_a,Polysemy,6.7226230155555555,1.0
+dinner,They liked the formal dinner.<p>,dinner,True,M2_b_M2_a,Polysemy,6.605057008999999,1.0
+dinner,They liked the light dinner.<p>,dinner,False,M2_a_M1_b,Polysemy,7.143694859666667,1.0
+dinner,They liked the light dinner.<p>,dinner,False,M2_b_M1_b,Polysemy,7.1333527949999995,0.7777777777777778
+dinner,They liked the light dinner.<p>,dinner,True,M1_a_M1_b,Polysemy,7.138325693166666,0.5
+dinner,They liked the turkey dinner.<p>,dinner,False,M2_a_M1_a,Polysemy,6.8455794525,1.0
+dinner,They liked the turkey dinner.<p>,dinner,False,M2_b_M1_a,Polysemy,6.868260063555556,1.0
+dinner,They liked the turkey dinner.<p>,dinner,True,M1_b_M1_a,Polysemy,7.033002986333334,1.0
+drain,They drained the account.<p>,drained,False,M2_a_M1_a,Polysemy,7.019493806500001,0.6666666666666666
+drain,They drained the account.<p>,drained,False,M2_b_M1_a,Polysemy,7.38294492225,0.75
+drain,They drained the account.<p>,drained,True,M1_b_M1_a,Polysemy,7.096605766000001,1.0
+drain,They drained the budget.<p>,drained,False,M2_a_M1_b,Polysemy,7.132283608000001,1.0
+drain,They drained the budget.<p>,drained,False,M2_b_M1_b,Polysemy,7.018575259,0.8571428571428571
+drain,They drained the budget.<p>,drained,True,M1_a_M1_b,Polysemy,7.283008138,0.8
+drain,They drained the pond.<p>,drained,False,M1_a_M2_b,Polysemy,6.797034913545454,1.0
+drain,They drained the pond.<p>,drained,False,M1_b_M2_b,Polysemy,6.866594593666666,1.0
+drain,They drained the pond.<p>,drained,True,M2_a_M2_b,Polysemy,7.084426609,0.6
+drain,They drained the pool.<p>,drained,False,M1_a_M2_a,Polysemy,6.723144579416666,1.0
+drain,They drained the pool.<p>,drained,False,M1_b_M2_a,Polysemy,6.725808168846154,1.0
+drain,They drained the pool.<p>,drained,True,M2_b_M2_a,Polysemy,7.1359134881666675,1.0
+draw,He drew a gun.<p>,drew,False,M2_a_M1_a,Polysemy,6.887988926333333,1.0
+draw,He drew a gun.<p>,drew,False,M2_b_M1_a,Polysemy,7.0303295778749995,1.0
+draw,He drew a gun.<p>,drew,True,M1_b_M1_a,Polysemy,6.805487842230769,1.0
+draw,He drew a sword.<p>,drew,False,M2_a_M1_b,Polysemy,6.891415978142858,1.0
+draw,He drew a sword.<p>,drew,False,M2_b_M1_b,Polysemy,6.9917086180000005,1.0
+draw,He drew a sword.<p>,drew,True,M1_a_M1_b,Polysemy,6.770007404599999,1.0
+draw,He drew a tree.<p>,drew,False,M1_a_M2_a,Polysemy,6.873184107636363,0.8181818181818182
+draw,He drew a tree.<p>,drew,False,M1_b_M2_a,Polysemy,7.955658820666667,1.0
+draw,He drew a tree.<p>,drew,True,M2_b_M2_a,Polysemy,7.1309192347999995,1.0
+draw,They drew a picture.<p>,drew,False,M1_a_M2_b,Polysemy,6.819034335666667,1.0
+draw,They drew a picture.<p>,drew,False,M1_b_M2_b,Polysemy,6.703026562444445,1.0
+draw,They drew a picture.<p>,drew,True,M2_a_M2_b,Polysemy,6.712778046833333,1.0
+dream,He had a bad dream.<p>,dream,False,M2_a_M1_b,Polysemy,7.0429329198333335,1.0
+dream,He had a bad dream.<p>,dream,False,M2_b_M1_b,Polysemy,6.8626492251428575,0.7142857142857143
+dream,He had a bad dream.<p>,dream,True,M1_a_M1_b,Polysemy,6.929878283363636,0.9090909090909091
+dream,He had a career dream.<p>,dream,False,M1_a_M2_b,Polysemy,7.033728763400001,0.4
+dream,He had a career dream.<p>,dream,False,M1_b_M2_b,Polysemy,7.212276425615385,0.6923076923076923
+dream,He had a career dream.<p>,dream,True,M2_a_M2_b,Polysemy,6.996660161833333,0.6666666666666666
+dream,He had a childhood dream.<p>,dream,False,M1_a_M2_a,Polysemy,6.757549642111111,1.0
+dream,He had a childhood dream.<p>,dream,False,M1_b_M2_a,Polysemy,6.839158820000001,1.0
+dream,He had a childhood dream.<p>,dream,True,M2_b_M2_a,Polysemy,7.217350942125,1.0
+dream,He had a recurring dream.<p>,dream,False,M2_a_M1_a,Polysemy,6.9197115623,1.0
+dream,He had a recurring dream.<p>,dream,False,M2_b_M1_a,Polysemy,6.860138646857143,0.8571428571428571
+dream,He had a recurring dream.<p>,dream,True,M1_b_M1_a,Polysemy,6.7554033771111115,1.0
+drill,It was a battery-powered drill.<p>,drill,False,M1_a_M2_b,Homonymy,7.35767774075,1.0
+drill,It was a battery-powered drill.<p>,drill,False,M1_b_M2_b,Homonymy,7.26710711075,0.875
+drill,It was a battery-powered drill.<p>,drill,True,M2_a_M2_b,Homonymy,7.063593784333334,1.0
+drill,It was a challenging drill.<p>,drill,False,M2_a_M1_b,Homonymy,7.136472466399999,0.4
+drill,It was a challenging drill.<p>,drill,False,M2_b_M1_b,Homonymy,7.076609769625,0.5
+drill,It was a challenging drill.<p>,drill,True,M1_a_M1_b,Homonymy,6.892213749,1.0
+drill,It was a grueling drill.<p>,drill,False,M2_a_M1_a,Homonymy,7.047863823818182,0.45454545454545453
+drill,It was a grueling drill.<p>,drill,False,M2_b_M1_a,Homonymy,7.281562775666667,1.0
+drill,It was a grueling drill.<p>,drill,True,M1_b_M1_a,Homonymy,6.833275426999999,0.42857142857142855
+drill,It was an electric drill.<p>,drill,False,M1_a_M2_a,Homonymy,7.0804997125,1.0
+drill,It was an electric drill.<p>,drill,False,M1_b_M2_a,Homonymy,6.9061237198,1.0
+drill,It was an electric drill.<p>,drill,True,M2_b_M2_a,Homonymy,7.004627738,1.0
+examination,It was a difficult examination.<p>,examination,False,M2_a_M1_b,Polysemy,7.017571958333334,1.0
+examination,It was a difficult examination.<p>,examination,False,M2_b_M1_b,Polysemy,6.7679428155,1.0
+examination,It was a difficult examination.<p>,examination,True,M1_a_M1_b,Polysemy,6.916847352166666,1.0
+examination,It was a multiple-choice examination.<p>,examination,False,M2_a_M1_a,Polysemy,7.1923792125,1.0
+examination,It was a multiple-choice examination.<p>,examination,False,M2_b_M1_a,Polysemy,7.019552849,0.8888888888888888
+examination,It was a multiple-choice examination.<p>,examination,True,M1_b_M1_a,Polysemy,7.104211773090909,1.0
+examination,It was a physical examination.<p>,examination,False,M1_a_M2_b,Polysemy,6.98365466475,1.0
+examination,It was a physical examination.<p>,examination,False,M1_b_M2_b,Polysemy,6.7875711817777775,1.0
+examination,It was a physical examination.<p>,examination,True,M2_a_M2_b,Polysemy,6.82004805990909,1.0
+examination,It was a prostate examination.<p>,examination,False,M1_a_M2_a,Polysemy,6.855801873714285,0.8571428571428571
+examination,It was a prostate examination.<p>,examination,False,M1_b_M2_a,Polysemy,7.061685902571428,0.7142857142857143
+examination,It was a prostate examination.<p>,examination,True,M2_b_M2_a,Polysemy,6.974245356666667,0.8888888888888888
+fan,They had a ceiling fan.<p>,fan,False,M2_a_M1_b,Homonymy,6.983668168625,1.0
+fan,They had a ceiling fan.<p>,fan,False,M2_b_M1_b,Homonymy,6.943490812916667,0.8333333333333334
+fan,They had a ceiling fan.<p>,fan,True,M1_a_M1_b,Homonymy,7.017786518909091,1.0
+fan,They had a zealous fan.<p>,fan,False,M1_a_M2_a,Homonymy,7.021976423,0.0
+fan,They had a zealous fan.<p>,fan,False,M1_b_M2_a,Homonymy,6.744136512375,0.0
+fan,They had a zealous fan.<p>,fan,True,M2_b_M2_a,Homonymy,7.127888918000001,0.7
+fan,They had an electric fan.<p>,fan,False,M2_a_M1_a,Homonymy,6.811903066400001,1.0
+fan,They had an electric fan.<p>,fan,False,M2_b_M1_a,Homonymy,7.111334497333334,1.0
+fan,They had an electric fan.<p>,fan,True,M1_b_M1_a,Homonymy,6.863545465142857,1.0
+fan,They had an enthusiastic fan.<p>,fan,False,M1_a_M2_b,Homonymy,7.1025143935555555,0.7777777777777778
+fan,They had an enthusiastic fan.<p>,fan,False,M1_b_M2_b,Homonymy,7.155614931714285,0.8571428571428571
+fan,They had an enthusiastic fan.<p>,fan,True,M2_a_M2_b,Homonymy,6.693952289142858,1.0
+film,It was a censored film.<p>,film,False,M2_a_M1_b,Polysemy,6.971431662857142,1.0
+film,It was a censored film.<p>,film,False,M2_b_M1_b,Polysemy,7.2933112730000005,0.875
+film,It was a censored film.<p>,film,True,M1_a_M1_b,Polysemy,6.8636866516,1.0
+film,It was a plastic film.<p>,film,False,M1_a_M2_b,Polysemy,6.9796423995,0.5
+film,It was a plastic film.<p>,film,False,M1_b_M2_b,Polysemy,7.14898828625,0.6666666666666666
+film,It was a plastic film.<p>,film,True,M2_a_M2_b,Polysemy,7.012604373166667,0.6666666666666666
+film,It was a transparent film.<p>,film,False,M1_a_M2_a,Polysemy,7.087078218333334,0.6666666666666666
+film,It was a transparent film.<p>,film,False,M1_b_M2_a,Polysemy,7.268918617,0.6666666666666666
+film,It was a transparent film.<p>,film,True,M2_b_M2_a,Polysemy,6.937882104,0.8461538461538461
+film,It was an action film.<p>,film,False,M2_a_M1_a,Polysemy,6.758104278428571,1.0
+film,It was an action film.<p>,film,False,M2_b_M1_a,Polysemy,6.707264824666667,1.0
+film,It was an action film.<p>,film,True,M1_b_M1_a,Polysemy,6.675527760083334,1.0
+fix,They fixed the date.<p>,fixed,False,M1_a_M2_a,Polysemy,7.0774973605,0.75
+fix,They fixed the date.<p>,fixed,False,M1_b_M2_a,Polysemy,7.1272657095000005,0.5833333333333334
+fix,They fixed the date.<p>,fixed,True,M2_b_M2_a,Polysemy,6.849635589857143,0.8571428571428571
+fix,They fixed the dishwasher.<p>,fixed,False,M2_a_M1_b,Polysemy,7.253642948375,1.0
+fix,They fixed the dishwasher.<p>,fixed,False,M2_b_M1_b,Polysemy,6.720864621571429,1.0
+fix,They fixed the dishwasher.<p>,fixed,True,M1_a_M1_b,Polysemy,6.9744194786,1.0
+fix,They fixed the price.<p>,fixed,False,M1_a_M2_b,Polysemy,7.067632541333333,1.0
+fix,They fixed the price.<p>,fixed,False,M1_b_M2_b,Polysemy,6.9793578978,1.0
+fix,They fixed the price.<p>,fixed,True,M2_a_M2_b,Polysemy,6.751349880818182,0.9090909090909091
+fix,They fixed the radio.<p>,fixed,False,M2_a_M1_a,Polysemy,6.554432780666667,1.0
+fix,They fixed the radio.<p>,fixed,False,M2_b_M1_a,Polysemy,7.1183036285000005,1.0
+fix,They fixed the radio.<p>,fixed,True,M1_b_M1_a,Polysemy,7.018082107750001,1.0
+foundation,It was a charitable foundation.<p>,foundation,False,M2_a_M1_a,Polysemy,7.2455348050769235,0.8461538461538461
+foundation,It was a charitable foundation.<p>,foundation,False,M2_b_M1_a,Polysemy,6.9672479890000005,1.0
+foundation,It was a charitable foundation.<p>,foundation,True,M1_b_M1_a,Polysemy,7.061455633333334,0.8333333333333334
+foundation,It was a concrete foundation.<p>,foundation,False,M1_a_M2_b,Polysemy,6.988240878857143,0.7142857142857143
+foundation,It was a concrete foundation.<p>,foundation,False,M1_b_M2_b,Polysemy,7.064732766769231,1.0
+foundation,It was a concrete foundation.<p>,foundation,True,M2_a_M2_b,Polysemy,6.6605911664285715,1.0
+foundation,It was a wooden foundation.<p>,foundation,False,M1_a_M2_a,Polysemy,7.130132534428571,0.5714285714285714
+foundation,It was a wooden foundation.<p>,foundation,False,M1_b_M2_a,Polysemy,7.171308910333333,0.6666666666666666
+foundation,It was a wooden foundation.<p>,foundation,True,M2_b_M2_a,Polysemy,7.155175027416667,0.8333333333333334
+foundation,It was an educational foundation.<p>,foundation,False,M2_a_M1_b,Polysemy,7.108331132777778,0.8888888888888888
+foundation,It was an educational foundation.<p>,foundation,False,M2_b_M1_b,Polysemy,6.9236460886,1.0
+foundation,It was an educational foundation.<p>,foundation,True,M1_a_M1_b,Polysemy,7.200957344888888,1.0
+function,It was a business function.<p>,function,False,M1_a_M2_b,Polysemy,7.032951645111111,0.8888888888888888
+function,It was a business function.<p>,function,False,M1_b_M2_b,Polysemy,7.0918645515000005,1.0
+function,It was a business function.<p>,function,True,M2_a_M2_b,Polysemy,6.730294919428571,0.8571428571428571
+function,It was a linear function.<p>,function,False,M2_a_M1_b,Polysemy,7.018636178,0.5
+function,It was a linear function.<p>,function,False,M2_b_M1_b,Polysemy,6.957039299500001,1.0
+function,It was a linear function.<p>,function,True,M1_a_M1_b,Polysemy,6.922643891,1.0
+function,It was a mathematical function.<p>,function,False,M2_a_M1_a,Polysemy,7.037997123428572,0.5714285714285714
+function,It was a mathematical function.<p>,function,False,M2_b_M1_a,Polysemy,6.905204038399999,1.0
+function,It was a mathematical function.<p>,function,True,M1_b_M1_a,Polysemy,6.892935275666667,1.0
+function,It was a social function.<p>,function,False,M1_a_M2_a,Polysemy,6.997812361625,1.0
+function,It was a social function.<p>,function,False,M1_b_M2_a,Polysemy,6.7983752847000005,0.8
+function,It was a social function.<p>,function,True,M2_b_M2_a,Polysemy,6.786482854,0.9090909090909091
+ground,He was on the camp ground.<p>,ground,False,M1_a_M2_a,Polysemy,7.141659329875,1.0
+ground,He was on the camp ground.<p>,ground,False,M1_b_M2_a,Polysemy,6.871146299499999,1.0
+ground,He was on the camp ground.<p>,ground,True,M2_b_M2_a,Polysemy,6.827033501,1.0
+ground,He was on the firm ground.<p>,ground,False,M2_a_M1_a,Polysemy,6.847398259333333,0.8333333333333334
+ground,He was on the firm ground.<p>,ground,False,M2_b_M1_a,Polysemy,7.099101092333334,0.8333333333333334
+ground,He was on the firm ground.<p>,ground,True,M1_b_M1_a,Polysemy,6.968477703125,1.0
+ground,He was on the frozen ground.<p>,ground,False,M2_a_M1_b,Polysemy,6.931794643500001,1.0
+ground,He was on the frozen ground.<p>,ground,False,M2_b_M1_b,Polysemy,7.0382258757,0.9
+ground,He was on the frozen ground.<p>,ground,True,M1_a_M1_b,Polysemy,7.0338794805000004,1.0
+ground,He was on the parade ground.<p>,ground,False,M1_a_M2_b,Polysemy,7.0448719146,0.6
+ground,He was on the parade ground.<p>,ground,False,M1_b_M2_b,Polysemy,7.009530220363636,0.36363636363636365
+ground,He was on the parade ground.<p>,ground,True,M2_a_M2_b,Polysemy,7.105787315571428,0.5714285714285714
+guard,They liked the coast guard.<p>,guard,False,M1_a_M2_a,Polysemy,7.03206356625,1.0
+guard,They liked the coast guard.<p>,guard,False,M1_b_M2_a,Polysemy,6.889350704714286,1.0
+guard,They liked the coast guard.<p>,guard,True,M2_b_M2_a,Polysemy,6.9430895503,0.8
+guard,They liked the national guard.<p>,guard,False,M1_a_M2_b,Polysemy,6.935939522,1.0
+guard,They liked the national guard.<p>,guard,False,M1_b_M2_b,Polysemy,6.8508938882727275,1.0
+guard,They liked the national guard.<p>,guard,True,M2_a_M2_b,Polysemy,6.777009952428571,1.0
+guard,They liked the night guard.<p>,guard,False,M2_a_M1_a,Polysemy,7.0553016817,0.9
+guard,They liked the night guard.<p>,guard,False,M2_b_M1_a,Polysemy,7.2002482292,0.8
+guard,They liked the night guard.<p>,guard,True,M1_b_M1_a,Polysemy,6.9380621567142855,1.0
+guard,They liked the security guard.<p>,guard,False,M2_a_M1_b,Polysemy,6.561379186800001,1.0
+guard,They liked the security guard.<p>,guard,False,M2_b_M1_b,Polysemy,6.7003193735,1.0
+guard,They liked the security guard.<p>,guard,True,M1_a_M1_b,Polysemy,6.889230337571428,1.0
+guide,He had a TV guide.<p>,guide,False,M2_a_M1_b,Polysemy,7.004241633,1.0
+guide,He had a TV guide.<p>,guide,False,M2_b_M1_b,Polysemy,6.782920211,0.875
+guide,He had a TV guide.<p>,guide,True,M1_a_M1_b,Polysemy,7.0914369837999995,1.0
+guide,He had a friendly guide.<p>,guide,False,M1_a_M2_b,Polysemy,6.842280838142857,1.0
+guide,He had a friendly guide.<p>,guide,False,M1_b_M2_b,Polysemy,6.838714622727273,0.9090909090909091
+guide,He had a friendly guide.<p>,guide,True,M2_a_M2_b,Polysemy,6.70253863725,1.0
+guide,He had a talkative guide.<p>,guide,False,M1_a_M2_a,Polysemy,6.9567718462000006,0.8
+guide,He had a talkative guide.<p>,guide,False,M1_b_M2_a,Polysemy,7.081088040363636,0.5454545454545454
+guide,He had a talkative guide.<p>,guide,True,M2_b_M2_a,Polysemy,6.758227914818182,1.0
+guide,He had an assembly guide.<p>,guide,False,M2_a_M1_a,Polysemy,7.0493424578,0.8
+guide,He had an assembly guide.<p>,guide,False,M2_b_M1_a,Polysemy,7.1931473435,0.875
+guide,He had an assembly guide.<p>,guide,True,M1_b_M1_a,Polysemy,7.219286816333334,0.8333333333333334
+hail,They hailed a cab.<p>,hailed,False,M2_a_M1_a,Polysemy,6.893823968142857,0.5714285714285714
+hail,They hailed a cab.<p>,hailed,False,M2_b_M1_a,Polysemy,6.846669966,0.75
+hail,They hailed a cab.<p>,hailed,True,M1_b_M1_a,Polysemy,6.742063674,1.0
+hail,They hailed a friend.<p>,hailed,False,M1_a_M2_a,Polysemy,7.018719022666667,0.5555555555555556
+hail,They hailed a friend.<p>,hailed,False,M1_b_M2_a,Polysemy,7.394206062125,0.0
+hail,They hailed a friend.<p>,hailed,True,M2_b_M2_a,Polysemy,6.631386794,1.0
+hail,They hailed a guest.<p>,hailed,False,M1_a_M2_b,Polysemy,7.10742831925,0.375
+hail,They hailed a guest.<p>,hailed,False,M1_b_M2_b,Polysemy,7.0723166857,0.5
+hail,They hailed a guest.<p>,hailed,True,M2_a_M2_b,Polysemy,7.288252055833333,0.3333333333333333
+hail,They hailed a taxi.<p>,hailed,False,M2_a_M1_b,Polysemy,6.95561924925,0.875
+hail,They hailed a taxi.<p>,hailed,False,M2_b_M1_b,Polysemy,6.755481087,1.0
+hail,They hailed a taxi.<p>,hailed,True,M1_a_M1_b,Polysemy,7.068568755875,1.0
+home,It was a childhood home.<p>,home,False,M2_a_M1_b,Polysemy,6.903405185705883,1.0
+home,It was a childhood home.<p>,home,False,M2_b_M1_b,Polysemy,6.9812515675,0.875
+home,It was a childhood home.<p>,home,True,M1_a_M1_b,Polysemy,6.807052490625,1.0
+home,It was a funeral home.<p>,home,False,M1_a_M2_a,Polysemy,6.770355483333333,1.0
+home,It was a funeral home.<p>,home,False,M1_b_M2_a,Polysemy,6.8345931867,1.0
+home,It was a funeral home.<p>,home,True,M2_b_M2_a,Polysemy,6.9204174017,1.0
+home,It was a nursing home.<p>,home,False,M1_a_M2_b,Polysemy,6.7104379045,1.0
+home,It was a nursing home.<p>,home,False,M1_b_M2_b,Polysemy,7.0172898264,1.0
+home,It was a nursing home.<p>,home,True,M2_a_M2_b,Polysemy,6.6894423766363635,1.0
+home,It was a summer home.<p>,home,False,M2_a_M1_a,Polysemy,6.6000555534,0.8
+home,It was a summer home.<p>,home,False,M2_b_M1_a,Polysemy,6.786973936142857,0.8571428571428571
+home,It was a summer home.<p>,home,True,M1_b_M1_a,Polysemy,6.8865012819,1.0
+intelligence,They had classified intelligence.<p>,intelligence,False,M1_a_M2_a,Polysemy,6.993774054166667,0.6666666666666666
+intelligence,They had classified intelligence.<p>,intelligence,False,M1_b_M2_a,Polysemy,7.2038022258,0.6
+intelligence,They had classified intelligence.<p>,intelligence,True,M2_b_M2_a,Polysemy,6.837593962,0.8888888888888888
+intelligence,They had innate intelligence.<p>,intelligence,False,M2_a_M1_b,Polysemy,7.2759838274,0.6
+intelligence,They had innate intelligence.<p>,intelligence,False,M2_b_M1_b,Polysemy,7.473618491222222,0.7777777777777778
+intelligence,They had innate intelligence.<p>,intelligence,True,M1_a_M1_b,Polysemy,6.99173602,1.0
+intelligence,They had military intelligence.<p>,intelligence,False,M1_a_M2_b,Polysemy,6.8900972145,0.5
+intelligence,They had military intelligence.<p>,intelligence,False,M1_b_M2_b,Polysemy,7.4345816305,1.0
+intelligence,They had military intelligence.<p>,intelligence,True,M2_a_M2_b,Polysemy,6.897359187,1.0
+intelligence,They had natural intelligence.<p>,intelligence,False,M2_a_M1_a,Polysemy,6.893346987923077,0.9230769230769231
+intelligence,They had natural intelligence.<p>,intelligence,False,M2_b_M1_a,Polysemy,6.971243675125,1.0
+intelligence,They had natural intelligence.<p>,intelligence,True,M1_b_M1_a,Polysemy,6.8199567865,0.75
+issue,It was a political issue.<p>,issue,False,M2_a_M1_b,Polysemy,6.773161893875,1.0
+issue,It was a political issue.<p>,issue,False,M2_b_M1_b,Polysemy,6.715263875222222,1.0
+issue,It was a political issue.<p>,issue,True,M1_a_M1_b,Polysemy,6.755944560500001,1.0
+issue,It was a sensitive issue.<p>,issue,False,M2_a_M1_a,Polysemy,6.9660645524545455,0.9090909090909091
+issue,It was a sensitive issue.<p>,issue,False,M2_b_M1_a,Polysemy,6.8670043856,1.0
+issue,It was a sensitive issue.<p>,issue,True,M1_b_M1_a,Polysemy,6.841469543,1.0
+issue,It was a special issue.<p>,issue,False,M1_a_M2_b,Polysemy,6.849242864,1.0
+issue,It was a special issue.<p>,issue,False,M1_b_M2_b,Polysemy,6.887992707083334,0.9166666666666666
+issue,It was a special issue.<p>,issue,True,M2_a_M2_b,Polysemy,6.791612849384616,1.0
+issue,It was a weekly issue.<p>,issue,False,M1_a_M2_a,Polysemy,6.75245533375,1.0
+issue,It was a weekly issue.<p>,issue,False,M1_b_M2_a,Polysemy,7.105940879142857,0.8571428571428571
+issue,It was a weekly issue.<p>,issue,True,M2_b_M2_a,Polysemy,6.7279448749999995,0.8333333333333334
+key,It was a backspace key.<p>,key,False,M1_a_M2_b,Polysemy,7.1844035888999995,0.7
+key,It was a backspace key.<p>,key,False,M1_b_M2_b,Polysemy,7.49505804075,0.75
+key,It was a backspace key.<p>,key,True,M2_a_M2_b,Polysemy,7.119762425166667,1.0
+key,It was a delete key.<p>,key,False,M1_a_M2_a,Polysemy,7.1254590584,0.4
+key,It was a delete key.<p>,key,False,M1_b_M2_a,Polysemy,6.950980896,0.5
+key,It was a delete key.<p>,key,True,M2_b_M2_a,Polysemy,6.835372126272728,1.0
+key,It was a duplicate key.<p>,key,False,M2_a_M1_a,Polysemy,6.856671765727273,1.0
+key,It was a duplicate key.<p>,key,False,M2_b_M1_a,Polysemy,7.2210353855000005,0.75
+key,It was a duplicate key.<p>,key,True,M1_b_M1_a,Polysemy,7.019700166500001,0.8333333333333334
+key,It was a master key.<p>,key,False,M2_a_M1_b,Polysemy,7.099059572714286,1.0
+key,It was a master key.<p>,key,False,M2_b_M1_b,Polysemy,7.1371055185,1.0
+key,It was a master key.<p>,key,True,M1_a_M1_b,Polysemy,6.728413107750001,1.0
+lamb,They liked the cute lamb.<p>,lamb,False,M1_a_M2_a,Polysemy,7.102919690818182,1.0
+lamb,They liked the cute lamb.<p>,lamb,False,M1_b_M2_a,Polysemy,7.240219585,1.0
+lamb,They liked the cute lamb.<p>,lamb,True,M2_b_M2_a,Polysemy,6.833520031142856,1.0
+lamb,They liked the friendly lamb.<p>,lamb,False,M1_a_M2_b,Polysemy,7.212271625714286,0.8571428571428571
+lamb,They liked the friendly lamb.<p>,lamb,False,M1_b_M2_b,Polysemy,7.0806548195714285,0.7142857142857143
+lamb,They liked the friendly lamb.<p>,lamb,True,M2_a_M2_b,Polysemy,6.830290204363636,1.0
+lamb,They liked the grilled lamb.<p>,lamb,False,M2_a_M1_b,Polysemy,6.996371445909091,0.9090909090909091
+lamb,They liked the grilled lamb.<p>,lamb,False,M2_b_M1_b,Polysemy,7.113903358363637,0.8181818181818182
+lamb,They liked the grilled lamb.<p>,lamb,True,M1_a_M1_b,Polysemy,6.8255711398125,1.0
+lamb,They liked the marinated lamb.<p>,lamb,False,M2_a_M1_a,Polysemy,6.821862627,0.75
+lamb,They liked the marinated lamb.<p>,lamb,False,M2_b_M1_a,Polysemy,7.335101939142858,0.8571428571428571
+lamb,They liked the marinated lamb.<p>,lamb,True,M1_b_M1_a,Polysemy,7.380016658000001,0.8571428571428571
+lap,She lapped the competitors.<p>,lapped,False,M1_a_M2_b,Homonymy,7.090233523857143,0.7142857142857143
+lap,She lapped the competitors.<p>,lapped,False,M1_b_M2_b,Homonymy,7.1790366216,0.7
+lap,She lapped the competitors.<p>,lapped,True,M2_a_M2_b,Homonymy,7.1823815015,0.75
+lap,She lapped the milk.<p>,lapped,False,M2_a_M1_a,Homonymy,7.1106941898,1.0
+lap,She lapped the milk.<p>,lapped,False,M2_b_M1_a,Homonymy,7.0887481351111115,0.5555555555555556
+lap,She lapped the milk.<p>,lapped,True,M1_b_M1_a,Homonymy,6.889950604,0.42857142857142855
+lap,She lapped the runners.<p>,lapped,False,M1_a_M2_a,Homonymy,7.153507690857142,0.7142857142857143
+lap,She lapped the runners.<p>,lapped,False,M1_b_M2_a,Homonymy,7.157341531692309,0.8461538461538461
+lap,She lapped the runners.<p>,lapped,True,M2_b_M2_a,Homonymy,7.074469017285715,0.8571428571428571
+lap,She lapped the water.<p>,lapped,False,M2_a_M1_b,Homonymy,6.9274532815,0.5
+lap,She lapped the water.<p>,lapped,False,M2_b_M1_b,Homonymy,7.130761478666667,1.0
+lap,She lapped the water.<p>,lapped,True,M1_a_M1_b,Homonymy,6.9813036038571425,0.5714285714285714
+load,She loaded the gun.<p>,loaded,False,M2_a_M1_a,Polysemy,6.856271959200001,1.0
+load,She loaded the gun.<p>,loaded,False,M2_b_M1_a,Polysemy,6.863679881875,1.0
+load,She loaded the gun.<p>,loaded,True,M1_b_M1_a,Polysemy,6.728938267833333,1.0
+load,She loaded the rifle.<p>,loaded,False,M2_a_M1_b,Polysemy,6.8073802114,1.0
+load,She loaded the rifle.<p>,loaded,False,M2_b_M1_b,Polysemy,6.6950795455000005,0.8333333333333334
+load,She loaded the rifle.<p>,loaded,True,M1_a_M1_b,Polysemy,6.5676743718,1.0
+load,She loaded the truck.<p>,loaded,False,M1_a_M2_a,Polysemy,6.9372892495,1.0
+load,She loaded the truck.<p>,loaded,False,M1_b_M2_a,Polysemy,6.9169245492857145,1.0
+load,She loaded the truck.<p>,loaded,True,M2_b_M2_a,Polysemy,6.741866857555555,1.0
+load,She loaded the van.<p>,loaded,False,M1_a_M2_b,Polysemy,6.824907690428572,1.0
+load,She loaded the van.<p>,loaded,False,M1_b_M2_b,Polysemy,6.736898868,1.0
+load,She loaded the van.<p>,loaded,True,M2_a_M2_b,Polysemy,6.5964356376,1.0
+lock,She had brown locks.<p>,locks,False,M2_a_M1_b,Homonymy,7.067038395071429,0.7142857142857143
+lock,She had brown locks.<p>,locks,False,M2_b_M1_b,Homonymy,6.855324206714286,0.7142857142857143
+lock,She had brown locks.<p>,locks,True,M1_a_M1_b,Homonymy,6.7289807506,1.0
+lock,She had curly locks.<p>,locks,False,M2_a_M1_a,Homonymy,7.147864280285715,0.8571428571428571
+lock,She had curly locks.<p>,locks,False,M2_b_M1_a,Homonymy,6.9298691770000005,0.8181818181818182
+lock,She had curly locks.<p>,locks,True,M1_b_M1_a,Homonymy,6.908730420222223,0.8888888888888888
+lock,She had door locks.<p>,locks,False,M1_a_M2_b,Homonymy,7.309672961999999,0.4
+lock,She had door locks.<p>,locks,False,M1_b_M2_b,Homonymy,7.0277953565,1.0
+lock,She had door locks.<p>,locks,True,M2_a_M2_b,Homonymy,7.1788909106666665,1.0
+lock,She had window locks.<p>,locks,False,M1_a_M2_a,Homonymy,7.327527637599999,0.6
+lock,She had window locks.<p>,locks,False,M1_b_M2_a,Homonymy,7.05500420975,0.5
+lock,She had window locks.<p>,locks,True,M2_b_M2_a,Homonymy,7.093961938,0.75
+lunch,They liked the afternoon lunch.<p>,lunch,False,M1_a_M2_a,Polysemy,7.2655328805714285,0.8571428571428571
+lunch,They liked the afternoon lunch.<p>,lunch,False,M1_b_M2_a,Polysemy,6.930602785714286,1.0
+lunch,They liked the afternoon lunch.<p>,lunch,True,M2_b_M2_a,Polysemy,7.1793322515,1.0
+lunch,They liked the hot lunch.<p>,lunch,False,M2_a_M1_a,Polysemy,6.919578915699999,0.9
+lunch,They liked the hot lunch.<p>,lunch,False,M2_b_M1_a,Polysemy,7.2120757473,1.0
+lunch,They liked the hot lunch.<p>,lunch,True,M1_b_M1_a,Polysemy,7.065736169666667,0.8888888888888888
+lunch,They liked the sandwich lunch.<p>,lunch,False,M2_a_M1_b,Polysemy,7.1965521705,0.5
+lunch,They liked the sandwich lunch.<p>,lunch,False,M2_b_M1_b,Polysemy,7.214729224666667,0.6666666666666666
+lunch,They liked the sandwich lunch.<p>,lunch,True,M1_a_M1_b,Polysemy,6.883795257499999,0.5
+lunch,They liked the women's lunch.<p>,lunch,False,M1_a_M2_b,Polysemy,7.141053653,1.0
+lunch,They liked the women's lunch.<p>,lunch,False,M1_b_M2_b,Polysemy,7.047328122454545,0.9090909090909091
+lunch,They liked the women's lunch.<p>,lunch,True,M2_a_M2_b,Polysemy,7.0885728137,0.6
+market,He liked the fish market.<p>,market,False,M2_a_M1_b,Polysemy,6.923036519375,1.0
+market,He liked the fish market.<p>,market,False,M2_b_M1_b,Polysemy,7.345113256,1.0
+market,He liked the fish market.<p>,market,True,M1_a_M1_b,Polysemy,6.728707731272727,1.0
+market,He liked the flea market.<p>,market,False,M2_a_M1_a,Polysemy,6.6823980604,1.0
+market,He liked the flea market.<p>,market,False,M2_b_M1_a,Polysemy,6.9206668298,1.0
+market,He liked the flea market.<p>,market,True,M1_b_M1_a,Polysemy,6.8243554738,1.0
+market,He liked the housing market.<p>,market,False,M1_a_M2_a,Polysemy,7.085532456428572,0.8571428571428571
+market,He liked the housing market.<p>,market,False,M1_b_M2_a,Polysemy,7.385015875800001,0.7
+market,He liked the housing market.<p>,market,True,M2_b_M2_a,Polysemy,6.954955109363637,1.0
+market,He liked the stock market.<p>,market,False,M1_a_M2_b,Polysemy,6.6678409786,1.0
+market,He liked the stock market.<p>,market,False,M1_b_M2_b,Polysemy,6.617330587,1.0
+market,He liked the stock market.<p>,market,True,M2_a_M2_b,Polysemy,6.8691630415,1.0
+match,It was a burning match.<p>,match,False,M2_a_M1_b,Homonymy,6.8289761225,1.0
+match,It was a burning match.<p>,match,False,M2_b_M1_b,Homonymy,7.122153575,0.875
+match,It was a burning match.<p>,match,True,M1_a_M1_b,Homonymy,6.932468174599999,1.0
+match,It was a lit match.<p>,match,False,M2_a_M1_a,Homonymy,7.0233465373,0.7
+match,It was a lit match.<p>,match,False,M2_b_M1_a,Homonymy,7.146202642125,0.375
+match,It was a lit match.<p>,match,True,M1_b_M1_a,Homonymy,7.1678933614,1.0
+match,It was a soccer match.<p>,match,False,M1_a_M2_a,Homonymy,6.984027345555556,1.0
+match,It was a soccer match.<p>,match,False,M1_b_M2_a,Homonymy,6.92369138,1.0
+match,It was a soccer match.<p>,match,True,M2_b_M2_a,Homonymy,6.7673266408,1.0
+match,It was a tennis match.<p>,match,False,M1_a_M2_b,Homonymy,6.776322953166667,1.0
+match,It was a tennis match.<p>,match,False,M1_b_M2_b,Homonymy,6.761285513,1.0
+match,It was a tennis match.<p>,match,True,M2_a_M2_b,Homonymy,6.68641568225,1.0
+medicine,It was cough medicine.<p>,medicine,False,M2_a_M1_a,Polysemy,6.813586917399999,1.0
+medicine,It was cough medicine.<p>,medicine,False,M2_b_M1_a,Polysemy,6.854451912384615,0.9230769230769231
+medicine,It was cough medicine.<p>,medicine,True,M1_b_M1_a,Polysemy,6.830914034428572,1.0
+medicine,It was orthopedic medicine.<p>,medicine,False,M1_a_M2_a,Polysemy,7.3969928489,0.6
+medicine,It was orthopedic medicine.<p>,medicine,False,M1_b_M2_a,Polysemy,7.07335569175,0.5
+medicine,It was orthopedic medicine.<p>,medicine,True,M2_b_M2_a,Polysemy,6.9959723628571435,1.0
+medicine,It was prescription medicine.<p>,medicine,False,M2_a_M1_b,Polysemy,6.633065807666667,0.6666666666666666
+medicine,It was prescription medicine.<p>,medicine,False,M2_b_M1_b,Polysemy,7.045753254714286,1.0
+medicine,It was prescription medicine.<p>,medicine,True,M1_a_M1_b,Polysemy,7.107870270153845,1.0
+medicine,It was veterinary medicine.<p>,medicine,False,M1_a_M2_b,Polysemy,7.2794465200000005,1.0
+medicine,It was veterinary medicine.<p>,medicine,False,M1_b_M2_b,Polysemy,7.099858969333333,1.0
+medicine,It was veterinary medicine.<p>,medicine,True,M2_a_M2_b,Polysemy,6.970391619142857,1.0
+message,There was a clear message.<p>,message,False,M1_a_M2_b,Polysemy,7.214776451444444,0.8888888888888888
+message,There was a clear message.<p>,message,False,M1_b_M2_b,Polysemy,6.8160529182000005,0.9
+message,There was a clear message.<p>,message,True,M2_a_M2_b,Polysemy,6.766302292142858,1.0
+message,There was a computer message.<p>,message,False,M2_a_M1_b,Polysemy,6.997600281333334,1.0
+message,There was a computer message.<p>,message,False,M2_b_M1_b,Polysemy,7.12388612725,1.0
+message,There was a computer message.<p>,message,True,M1_a_M1_b,Polysemy,6.919080737625,1.0
+message,There was a phone message.<p>,message,False,M2_a_M1_a,Polysemy,6.748443735285714,1.0
+message,There was a phone message.<p>,message,False,M2_b_M1_a,Polysemy,6.919747105777778,1.0
+message,There was a phone message.<p>,message,True,M1_b_M1_a,Polysemy,6.782464407,1.0
+message,There was an urgent message.<p>,message,False,M1_a_M2_a,Polysemy,6.73052939175,1.0
+message,There was an urgent message.<p>,message,False,M1_b_M2_a,Polysemy,6.764789551,1.0
+message,There was an urgent message.<p>,message,True,M2_b_M2_a,Polysemy,6.9775279370000005,1.0
+mold,It was a clay mold.<p>,mold,False,M1_a_M2_b,Homonymy,7.018368319666667,0.8888888888888888
+mold,It was a clay mold.<p>,mold,False,M1_b_M2_b,Homonymy,7.198601713,0.8888888888888888
+mold,It was a clay mold.<p>,mold,True,M2_a_M2_b,Homonymy,6.8035426755,1.0
+mold,It was a fungal mold.<p>,mold,False,M2_a_M1_a,Homonymy,6.928982240000001,0.5714285714285714
+mold,It was a fungal mold.<p>,mold,False,M2_b_M1_a,Homonymy,7.1132910641428575,0.5714285714285714
+mold,It was a fungal mold.<p>,mold,True,M1_b_M1_a,Homonymy,6.954749776333333,0.6666666666666666
+mold,It was a harmful mold.<p>,mold,False,M2_a_M1_b,Homonymy,7.053912053090909,0.5454545454545454
+mold,It was a harmful mold.<p>,mold,False,M2_b_M1_b,Homonymy,7.2580148824999995,0.5
+mold,It was a harmful mold.<p>,mold,True,M1_a_M1_b,Homonymy,7.064559117777778,0.8888888888888888
+mold,It was a rubber mold.<p>,mold,False,M1_a_M2_a,Homonymy,7.0639224447,0.5
+mold,It was a rubber mold.<p>,mold,False,M1_b_M2_a,Homonymy,6.952972166,0.7272727272727273
+mold,It was a rubber mold.<p>,mold,True,M2_b_M2_a,Homonymy,6.887703374,0.875
+movement,He liked the civil-rights movement.<p>,movement,False,M1_a_M2_b,Polysemy,6.93977647125,1.0
+movement,He liked the civil-rights movement.<p>,movement,False,M1_b_M2_b,Polysemy,6.859026451999999,1.0
+movement,He liked the civil-rights movement.<p>,movement,True,M2_a_M2_b,Polysemy,6.8329133166250005,1.0
+movement,He liked the feminist movement.<p>,movement,False,M1_a_M2_a,Polysemy,7.099374053857143,1.0
+movement,He liked the feminist movement.<p>,movement,False,M1_b_M2_a,Polysemy,6.92404392275,1.0
+movement,He liked the feminist movement.<p>,movement,True,M2_b_M2_a,Polysemy,6.978261000111111,1.0
+movement,He liked the graceful movement.<p>,movement,False,M2_a_M1_b,Polysemy,7.00705790375,0.75
+movement,He liked the graceful movement.<p>,movement,False,M2_b_M1_b,Polysemy,7.102496928,0.8571428571428571
+movement,He liked the graceful movement.<p>,movement,True,M1_a_M1_b,Polysemy,6.8935218701,0.9
+movement,He liked the rhythmic movement.<p>,movement,False,M2_a_M1_a,Polysemy,7.0947062865,1.0
+movement,He liked the rhythmic movement.<p>,movement,False,M2_b_M1_a,Polysemy,7.027721133285715,0.8571428571428571
+movement,He liked the rhythmic movement.<p>,movement,True,M1_b_M1_a,Polysemy,6.8508462592,1.0
+newspaper,It was a daily newspaper.<p>,newspaper,False,M2_a_M1_b,Polysemy,6.718673928333334,1.0
+newspaper,It was a daily newspaper.<p>,newspaper,False,M2_b_M1_b,Polysemy,6.882747363666667,1.0
+newspaper,It was a daily newspaper.<p>,newspaper,True,M1_a_M1_b,Polysemy,6.8139896185,1.0
+newspaper,It was a faded newspaper.<p>,newspaper,False,M1_a_M2_a,Polysemy,6.961935281166666,0.5833333333333334
+newspaper,It was a faded newspaper.<p>,newspaper,False,M1_b_M2_a,Polysemy,6.7367034986666665,0.0
+newspaper,It was a faded newspaper.<p>,newspaper,True,M2_b_M2_a,Polysemy,7.292562440777778,0.8888888888888888
+newspaper,It was a national newspaper.<p>,newspaper,False,M2_a_M1_a,Polysemy,6.959714094375,1.0
+newspaper,It was a national newspaper.<p>,newspaper,False,M2_b_M1_a,Polysemy,6.8462038965,1.0
+newspaper,It was a national newspaper.<p>,newspaper,True,M1_b_M1_a,Polysemy,6.806621503285714,1.0
+newspaper,It was a shredded newspaper.<p>,newspaper,False,M1_a_M2_b,Polysemy,7.167392987777778,0.8888888888888888
+newspaper,It was a shredded newspaper.<p>,newspaper,False,M1_b_M2_b,Polysemy,7.1875923111111115,0.8888888888888888
+newspaper,It was a shredded newspaper.<p>,newspaper,True,M2_a_M2_b,Polysemy,6.956513996571429,1.0
+orange,It was a bright orange.<p>,orange,False,M1_a_M2_a,Polysemy,6.958945288200001,0.8
+orange,It was a bright orange.<p>,orange,False,M1_b_M2_a,Polysemy,6.955686810142857,0.7142857142857143
+orange,It was a bright orange.<p>,orange,True,M2_b_M2_a,Polysemy,7.105441093333333,0.6666666666666666
+orange,It was a juicy orange.<p>,orange,False,M2_a_M1_a,Polysemy,7.030785662125,1.0
+orange,It was a juicy orange.<p>,orange,False,M2_b_M1_a,Polysemy,7.0665861422,0.8
+orange,It was a juicy orange.<p>,orange,True,M1_b_M1_a,Polysemy,6.605535722875,1.0
+orange,It was a reddish orange.<p>,orange,False,M1_a_M2_b,Polysemy,7.155498858,0.8888888888888888
+orange,It was a reddish orange.<p>,orange,False,M1_b_M2_b,Polysemy,6.831378025714286,0.7142857142857143
+orange,It was a reddish orange.<p>,orange,True,M2_a_M2_b,Polysemy,6.751204186333333,0.8333333333333334
+orange,It was a ripe orange.<p>,orange,False,M2_a_M1_b,Polysemy,7.023349522444445,0.8888888888888888
+orange,It was a ripe orange.<p>,orange,False,M2_b_M1_b,Polysemy,7.02922320925,0.75
+orange,It was a ripe orange.<p>,orange,True,M1_a_M1_b,Polysemy,6.932909718111111,1.0
+page,He saw the blank page.<p>,page,False,M1_a_M2_a,Homonymy,6.787844982,1.0
+page,He saw the blank page.<p>,page,False,M1_b_M2_a,Homonymy,6.791468100714285,1.0
+page,He saw the blank page.<p>,page,True,M2_b_M2_a,Homonymy,6.788657904199999,1.0
+page,He saw the loyal page.<p>,page,False,M2_a_M1_b,Homonymy,7.059095736285714,0.2857142857142857
+page,He saw the loyal page.<p>,page,False,M2_b_M1_b,Homonymy,7.0893872226,0.1
+page,He saw the loyal page.<p>,page,True,M1_a_M1_b,Homonymy,7.185178022555555,0.5555555555555556
+page,He saw the ripped page.<p>,page,False,M1_a_M2_b,Homonymy,6.968123225142857,0.8571428571428571
+page,He saw the ripped page.<p>,page,False,M1_b_M2_b,Homonymy,6.9107541175,0.875
+page,He saw the ripped page.<p>,page,True,M2_a_M2_b,Homonymy,6.97662565775,0.875
+page,He saw the young page.<p>,page,False,M2_a_M1_a,Homonymy,7.234638529,0.25
+page,He saw the young page.<p>,page,False,M2_b_M1_a,Homonymy,7.108701018285714,0.0
+page,He saw the young page.<p>,page,True,M1_b_M1_a,Homonymy,7.50330806,0.375
+palm,It was a calloused palm.<p>,palm,False,M2_a_M1_a,Homonymy,7.092959326857143,0.2857142857142857
+palm,It was a calloused palm.<p>,palm,False,M2_b_M1_a,Homonymy,7.134802898285714,1.0
+palm,It was a calloused palm.<p>,palm,True,M1_b_M1_a,Homonymy,7.134453602400001,0.8
+palm,It was a tree palm.<p>,palm,False,M1_a_M2_b,Homonymy,7.1084199054,0.8
+palm,It was a tree palm.<p>,palm,False,M1_b_M2_b,Homonymy,6.8270002972,1.0
+palm,It was a tree palm.<p>,palm,True,M2_a_M2_b,Homonymy,6.6865290357500005,1.0
+palm,It was a tropical palm.<p>,palm,False,M1_a_M2_a,Homonymy,7.136097236625,0.75
+palm,It was a tropical palm.<p>,palm,False,M1_b_M2_a,Homonymy,7.200975219333333,0.7777777777777778
+palm,It was a tropical palm.<p>,palm,True,M2_b_M2_a,Homonymy,6.930881238909091,0.6363636363636364
+palm,It was a wrinkled palm.<p>,palm,False,M2_a_M1_b,Homonymy,7.0359936382727275,0.5454545454545454
+palm,It was a wrinkled palm.<p>,palm,False,M2_b_M1_b,Homonymy,6.8367640715,0.5
+palm,It was a wrinkled palm.<p>,palm,True,M1_a_M1_b,Homonymy,6.9732233132,0.8
+panel,It was a consumer panel.<p>,panel,False,M1_a_M2_b,Polysemy,7.062234934600001,0.6
+panel,It was a consumer panel.<p>,panel,False,M1_b_M2_b,Polysemy,7.196690122600001,0.6
+panel,It was a consumer panel.<p>,panel,True,M2_a_M2_b,Polysemy,7.038322363400001,0.8
+panel,It was a control panel.<p>,panel,False,M2_a_M1_a,Polysemy,6.780827733200001,1.0
+panel,It was a control panel.<p>,panel,False,M2_b_M1_a,Polysemy,6.8110756245555555,1.0
+panel,It was a control panel.<p>,panel,True,M1_b_M1_a,Polysemy,6.866806247166667,1.0
+panel,It was an advisory panel.<p>,panel,False,M1_a_M2_a,Polysemy,7.169887932444444,0.8888888888888888
+panel,It was an advisory panel.<p>,panel,False,M1_b_M2_a,Polysemy,7.019792877166666,0.9166666666666666
+panel,It was an advisory panel.<p>,panel,True,M2_b_M2_a,Polysemy,6.840906829875,1.0
+panel,It was an instrument panel.<p>,panel,False,M2_a_M1_b,Polysemy,7.076083500749999,0.5833333333333334
+panel,It was an instrument panel.<p>,panel,False,M2_b_M1_b,Polysemy,7.382203676333333,0.6666666666666666
+panel,It was an instrument panel.<p>,panel,True,M1_a_M1_b,Polysemy,7.208835257666666,0.8333333333333334
+passage,It was a biblical passage.<p>,passage,False,M1_a_M2_b,Polysemy,7.131397188083334,0.8333333333333334
+passage,It was a biblical passage.<p>,passage,False,M1_b_M2_b,Polysemy,6.842037478230769,0.9230769230769231
+passage,It was a biblical passage.<p>,passage,True,M2_a_M2_b,Polysemy,6.832008657375,1.0
+passage,It was a literary passage.<p>,passage,False,M1_a_M2_a,Polysemy,7.016006108285715,0.7857142857142857
+passage,It was a literary passage.<p>,passage,False,M1_b_M2_a,Polysemy,7.12787648275,0.25
+passage,It was a literary passage.<p>,passage,True,M2_b_M2_a,Polysemy,6.741245347,1.0
+passage,It was a narrow passage.<p>,passage,False,M2_a_M1_b,Polysemy,6.922724064363636,1.0
+passage,It was a narrow passage.<p>,passage,False,M2_b_M1_b,Polysemy,6.927861257571428,1.0
+passage,It was a narrow passage.<p>,passage,True,M1_a_M1_b,Polysemy,6.6653261577142855,1.0
+passage,It was a secret passage.<p>,passage,False,M2_a_M1_a,Polysemy,6.572655033333334,1.0
+passage,It was a secret passage.<p>,passage,False,M2_b_M1_a,Polysemy,6.949712604666666,1.0
+passage,It was a secret passage.<p>,passage,True,M1_b_M1_a,Polysemy,6.640786658142857,1.0
+pen,She penned her animals.<p>,penned,False,M2_a_M1_a,Homonymy,7.009952972700001,0.2
+pen,She penned her animals.<p>,penned,False,M2_b_M1_a,Homonymy,7.2872250805,1.0
+pen,She penned her animals.<p>,penned,True,M1_b_M1_a,Homonymy,6.846001599714286,0.8571428571428571
+pen,She penned her livestock.<p>,penned,False,M2_a_M1_b,Homonymy,7.034102918166667,0.16666666666666666
+pen,She penned her livestock.<p>,penned,False,M2_b_M1_b,Homonymy,7.420939383375,0.875
+pen,She penned her livestock.<p>,penned,True,M1_a_M1_b,Homonymy,7.1962533275,0.3333333333333333
+pen,She penned her memoirs.<p>,penned,False,M1_a_M2_a,Homonymy,7.143080571833333,0.6666666666666666
+pen,She penned her memoirs.<p>,penned,False,M1_b_M2_a,Homonymy,7.083112601583333,0.8333333333333334
+pen,She penned her memoirs.<p>,penned,True,M2_b_M2_a,Homonymy,6.9200681024,0.8
+pen,She penned her thoughts.<p>,penned,False,M1_a_M2_b,Homonymy,7.162367068333334,1.0
+pen,She penned her thoughts.<p>,penned,False,M1_b_M2_b,Homonymy,7.011708261333333,0.6666666666666666
+pen,She penned her thoughts.<p>,penned,True,M2_a_M2_b,Homonymy,6.952676758722222,0.7777777777777778
+pick,He picked his coffee.<p>,picked,False,M2_a_M1_a,Polysemy,6.6364523460000004,0.75
+pick,He picked his coffee.<p>,picked,False,M2_b_M1_a,Polysemy,6.913548093444444,0.6666666666666666
+pick,He picked his coffee.<p>,picked,True,M1_b_M1_a,Polysemy,6.8913117125,1.0
+pick,He picked his dinner.<p>,picked,False,M2_a_M1_b,Polysemy,7.089505766166667,1.0
+pick,He picked his dinner.<p>,picked,False,M2_b_M1_b,Polysemy,7.013689933181817,0.7272727272727273
+pick,He picked his dinner.<p>,picked,True,M1_a_M1_b,Polysemy,6.9469813773,1.0
+pick,He picked his nose.<p>,picked,False,M1_a_M2_b,Polysemy,6.740288248285714,0.8571428571428571
+pick,He picked his nose.<p>,picked,False,M1_b_M2_b,Polysemy,6.785939209333334,1.0
+pick,He picked his nose.<p>,picked,True,M2_a_M2_b,Polysemy,6.940850381714285,1.0
+pick,He picked his scab.<p>,picked,False,M1_a_M2_a,Polysemy,6.940644509833334,1.0
+pick,He picked his scab.<p>,picked,False,M1_b_M2_a,Polysemy,6.978225167555555,1.0
+pick,He picked his scab.<p>,picked,True,M2_b_M2_a,Polysemy,6.7998723625,1.0
+pitcher,He saw the fast pitcher.<p>,pitcher,False,M2_a_M1_a,Homonymy,7.020588823625,0.875
+pitcher,He saw the fast pitcher.<p>,pitcher,False,M2_b_M1_a,Homonymy,7.250073088000001,0.6666666666666666
+pitcher,He saw the fast pitcher.<p>,pitcher,True,M1_b_M1_a,Homonymy,6.906894221625,1.0
+pitcher,He saw the glass pitcher.<p>,pitcher,False,M1_a_M2_a,Homonymy,7.1031191616000005,0.8
+pitcher,He saw the glass pitcher.<p>,pitcher,False,M1_b_M2_a,Homonymy,6.914773820888889,1.0
+pitcher,He saw the glass pitcher.<p>,pitcher,True,M2_b_M2_a,Homonymy,6.858623945076923,1.0
+pitcher,He saw the plastic pitcher.<p>,pitcher,False,M1_a_M2_b,Homonymy,7.141876985909092,0.6363636363636364
+pitcher,He saw the plastic pitcher.<p>,pitcher,False,M1_b_M2_b,Homonymy,7.218874297,0.7142857142857143
+pitcher,He saw the plastic pitcher.<p>,pitcher,True,M2_a_M2_b,Homonymy,7.04701524,1.0
+pitcher,He saw the right-handed pitcher.<p>,pitcher,False,M2_a_M1_b,Homonymy,7.180694647636363,0.7272727272727273
+pitcher,He saw the right-handed pitcher.<p>,pitcher,False,M2_b_M1_b,Homonymy,7.543074112,0.75
+pitcher,He saw the right-handed pitcher.<p>,pitcher,True,M1_a_M1_b,Homonymy,7.059845248444445,1.0
+poach,She poached the bear.<p>,poached,False,M2_a_M1_b,Homonymy,6.869330588666666,0.0
+poach,She poached the bear.<p>,poached,False,M2_b_M1_b,Homonymy,7.249138744285714,0.42857142857142855
+poach,She poached the bear.<p>,poached,True,M1_a_M1_b,Homonymy,6.982431075999999,0.7142857142857143
+poach,She poached the deer.<p>,poached,False,M2_a_M1_a,Homonymy,6.952469869000001,0.4444444444444444
+poach,She poached the deer.<p>,poached,False,M2_b_M1_a,Homonymy,7.2571925219999995,1.0
+poach,She poached the deer.<p>,poached,True,M1_b_M1_a,Homonymy,7.087712638636364,0.6363636363636364
+poach,She poached the eggs.<p>,poached,False,M1_a_M2_a,Homonymy,6.641173630636363,1.0
+poach,She poached the eggs.<p>,poached,False,M1_b_M2_a,Homonymy,6.76705325875,1.0
+poach,She poached the eggs.<p>,poached,True,M2_b_M2_a,Homonymy,6.668113699888888,1.0
+poach,She poached the vegetables.<p>,poached,False,M1_a_M2_b,Homonymy,7.007576550818182,0.9090909090909091
+poach,She poached the vegetables.<p>,poached,False,M1_b_M2_b,Homonymy,7.044723935916667,0.6666666666666666
+poach,She poached the vegetables.<p>,poached,True,M2_a_M2_b,Homonymy,7.270665225333333,0.3333333333333333
+port,It was a delicious port.<p>,port,False,M1_a_M2_a,Homonymy,6.994409424428571,0.0
+port,It was a delicious port.<p>,port,False,M1_b_M2_a,Homonymy,7.105950774333333,0.08333333333333333
+port,It was a delicious port.<p>,port,True,M2_b_M2_a,Homonymy,6.922421592749999,0.3333333333333333
+port,It was a seaside port.<p>,port,False,M2_a_M1_b,Homonymy,6.9125408022000006,1.0
+port,It was a seaside port.<p>,port,False,M2_b_M1_b,Homonymy,6.858084869333333,1.0
+port,It was a seaside port.<p>,port,True,M1_a_M1_b,Homonymy,6.895654029,1.0
+port,It was a sweet port.<p>,port,False,M1_a_M2_b,Homonymy,6.876586651285714,0.14285714285714285
+port,It was a sweet port.<p>,port,False,M1_b_M2_b,Homonymy,7.1313215074,0.2
+port,It was a sweet port.<p>,port,True,M2_a_M2_b,Homonymy,7.0795397306,0.2
+port,It was a windy port.<p>,port,False,M2_a_M1_a,Homonymy,6.798893015999999,1.0
+port,It was a windy port.<p>,port,False,M2_b_M1_a,Homonymy,6.896451690399999,1.0
+port,It was a windy port.<p>,port,True,M1_b_M1_a,Homonymy,7.2238127128,0.6
+position,He was in a distinguished position.<p>,position,False,M2_a_M1_a,Polysemy,7.28834810575,1.0
+position,He was in a distinguished position.<p>,position,False,M2_b_M1_a,Polysemy,7.125250439888889,1.0
+position,He was in a distinguished position.<p>,position,True,M1_b_M1_a,Polysemy,6.987125965428571,0.8571428571428571
+position,He was in a fetal position.<p>,position,False,M1_a_M2_a,Polysemy,7.079854915125,0.875
+position,He was in a fetal position.<p>,position,False,M1_b_M2_a,Polysemy,7.007247526222222,1.0
+position,He was in a fetal position.<p>,position,True,M2_b_M2_a,Polysemy,6.9478728092,0.9
+position,He was in a prominent position.<p>,position,False,M2_a_M1_b,Polysemy,6.8395868355000005,0.8333333333333334
+position,He was in a prominent position.<p>,position,False,M2_b_M1_b,Polysemy,6.971868435999999,1.0
+position,He was in a prominent position.<p>,position,True,M1_a_M1_b,Polysemy,6.991947044625,0.875
+position,He was in a yoga position.<p>,position,False,M1_a_M2_b,Polysemy,6.920912461,0.8333333333333334
+position,He was in a yoga position.<p>,position,False,M1_b_M2_b,Polysemy,7.1273973321428565,1.0
+position,He was in a yoga position.<p>,position,True,M2_a_M2_b,Polysemy,6.862274115700001,1.0
+punch,He had the alcoholic punch.<p>,punch,False,M2_a_M1_a,Homonymy,7.061576061818181,0.09090909090909091
+punch,He had the alcoholic punch.<p>,punch,False,M2_b_M1_a,Homonymy,6.915827086555556,0.2222222222222222
+punch,He had the alcoholic punch.<p>,punch,True,M1_b_M1_a,Homonymy,7.253596867,0.42857142857142855
+punch,He had the fruit punch.<p>,punch,False,M2_a_M1_b,Homonymy,7.038008094666666,0.6666666666666666
+punch,He had the fruit punch.<p>,punch,False,M2_b_M1_b,Homonymy,7.11864476075,1.0
+punch,He had the fruit punch.<p>,punch,True,M1_a_M1_b,Homonymy,6.9692237269333335,1.0
+punch,He had the quickest punch.<p>,punch,False,M1_a_M2_b,Homonymy,6.9853022016,0.8
+punch,He had the quickest punch.<p>,punch,False,M1_b_M2_b,Homonymy,7.110944605499999,0.8333333333333334
+punch,He had the quickest punch.<p>,punch,True,M2_a_M2_b,Homonymy,6.838800653142857,1.0
+punch,He had the strongest punch.<p>,punch,False,M1_a_M2_a,Homonymy,6.8220269413571435,1.0
+punch,He had the strongest punch.<p>,punch,False,M1_b_M2_a,Homonymy,7.049507669857143,1.0
+punch,He had the strongest punch.<p>,punch,True,M2_b_M2_a,Homonymy,6.780823708125,1.0
+push,He pushed the bed.<p>,pushed,False,M1_a_M2_a,Polysemy,6.737411275,1.0
+push,He pushed the bed.<p>,pushed,False,M1_b_M2_a,Polysemy,6.898879908222223,1.0
+push,He pushed the bed.<p>,pushed,True,M2_b_M2_a,Polysemy,6.8360321282,1.0
+push,He pushed the cocaine.<p>,pushed,False,M2_a_M1_a,Polysemy,7.276578726666667,0.16666666666666666
+push,He pushed the cocaine.<p>,pushed,False,M2_b_M1_a,Polysemy,7.216473384636364,0.36363636363636365
+push,He pushed the cocaine.<p>,pushed,True,M1_b_M1_a,Polysemy,7.158754083875,0.875
+push,He pushed the desk.<p>,pushed,False,M1_a_M2_b,Polysemy,6.744246877166667,1.0
+push,He pushed the desk.<p>,pushed,False,M1_b_M2_b,Polysemy,7.0457948856,1.0
+push,He pushed the desk.<p>,pushed,True,M2_a_M2_b,Polysemy,6.6615282663,1.0
+push,He pushed the drugs.<p>,pushed,False,M2_a_M1_b,Polysemy,6.998534539571429,0.42857142857142855
+push,He pushed the drugs.<p>,pushed,False,M2_b_M1_b,Polysemy,7.213246371285714,0.7142857142857143
+push,He pushed the drugs.<p>,pushed,True,M1_a_M1_b,Polysemy,7.119452410333333,0.5
+racket,That was a badminton racket.<p>,racket,False,M1_a_M2_a,Homonymy,7.206693672714286,0.7142857142857143
+racket,That was a badminton racket.<p>,racket,False,M1_b_M2_a,Homonymy,7.139363315,0.6666666666666666
+racket,That was a badminton racket.<p>,racket,True,M2_b_M2_a,Homonymy,6.979488659235294,0.8823529411764706
+racket,That was a loud racket.<p>,racket,False,M2_a_M1_a,Homonymy,6.96854484525,0.5
+racket,That was a loud racket.<p>,racket,False,M2_b_M1_a,Homonymy,7.160892751428571,0.5714285714285714
+racket,That was a loud racket.<p>,racket,True,M1_b_M1_a,Homonymy,6.9155777787999995,1.0
+racket,That was a tennis racket.<p>,racket,False,M1_a_M2_b,Homonymy,6.8895813745000005,1.0
+racket,That was a tennis racket.<p>,racket,False,M1_b_M2_b,Homonymy,6.798509578666667,1.0
+racket,That was a tennis racket.<p>,racket,True,M2_a_M2_b,Homonymy,7.036874839142857,1.0
+racket,That was an annoying racket.<p>,racket,False,M2_a_M1_b,Homonymy,7.186032094800001,0.2
+racket,That was an annoying racket.<p>,racket,False,M2_b_M1_b,Homonymy,7.496889920666667,0.8333333333333334
+racket,That was an annoying racket.<p>,racket,True,M1_a_M1_b,Homonymy,7.156488091153847,0.6153846153846154
+rock,He liked alternative rock.<p>,rock,False,M2_a_M1_b,Homonymy,7.274778869666666,1.0
+rock,He liked alternative rock.<p>,rock,False,M2_b_M1_b,Homonymy,6.993434078333333,1.0
+rock,He liked alternative rock.<p>,rock,True,M1_a_M1_b,Homonymy,6.5488078234,1.0
+rock,He liked electronic rock.<p>,rock,False,M2_a_M1_a,Homonymy,6.977457727428572,0.7142857142857143
+rock,He liked electronic rock.<p>,rock,False,M2_b_M1_a,Homonymy,6.8408300446,0.9
+rock,He liked electronic rock.<p>,rock,True,M1_b_M1_a,Homonymy,6.9896065489375,1.0
+rock,He liked granite rock.<p>,rock,False,M1_a_M2_b,Homonymy,7.178851566555555,0.6666666666666666
+rock,He liked granite rock.<p>,rock,False,M1_b_M2_b,Homonymy,7.072077363846153,0.38461538461538464
+rock,He liked granite rock.<p>,rock,True,M2_a_M2_b,Homonymy,6.6904454614,1.0
+rock,He liked limestone rock.<p>,rock,False,M1_a_M2_a,Homonymy,7.0942083613,0.6
+rock,He liked limestone rock.<p>,rock,False,M1_b_M2_a,Homonymy,6.8488781101,0.4
+rock,He liked limestone rock.<p>,rock,True,M2_b_M2_a,Homonymy,6.8671402935,1.0
+run,She ran the company.<p>,ran,False,M1_a_M2_b,Polysemy,6.966361344666666,1.0
+run,She ran the company.<p>,ran,False,M1_b_M2_b,Polysemy,6.8215617982222225,0.6666666666666666
+run,She ran the company.<p>,ran,True,M2_a_M2_b,Polysemy,6.541223936142857,1.0
+run,She ran the marathon.<p>,ran,False,M2_a_M1_a,Polysemy,6.834631358833334,1.0
+run,She ran the marathon.<p>,ran,False,M2_b_M1_a,Polysemy,6.76812015625,1.0
+run,She ran the marathon.<p>,ran,True,M1_b_M1_a,Polysemy,6.712125235099999,1.0
+run,She ran the race.<p>,ran,False,M2_a_M1_b,Polysemy,6.812971397555556,0.8888888888888888
+run,She ran the race.<p>,ran,False,M2_b_M1_b,Polysemy,6.796833373,1.0
+run,She ran the race.<p>,ran,True,M1_a_M1_b,Polysemy,6.781862665818181,1.0
+run,She ran the shop.<p>,ran,False,M1_a_M2_a,Polysemy,6.953798839666667,0.5555555555555556
+run,She ran the shop.<p>,ran,False,M1_b_M2_a,Polysemy,7.119350404416667,0.9166666666666666
+run,She ran the shop.<p>,ran,True,M2_b_M2_a,Polysemy,6.6921810463749996,1.0
+sage,He saw the bushy sage.<p>,sage,False,M1_a_M2_b,Homonymy,7.043812287,0.5
+sage,He saw the bushy sage.<p>,sage,False,M1_b_M2_b,Homonymy,7.837447116333333,0.3333333333333333
+sage,He saw the bushy sage.<p>,sage,True,M2_a_M2_b,Homonymy,7.3701433,0.5
+sage,He saw the fragrant sage.<p>,sage,False,M1_a_M2_a,Homonymy,7.238888651666667,0.3333333333333333
+sage,He saw the fragrant sage.<p>,sage,False,M1_b_M2_a,Homonymy,7.166099126,0.5555555555555556
+sage,He saw the fragrant sage.<p>,sage,True,M2_b_M2_a,Homonymy,7.174526861181818,0.7272727272727273
+sage,He saw the renowned sage.<p>,sage,False,M2_a_M1_b,Homonymy,7.288218798222222,0.4444444444444444
+sage,He saw the renowned sage.<p>,sage,False,M2_b_M1_b,Homonymy,7.213167817857142,0.2857142857142857
+sage,He saw the renowned sage.<p>,sage,True,M1_a_M1_b,Homonymy,7.233097176666667,0.8333333333333334
+sage,He saw the wise sage.<p>,sage,False,M2_a_M1_a,Homonymy,7.17025338725,0.5
+sage,He saw the wise sage.<p>,sage,False,M2_b_M1_a,Homonymy,7.0279918265,0.75
+sage,He saw the wise sage.<p>,sage,True,M1_b_M1_a,Homonymy,7.049082685625,0.625
+scale,It was a fish scale.<p>,scale,False,M2_a_M1_a,Homonymy,6.8629925473333335,0.8333333333333334
+scale,It was a fish scale.<p>,scale,False,M2_b_M1_a,Homonymy,6.8208254184,1.0
+scale,It was a fish scale.<p>,scale,True,M1_b_M1_a,Homonymy,7.117415254833333,0.8333333333333334
+scale,It was a lizard scale.<p>,scale,False,M2_a_M1_b,Homonymy,7.217193761,0.3333333333333333
+scale,It was a lizard scale.<p>,scale,False,M2_b_M1_b,Homonymy,6.910777488357143,0.21428571428571427
+scale,It was a lizard scale.<p>,scale,True,M1_a_M1_b,Homonymy,6.841344109714285,0.5714285714285714
+scale,It was a major scale.<p>,scale,False,M1_a_M2_b,Homonymy,6.7344621816,0.8
+scale,It was a major scale.<p>,scale,False,M1_b_M2_b,Homonymy,6.978765650333333,0.8333333333333334
+scale,It was a major scale.<p>,scale,True,M2_a_M2_b,Homonymy,7.285334768,0.9
+scale,It was a music scale.<p>,scale,False,M1_a_M2_a,Homonymy,6.9092821516,0.9
+scale,It was a music scale.<p>,scale,False,M1_b_M2_a,Homonymy,7.013477679888889,0.8888888888888888
+scale,It was a music scale.<p>,scale,True,M2_b_M2_a,Homonymy,6.7249458146,1.0
+scene,It was a nature scene.<p>,scene,False,M1_a_M2_a,Polysemy,7.0573144344,0.7
+scene,It was a nature scene.<p>,scene,False,M1_b_M2_a,Polysemy,7.154515949444445,0.7777777777777778
+scene,It was a nature scene.<p>,scene,True,M2_b_M2_a,Polysemy,6.750482085142857,0.8571428571428571
+scene,It was a panoramic scene.<p>,scene,False,M1_a_M2_b,Polysemy,7.183639284142857,0.5714285714285714
+scene,It was a panoramic scene.<p>,scene,False,M1_b_M2_b,Polysemy,7.081822773333333,0.8333333333333334
+scene,It was a panoramic scene.<p>,scene,True,M2_a_M2_b,Polysemy,7.0642141366,0.6
+scene,It was a touching scene.<p>,scene,False,M2_a_M1_a,Polysemy,6.938507726625,1.0
+scene,It was a touching scene.<p>,scene,False,M2_b_M1_a,Polysemy,6.756051063,0.7777777777777778
+scene,It was a touching scene.<p>,scene,True,M1_b_M1_a,Polysemy,6.8561952754,1.0
+scene,It was a well-acted scene.<p>,scene,False,M2_a_M1_b,Polysemy,7.014298164444444,1.0
+scene,It was a well-acted scene.<p>,scene,False,M2_b_M1_b,Polysemy,6.8349449983333335,1.0
+scene,It was a well-acted scene.<p>,scene,True,M1_a_M1_b,Polysemy,7.068877373428571,1.0
+seal,It was a certified seal.<p>,seal,False,M2_a_M1_b,Homonymy,7.4774644236,0.6
+seal,It was a certified seal.<p>,seal,False,M2_b_M1_b,Homonymy,7.0273854714285715,0.5714285714285714
+seal,It was a certified seal.<p>,seal,True,M1_a_M1_b,Homonymy,6.934239402818181,0.9090909090909091
+seal,It was a circus seal.<p>,seal,False,M1_a_M2_a,Homonymy,7.137695630888889,0.8888888888888888
+seal,It was a circus seal.<p>,seal,False,M1_b_M2_a,Homonymy,7.043912626666667,1.0
+seal,It was a circus seal.<p>,seal,True,M2_b_M2_a,Homonymy,6.9598454084285715,0.8571428571428571
+seal,It was a gold seal.<p>,seal,False,M2_a_M1_a,Homonymy,7.0850474318,0.9
+seal,It was a gold seal.<p>,seal,False,M2_b_M1_a,Homonymy,6.966704190000001,0.5
+seal,It was a gold seal.<p>,seal,True,M1_b_M1_a,Homonymy,6.741986712,1.0
+seal,It was a trained seal.<p>,seal,False,M1_a_M2_b,Homonymy,6.9806436269,1.0
+seal,It was a trained seal.<p>,seal,False,M1_b_M2_b,Homonymy,6.909126072333333,0.9166666666666666
+seal,It was a trained seal.<p>,seal,True,M2_a_M2_b,Homonymy,6.92765774,1.0
+serve,She served a lasagna.<p>,served,False,M2_a_M1_b,Polysemy,6.929255779428572,0.8571428571428571
+serve,She served a lasagna.<p>,served,False,M2_b_M1_b,Polysemy,7.0155879228,1.0
+serve,She served a lasagna.<p>,served,True,M1_a_M1_b,Polysemy,6.7992058696,0.8
+serve,She served a pie.<p>,served,False,M2_a_M1_a,Polysemy,7.003907710142856,0.8571428571428571
+serve,She served a pie.<p>,served,False,M2_b_M1_a,Polysemy,7.052860320428572,1.0
+serve,She served a pie.<p>,served,True,M1_b_M1_a,Polysemy,7.121319455285715,1.0
+serve,She served a summons.<p>,served,False,M1_a_M2_a,Polysemy,7.083618364666667,0.6666666666666666
+serve,She served a summons.<p>,served,False,M1_b_M2_a,Polysemy,7.065727308142857,0.42857142857142855
+serve,She served a summons.<p>,served,True,M2_b_M2_a,Polysemy,6.7932129214,0.8
+serve,She served a warrant.<p>,served,False,M1_a_M2_b,Polysemy,7.0550609496,0.6
+serve,She served a warrant.<p>,served,False,M1_b_M2_b,Polysemy,7.10551964975,0.75
+serve,She served a warrant.<p>,served,True,M2_a_M2_b,Polysemy,6.844308004125001,1.0
+sing,The bird sang.<p>,sang,False,M1_a_M2_a,Polysemy,6.752676533833333,1.0
+sing,The bird sang.<p>,sang,False,M1_b_M2_a,Polysemy,6.672217924466667,0.9333333333333333
+sing,The bird sang.<p>,sang,True,M2_b_M2_a,Polysemy,6.621570040666666,1.0
+sing,The choir sang.<p>,sang,False,M2_a_M1_b,Polysemy,6.610134236,1.0
+sing,The choir sang.<p>,sang,False,M2_b_M1_b,Polysemy,6.78473114975,1.0
+sing,The choir sang.<p>,sang,True,M1_a_M1_b,Polysemy,6.7008489155,1.0
+sing,The cricket sang.<p>,sang,False,M1_a_M2_b,Polysemy,6.762387350833333,0.5833333333333334
+sing,The cricket sang.<p>,sang,False,M1_b_M2_b,Polysemy,7.154158718666667,0.3333333333333333
+sing,The cricket sang.<p>,sang,True,M2_a_M2_b,Polysemy,6.7478963328749995,0.875
+sing,The girl sang.<p>,sang,False,M2_a_M1_a,Polysemy,6.658113677499999,1.0
+sing,The girl sang.<p>,sang,False,M2_b_M1_a,Polysemy,6.635813214142857,1.0
+sing,The girl sang.<p>,sang,True,M1_b_M1_a,Polysemy,6.55033893425,1.0
+spill,He spilled the drink.<p>,spilled,False,M2_a_M1_a,Polysemy,7.0485669988,1.0
+spill,He spilled the drink.<p>,spilled,False,M2_b_M1_a,Polysemy,6.922062311583333,1.0
+spill,He spilled the drink.<p>,spilled,True,M1_b_M1_a,Polysemy,6.8259102545,1.0
+spill,He spilled the flour.<p>,spilled,False,M2_a_M1_b,Polysemy,6.7608798605,1.0
+spill,He spilled the flour.<p>,spilled,False,M2_b_M1_b,Polysemy,6.7576469445714284,0.8571428571428571
+spill,He spilled the flour.<p>,spilled,True,M1_a_M1_b,Polysemy,6.908156109666667,0.8333333333333334
+spill,He spilled the news.<p>,spilled,False,M1_a_M2_a,Polysemy,7.110465301285714,0.7142857142857143
+spill,He spilled the news.<p>,spilled,False,M1_b_M2_a,Polysemy,6.993564926857142,1.0
+spill,He spilled the news.<p>,spilled,True,M2_b_M2_a,Polysemy,6.922283270571429,1.0
+spill,He spilled the secret.<p>,spilled,False,M1_a_M2_b,Polysemy,6.681070219857142,1.0
+spill,He spilled the secret.<p>,spilled,False,M1_b_M2_b,Polysemy,6.90467965025,0.875
+spill,He spilled the secret.<p>,spilled,True,M2_a_M2_b,Polysemy,7.043881599,1.0
+stake,He staked his claim.<p>,staked,False,M1_a_M2_b,Polysemy,6.9247390958,0.8
+stake,He staked his claim.<p>,staked,False,M1_b_M2_b,Polysemy,7.270084709625,0.5
+stake,He staked his claim.<p>,staked,True,M2_a_M2_b,Polysemy,7.12458464,1.0
+stake,He staked his horse.<p>,staked,False,M2_a_M1_a,Polysemy,7.2763750688,0.6
+stake,He staked his horse.<p>,staked,False,M2_b_M1_a,Polysemy,7.255198626666666,0.16666666666666666
+stake,He staked his horse.<p>,staked,True,M1_b_M1_a,Polysemy,7.177170259714286,0.2857142857142857
+stake,He staked his name.<p>,staked,False,M1_a_M2_a,Polysemy,6.887411385833333,0.8333333333333334
+stake,He staked his name.<p>,staked,False,M1_b_M2_a,Polysemy,7.1348727072,0.2
+stake,He staked his name.<p>,staked,True,M2_b_M2_a,Polysemy,6.953831395428572,0.5714285714285714
+stake,He staked his tent.<p>,staked,False,M2_a_M1_b,Polysemy,6.966465984333333,0.6666666666666666
+stake,He staked his tent.<p>,staked,False,M2_b_M1_b,Polysemy,7.051648054571428,0.8571428571428571
+stake,He staked his tent.<p>,staked,True,M1_a_M1_b,Polysemy,6.872402482888889,0.8888888888888888
+stall,They stalled the bus.<p>,stalled,False,M2_a_M1_b,Polysemy,6.8089006295,1.0
+stall,They stalled the bus.<p>,stalled,False,M2_b_M1_b,Polysemy,7.021494499166667,0.8333333333333334
+stall,They stalled the bus.<p>,stalled,True,M1_a_M1_b,Polysemy,6.8680657754,0.8
+stall,They stalled the horse.<p>,stalled,False,M1_a_M2_a,Polysemy,7.01417204275,0.75
+stall,They stalled the horse.<p>,stalled,False,M1_b_M2_a,Polysemy,6.9012440861428574,0.8571428571428571
+stall,They stalled the horse.<p>,stalled,True,M2_b_M2_a,Polysemy,7.090173265307692,0.6923076923076923
+stall,They stalled the pig.<p>,stalled,False,M1_a_M2_b,Polysemy,6.934077059285714,0.14285714285714285
+stall,They stalled the pig.<p>,stalled,False,M1_b_M2_b,Polysemy,7.2834575935,0.25
+stall,They stalled the pig.<p>,stalled,True,M2_a_M2_b,Polysemy,6.9911711302,0.5
+stall,They stalled the truck.<p>,stalled,False,M2_a_M1_a,Polysemy,6.84798814825,0.875
+stall,They stalled the truck.<p>,stalled,False,M2_b_M1_a,Polysemy,6.984414886714285,0.7142857142857143
+stall,They stalled the truck.<p>,stalled,True,M1_b_M1_a,Polysemy,6.774987430444444,0.7777777777777778
+stay,They stayed cold.<p>,stayed,False,M2_a_M1_b,Polysemy,6.936075043142857,1.0
+stay,They stayed cold.<p>,stayed,False,M2_b_M1_b,Polysemy,6.995116488,0.7777777777777778
+stay,They stayed cold.<p>,stayed,True,M1_a_M1_b,Polysemy,7.09671848025,1.0
+stay,They stayed nearby.<p>,stayed,False,M1_a_M2_a,Polysemy,6.8567001908571426,1.0
+stay,They stayed nearby.<p>,stayed,False,M1_b_M2_a,Polysemy,6.712929479571429,1.0
+stay,They stayed nearby.<p>,stayed,True,M2_b_M2_a,Polysemy,6.8071565417999995,1.0
+stay,They stayed overnight.<p>,stayed,False,M1_a_M2_b,Polysemy,6.597605966,1.0
+stay,They stayed overnight.<p>,stayed,False,M1_b_M2_b,Polysemy,6.746506943999999,1.0
+stay,They stayed overnight.<p>,stayed,True,M2_a_M2_b,Polysemy,6.5692547868333335,1.0
+stay,They stayed wet.<p>,stayed,False,M2_a_M1_a,Polysemy,6.984458656222222,0.7777777777777778
+stay,They stayed wet.<p>,stayed,False,M2_b_M1_a,Polysemy,6.995938954363637,0.9090909090909091
+stay,They stayed wet.<p>,stayed,True,M1_b_M1_a,Polysemy,6.8419723895999995,1.0
+tap,He tapped the beer.<p>,tapped,False,M2_a_M1_b,Homonymy,7.2092431628749996,1.0
+tap,He tapped the beer.<p>,tapped,False,M2_b_M1_b,Homonymy,7.6921991808,0.6
+tap,He tapped the beer.<p>,tapped,True,M1_a_M1_b,Homonymy,6.688055019833333,1.0
+tap,He tapped the drums.<p>,tapped,False,M1_a_M2_b,Homonymy,7.0790603385,1.0
+tap,He tapped the drums.<p>,tapped,False,M1_b_M2_b,Homonymy,6.850406019499999,1.0
+tap,He tapped the drums.<p>,tapped,True,M2_a_M2_b,Homonymy,6.741489899444444,1.0
+tap,He tapped the keg.<p>,tapped,False,M2_a_M1_a,Homonymy,7.208382826199999,0.9
+tap,He tapped the keg.<p>,tapped,False,M2_b_M1_a,Homonymy,7.09850345,1.0
+tap,He tapped the keg.<p>,tapped,True,M1_b_M1_a,Homonymy,6.99553787275,0.75
+tap,He tapped the stick.<p>,tapped,False,M1_a_M2_a,Homonymy,6.978149447285714,1.0
+tap,He tapped the stick.<p>,tapped,False,M1_b_M2_a,Homonymy,6.978482064125,0.875
+tap,He tapped the stick.<p>,tapped,True,M2_b_M2_a,Homonymy,7.2014950465,0.875
+tape,He used the double-sided tape.<p>,tape,False,M2_a_M1_b,Polysemy,7.096736216166666,1.0
+tape,He used the double-sided tape.<p>,tape,False,M2_b_M1_b,Polysemy,7.370762577285714,1.0
+tape,He used the double-sided tape.<p>,tape,True,M1_a_M1_b,Polysemy,6.931138173857143,1.0
+tape,He used the interview tape.<p>,tape,False,M1_a_M2_a,Polysemy,7.421527537666667,0.5
+tape,He used the interview tape.<p>,tape,False,M1_b_M2_a,Polysemy,7.388836094,0.9
+tape,He used the interview tape.<p>,tape,True,M2_b_M2_a,Polysemy,7.1643897111,0.9
+tape,He used the scotch tape.<p>,tape,False,M2_a_M1_a,Polysemy,6.8683582887500005,1.0
+tape,He used the scotch tape.<p>,tape,False,M2_b_M1_a,Polysemy,6.8483492185,0.9
+tape,He used the scotch tape.<p>,tape,True,M1_b_M1_a,Polysemy,6.9360465321666664,1.0
+tape,He used the video tape.<p>,tape,False,M1_a_M2_b,Polysemy,7.05374827,0.75
+tape,He used the video tape.<p>,tape,False,M1_b_M2_b,Polysemy,7.1637538095454545,1.0
+tape,He used the video tape.<p>,tape,True,M2_a_M2_b,Polysemy,6.820481978571428,1.0
+term,It was a fall term.<p>,term,False,M2_a_M1_b,Polysemy,7.0195710075,0.8
+term,It was a fall term.<p>,term,False,M2_b_M1_b,Polysemy,7.525731527,0.5714285714285714
+term,It was a fall term.<p>,term,True,M1_a_M1_b,Polysemy,6.849843817083333,1.0
+term,It was a legal term.<p>,term,False,M1_a_M2_a,Polysemy,6.8045402669,1.0
+term,It was a legal term.<p>,term,False,M1_b_M2_a,Polysemy,6.787844982,1.0
+term,It was a legal term.<p>,term,True,M2_b_M2_a,Polysemy,6.882379265666667,1.0
+term,It was a technical term.<p>,term,False,M1_a_M2_b,Polysemy,7.0634830035,1.0
+term,It was a technical term.<p>,term,False,M1_b_M2_b,Polysemy,7.327294104090909,1.0
+term,It was a technical term.<p>,term,True,M2_a_M2_b,Polysemy,6.915876093083334,1.0
+term,It was a winter term.<p>,term,False,M2_a_M1_a,Polysemy,7.181157304571428,0.7142857142857143
+term,It was a winter term.<p>,term,False,M2_b_M1_a,Polysemy,6.5941844265,0.5
+term,It was a winter term.<p>,term,True,M1_b_M1_a,Polysemy,6.974983528428572,0.8571428571428571
+tick,It was a clock tick.<p>,tick,False,M2_a_M1_a,Homonymy,7.108529009125,0.75
+tick,It was a clock tick.<p>,tick,False,M2_b_M1_a,Homonymy,7.087702500909091,1.0
+tick,It was a clock tick.<p>,tick,True,M1_b_M1_a,Homonymy,6.83145871925,1.0
+tick,It was a diseased tick.<p>,tick,False,M1_a_M2_b,Homonymy,7.201607879777778,0.5555555555555556
+tick,It was a diseased tick.<p>,tick,False,M1_b_M2_b,Homonymy,6.871835326428572,0.5714285714285714
+tick,It was a diseased tick.<p>,tick,True,M2_a_M2_b,Homonymy,7.320492662,0.7692307692307693
+tick,It was a parasitic tick.<p>,tick,False,M1_a_M2_a,Homonymy,7.0471062095,0.875
+tick,It was a parasitic tick.<p>,tick,False,M1_b_M2_a,Homonymy,6.978924744444445,0.6666666666666666
+tick,It was a parasitic tick.<p>,tick,True,M2_b_M2_a,Homonymy,6.667322475500001,1.0
+tick,It was an audible tick.<p>,tick,False,M2_a_M1_b,Homonymy,7.3949459535,0.5
+tick,It was an audible tick.<p>,tick,False,M2_b_M1_b,Homonymy,7.3361947505,0.25
+tick,It was an audible tick.<p>,tick,True,M1_a_M1_b,Homonymy,6.761884612909091,0.8181818181818182
+tip,It was a finger tip.<p>,tip,False,M1_a_M2_b,Homonymy,7.01706129725,0.75
+tip,It was a finger tip.<p>,tip,False,M1_b_M2_b,Homonymy,6.8262542885,0.875
+tip,It was a finger tip.<p>,tip,True,M2_a_M2_b,Homonymy,6.634803516571429,1.0
+tip,It was a generous tip.<p>,tip,False,M2_a_M1_a,Homonymy,6.908310173769231,1.0
+tip,It was a generous tip.<p>,tip,False,M2_b_M1_a,Homonymy,6.890600779400001,1.0
+tip,It was a generous tip.<p>,tip,True,M1_b_M1_a,Homonymy,6.859954522714285,1.0
+tip,It was a pencil tip.<p>,tip,False,M1_a_M2_a,Homonymy,6.9568186802,0.7
+tip,It was a pencil tip.<p>,tip,False,M1_b_M2_a,Homonymy,7.1501404835,1.0
+tip,It was a pencil tip.<p>,tip,True,M2_b_M2_a,Homonymy,6.671578478,1.0
+tip,It was a stingy tip.<p>,tip,False,M2_a_M1_b,Homonymy,6.9482381511,0.0
+tip,It was a stingy tip.<p>,tip,False,M2_b_M1_b,Homonymy,7.032146244181818,0.18181818181818182
+tip,It was a stingy tip.<p>,tip,True,M1_a_M1_b,Homonymy,6.974825904833334,0.5
+title,She liked the academic title.<p>,title,False,M1_a_M2_a,Polysemy,7.166365610375,0.75
+title,She liked the academic title.<p>,title,False,M1_b_M2_a,Polysemy,7.0991159487777775,0.7777777777777778
+title,She liked the academic title.<p>,title,True,M2_b_M2_a,Polysemy,7.037692198615384,1.0
+title,She liked the essay title.<p>,title,False,M2_a_M1_a,Polysemy,7.143037992333333,1.0
+title,She liked the essay title.<p>,title,False,M2_b_M1_a,Polysemy,7.022051798,0.8571428571428571
+title,She liked the essay title.<p>,title,True,M1_b_M1_a,Polysemy,6.776814156666667,1.0
+title,She liked the poem title.<p>,title,False,M2_a_M1_b,Polysemy,6.820709048416667,0.9166666666666666
+title,She liked the poem title.<p>,title,False,M2_b_M1_b,Polysemy,6.911257344142856,0.8571428571428571
+title,She liked the poem title.<p>,title,True,M1_a_M1_b,Polysemy,6.563195406999999,1.0
+title,She liked the professional title.<p>,title,False,M1_a_M2_b,Polysemy,7.0413406815999995,1.0
+title,She liked the professional title.<p>,title,False,M1_b_M2_b,Polysemy,7.1398093750000005,0.5555555555555556
+title,She liked the professional title.<p>,title,True,M2_a_M2_b,Polysemy,6.913361366,0.9090909090909091
+toast,They toasted the bread.<p>,toasted,False,M2_a_M1_a,Homonymy,6.9466709825,1.0
+toast,They toasted the bread.<p>,toasted,False,M2_b_M1_a,Homonymy,6.813554502571429,1.0
+toast,They toasted the bread.<p>,toasted,True,M1_b_M1_a,Homonymy,6.659235715285715,1.0
+toast,They toasted the bride.<p>,toasted,False,M1_a_M2_b,Homonymy,7.0205005819999995,0.2857142857142857
+toast,They toasted the bride.<p>,toasted,False,M1_b_M2_b,Homonymy,7.086001790375,0.5
+toast,They toasted the bride.<p>,toasted,True,M2_a_M2_b,Homonymy,7.0194840658,0.9
+toast,They toasted the host.<p>,toasted,False,M1_a_M2_a,Homonymy,6.854520170714286,0.5714285714285714
+toast,They toasted the host.<p>,toasted,False,M1_b_M2_a,Homonymy,7.340640859,0.125
+toast,They toasted the host.<p>,toasted,True,M2_b_M2_a,Homonymy,6.959985410777778,0.7777777777777778
+toast,They toasted the strudel.<p>,toasted,False,M2_a_M1_b,Homonymy,6.996828031882353,0.5882352941176471
+toast,They toasted the strudel.<p>,toasted,False,M2_b_M1_b,Homonymy,7.169191645636364,1.0
+toast,They toasted the strudel.<p>,toasted,True,M1_a_M1_b,Homonymy,6.9748170125,1.0
+track,She saw the moose tracks.<p>,tracks,False,M1_a_M2_a,Polysemy,6.998705568181818,0.5454545454545454
+track,She saw the moose tracks.<p>,tracks,False,M1_b_M2_a,Polysemy,6.7541556289999995,1.0
+track,She saw the moose tracks.<p>,tracks,True,M2_b_M2_a,Polysemy,7.018865719857144,1.0
+track,She saw the snowshoe tracks.<p>,tracks,False,M1_a_M2_b,Polysemy,7.176445230384616,0.7692307692307693
+track,She saw the snowshoe tracks.<p>,tracks,False,M1_b_M2_b,Polysemy,7.5331150177142865,0.7142857142857143
+track,She saw the snowshoe tracks.<p>,tracks,True,M2_a_M2_b,Polysemy,7.364782859454545,1.0
+track,She saw the train tracks.<p>,tracks,False,M2_a_M1_a,Polysemy,7.14440718,1.0
+track,She saw the train tracks.<p>,tracks,False,M2_b_M1_a,Polysemy,7.1428715217272725,1.0
+track,She saw the train tracks.<p>,tracks,True,M1_b_M1_a,Polysemy,6.6853928938,1.0
+track,She saw the trolley tracks.<p>,tracks,False,M2_a_M1_b,Polysemy,6.913218404833334,1.0
+track,She saw the trolley tracks.<p>,tracks,False,M2_b_M1_b,Polysemy,6.8169156538,1.0
+track,She saw the trolley tracks.<p>,tracks,True,M1_a_M1_b,Polysemy,6.980839556888889,1.0
+yard,It was five yards.<p>,yards,False,M2_a_M1_a,Homonymy,6.832845009800001,1.0
+yard,It was five yards.<p>,yards,False,M2_b_M1_a,Homonymy,6.8604923937999995,1.0
+yard,It was five yards.<p>,yards,True,M1_b_M1_a,Homonymy,6.629735238,1.0
+yard,It was ten yards.<p>,yards,False,M2_a_M1_b,Homonymy,6.925085834399999,1.0
+yard,It was ten yards.<p>,yards,False,M2_b_M1_b,Homonymy,7.189375193833333,1.0
+yard,It was ten yards.<p>,yards,True,M1_a_M1_b,Homonymy,6.813781222125,1.0
+yard,They were big yards.<p>,yards,False,M1_a_M2_a,Homonymy,7.455388299800001,0.5
+yard,They were big yards.<p>,yards,False,M1_b_M2_a,Homonymy,7.2542611365,0.5
+yard,They were big yards.<p>,yards,True,M2_b_M2_a,Homonymy,6.853969698375,0.875
+yard,They were cluttered yards.<p>,yards,False,M1_a_M2_b,Homonymy,7.101508247333332,0.3333333333333333
+yard,They were cluttered yards.<p>,yards,False,M1_b_M2_b,Homonymy,7.403817005666667,0.6666666666666666
+yard,They were cluttered yards.<p>,yards,True,M2_a_M2_b,Homonymy,7.2146293911249995,0.625
