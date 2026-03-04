@@ -71,6 +71,9 @@ df_pythia_models <- df_pythia_models %>%
 ```
 
 
+
+
+
 # Pre-registered analyses
 
 *Note that analyses of human data (RQ2, RQ4) are included in a separate file.
@@ -260,7 +263,7 @@ developmental_results_rq1 %>%
                      name = NULL) +
   theme(text = element_text(size = 15),
         legend.position = "bottom") +
-  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+  scale_color_manual(values = viridisLite::viridis(7, option = "magma", 
                                                 begin = 0.8, end = 0.15))
 ```
 
@@ -381,6 +384,25 @@ df_pythia_models %>%
   ) +
   facet_wrap(~reorder(model_shorthand, n_params))
 
+
+df_pythia_models %>%
+  filter(model_shorthand == "pythia-2.8b") %>%
+  ggplot(aes(x = target_surprisal_mean,
+             fill = same_label,
+             y = ambiguity_type)) +
+  geom_density_ridges(color = NA, alpha = 0.7, scale = 0.9) +
+  scale_fill_manual(values = c("Same Sense" = "#4E79A7", "Different Sense" = "#E15759")) +
+  labs(x = "Mean target surprisal",
+       y = NULL,
+       fill = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    legend.position = "top"
+  ) +
+  facet_wrap(~checkpoint)
+
 ```
 
 ### RQ5: Model scaling
@@ -455,7 +477,7 @@ developmental_results_rq3 %>%
                      name = NULL) +
   theme(text = element_text(size = 15),
         legend.position = "bottom") +
-  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+  scale_color_manual(values = viridisLite::viridis(7, option = "magma", 
                                                 begin = 0.8, end = 0.15))
 ```
 
