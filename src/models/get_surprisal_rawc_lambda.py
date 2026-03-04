@@ -18,6 +18,11 @@ Usage:
     python get_surprisals.py --model EleutherAI/pythia-1.4b
     python get_surprisals.py --model EleutherAI/pythia-2.8b --checkpoints 0 1000 143000
     python get_surprisals.py --run_all
+
+
+For lambda:
+pip install transformers pandas tqdm
+python get_surprisal_rawc_lambda.py --run_all
 """
 
 import argparse
