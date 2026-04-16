@@ -667,6 +667,879 @@ csv_list <- csv_files %>%
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 1344 Columns: 22
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (15): word, ambiguity_type, string, version, Class, order, version_with_...
+## dbl  (6): target_surprisal_sum, target_surprisal_mean, final_token_surprisal...
+## lgl  (1): same
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 ``` r
@@ -676,7 +1549,7 @@ nrow(df_pythia_models)
 ```
 
 ```
-## [1] 84672
+## [1] 215040
 ```
 
 ``` r
@@ -685,8 +1558,10 @@ table(df_pythia_models$model_shorthand)
 
 ```
 ## 
-##  pythia-14m pythia-160m pythia-410m  pythia-70m 
-##       26880       26880        4032       26880
+## pythia-1.4b  pythia-12b  pythia-14m pythia-160m   pythia-1b pythia-410m 
+##       26880       26880       26880       26880       26880       26880 
+## pythia-6.9b  pythia-70m 
+##       26880       26880
 ```
 
 ``` r
@@ -733,7 +1608,10 @@ df_pythia_models <- df_pythia_models %>%
 ```
 
 
-# Analyses
+
+
+
+# Pre-registered analyses
 
 *Note that analyses of human data (RQ2, RQ4) are included in a separate file.
 
@@ -831,6 +1709,51 @@ developmental_results_rq1 %>%
    <td style="text-align:left;"> &lt; 2e-16 </td>
    <td style="text-align:right;"> 73.231 </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-410m </td>
+   <td style="text-align:right;"> 405334016 </td>
+   <td style="text-align:right;"> -0.141 </td>
+   <td style="text-align:right;"> 0.017 </td>
+   <td style="text-align:right;"> 62.852 </td>
+   <td style="text-align:left;"> 2.23e-15 </td>
+   <td style="text-align:right;"> 60.852 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-1b </td>
+   <td style="text-align:right;"> 1011781632 </td>
+   <td style="text-align:right;"> -0.137 </td>
+   <td style="text-align:right;"> 0.017 </td>
+   <td style="text-align:right;"> 59.354 </td>
+   <td style="text-align:left;"> 1.32e-14 </td>
+   <td style="text-align:right;"> 57.354 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-1.4b </td>
+   <td style="text-align:right;"> 1414647808 </td>
+   <td style="text-align:right;"> -0.125 </td>
+   <td style="text-align:right;"> 0.018 </td>
+   <td style="text-align:right;"> 45.617 </td>
+   <td style="text-align:left;"> 1.44e-11 </td>
+   <td style="text-align:right;"> 43.617 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-6.9b </td>
+   <td style="text-align:right;"> 6857302016 </td>
+   <td style="text-align:right;"> -0.126 </td>
+   <td style="text-align:right;"> 0.017 </td>
+   <td style="text-align:right;"> 53.161 </td>
+   <td style="text-align:left;"> 3.07e-13 </td>
+   <td style="text-align:right;"> 51.161 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-12b </td>
+   <td style="text-align:right;"> 11846072320 </td>
+   <td style="text-align:right;"> -0.140 </td>
+   <td style="text-align:right;"> 0.017 </td>
+   <td style="text-align:right;"> 64.780 </td>
+   <td style="text-align:left;"> 8.38e-16 </td>
+   <td style="text-align:right;"> 62.780 </td>
+  </tr>
 </tbody>
 </table>
 
@@ -841,31 +1764,40 @@ developmental_results_rq1 %>%
     rq1_lrt_p = format.pval(rq1_lrt_p, digits = 3),
     across(c(rq1_dom_beta, rq1_dom_se, rq1_lrt_chi2, rq1_aic_delta), ~ round(.x, 3))
   ) %>%
-  select(model, n_params, rq1_dom_beta, rq1_dom_se, rq1_lrt_chi2, rq1_lrt_p, rq1_aic_delta) %>%
+  select(model, n_params, rq1_dom_beta, rq1_dom_se, rq1_lrt_chi2, rq1_lrt_p) %>%
   kable(
     format = "latex",
     booktabs = TRUE,
-    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$", "$\\Delta$AIC"),
+    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$"),
     escape = FALSE,
     caption = "RQ1: Dominance predicting target surprisal (final checkpoint)"
   ) %>%
-  kable_styling(latex_options = c("hold_position"))
+  kable_styling(latex_options = c("hold_position")) %>%
+  cat()
 ```
 
-\begin{table}[!h]
-\centering
-\caption{\label{tab:tables}RQ1: Dominance predicting target surprisal (final checkpoint)}
-\centering
-\begin{tabular}[t]{lrrrrlr}
-\toprule
-Model & Params & $\beta$ & SE & $\chi^2$ & $p$ & $\Delta$AIC\\
-\midrule
-EleutherAI/pythia-14m & 14067712 & -0.101 & 0.017 & 33.199 & 8.32e-09 & 31.199\\
-EleutherAI/pythia-70m & 70426624 & -0.157 & 0.017 & 85.225 & < 2e-16 & 83.225\\
-EleutherAI/pythia-160m & 162322944 & -0.147 & 0.017 & 75.231 & < 2e-16 & 73.231\\
-\bottomrule
-\end{tabular}
-\end{table}
+```
+## \begin{table}[!h]
+## \centering
+## \caption{\label{tab:tables}RQ1: Dominance predicting target surprisal (final checkpoint)}
+## \centering
+## \begin{tabular}[t]{lrrrrl}
+## \toprule
+## Model & Params & $\beta$ & SE & $\chi^2$ & $p$\\
+## \midrule
+## EleutherAI/pythia-14m & 14067712 & -0.101 & 0.017 & 33.199 & 8.32e-09\\
+## EleutherAI/pythia-70m & 70426624 & -0.157 & 0.017 & 85.225 & < 2e-16\\
+## EleutherAI/pythia-160m & 162322944 & -0.147 & 0.017 & 75.231 & < 2e-16\\
+## EleutherAI/pythia-410m & 405334016 & -0.141 & 0.017 & 62.852 & 2.23e-15\\
+## EleutherAI/pythia-1b & 1011781632 & -0.137 & 0.017 & 59.354 & 1.32e-14\\
+## \addlinespace
+## EleutherAI/pythia-1.4b & 1414647808 & -0.125 & 0.018 & 45.617 & 1.44e-11\\
+## EleutherAI/pythia-6.9b & 6857302016 & -0.126 & 0.017 & 53.161 & 3.07e-13\\
+## EleutherAI/pythia-12b & 11846072320 & -0.140 & 0.017 & 64.780 & 8.38e-16\\
+## \bottomrule
+## \end{tabular}
+## \end{table}
+```
 
 We also visualize the coefficients.
 
@@ -909,7 +1841,7 @@ df_merged %>%
   labs(x = "Human Dominance Rating",
        y = "Surprisal on Target") +
   theme_minimal(base_size = 13) +
-  facet_wrap(~reorder(model_shorthand, n_params))
+  facet_wrap(~reorder(model_shorthand, n_params), nrow=2)
 ```
 
 ```
@@ -972,17 +1904,17 @@ summary(lm(rq1_dom_beta ~ log10(n_params),
 ##     filter(checkpoint == 143000))
 ## 
 ## Residuals:
-##         1         2         3 
-##  0.005752 -0.016846  0.011094 
+##       Min        1Q    Median        3Q       Max 
+## -0.025804 -0.009153 -0.001617  0.010746  0.028928 
 ## 
 ## Coefficients:
-##                 Estimate Std. Error t value Pr(>|t|)
-## (Intercept)      0.24346    0.21284   1.144    0.457
-## log10(n_params) -0.04893    0.02747  -1.781    0.326
+##                  Estimate Std. Error t value Pr(>|t|)
+## (Intercept)     -0.108088   0.061525  -1.757    0.129
+## log10(n_params) -0.002997   0.007004  -0.428    0.684
 ## 
-## Residual standard error: 0.02097 on 1 degrees of freedom
-## Multiple R-squared:  0.7604,	Adjusted R-squared:  0.5208 
-## F-statistic: 3.173 on 1 and 1 DF,  p-value: 0.3256
+## Residual standard error: 0.01833 on 6 degrees of freedom
+## Multiple R-squared:  0.0296,	Adjusted R-squared:  -0.1321 
+## F-statistic: 0.183 on 1 and 6 DF,  p-value: 0.6837
 ```
 
 ``` r
@@ -998,17 +1930,17 @@ summary(lm(rq1_aic_delta ~ log10(n_params),
 ##     filter(checkpoint == 143000))
 ## 
 ## Residuals:
-##       1       2       3 
-##  -5.362  15.704 -10.342 
+##     Min      1Q  Median      3Q     Max 
+## -25.684  -9.264   1.129   6.890  25.882 
 ## 
 ## Coefficients:
 ##                 Estimate Std. Error t value Pr(>|t|)
-## (Intercept)      -279.82     198.41  -1.410    0.393
-## log10(n_params)    44.26      25.61   1.728    0.334
+## (Intercept)      52.1779    59.2417   0.881    0.412
+## log10(n_params)   0.6582     6.7444   0.098    0.925
 ## 
-## Residual standard error: 19.55 on 1 degrees of freedom
-## Multiple R-squared:  0.7492,	Adjusted R-squared:  0.4984 
-## F-statistic: 2.987 on 1 and 1 DF,  p-value: 0.3339
+## Residual standard error: 17.65 on 6 degrees of freedom
+## Multiple R-squared:  0.001585,	Adjusted R-squared:  -0.1648 
+## F-statistic: 0.009525 on 1 and 6 DF,  p-value: 0.9254
 ```
 
 
@@ -1037,8 +1969,12 @@ developmental_results_rq1 %>%
                      labels = c("n.s.", "p < .05"),
                      name = NULL) +
   theme(text = element_text(size = 15),
-        legend.position = "bottom") +
-  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+        legend.position = "bottom",
+        legend.box = "vertical",          # stack the shape + color legends
+        legend.text = element_text(size = 11),   # shrink legend text
+        legend.key.width = unit(0.8, "cm")) +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
                                                 begin = 0.8, end = 0.15))
 ```
 
@@ -1153,6 +2089,51 @@ developmental_results_rq3 %>%
    <td style="text-align:left;"> &lt;2e-16 </td>
    <td style="text-align:right;"> 353.356 </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-410m </td>
+   <td style="text-align:right;"> 405334016 </td>
+   <td style="text-align:right;"> -0.837 </td>
+   <td style="text-align:right;"> 0.031 </td>
+   <td style="text-align:right;"> 566.881 </td>
+   <td style="text-align:left;"> &lt;2e-16 </td>
+   <td style="text-align:right;"> 564.881 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-1b </td>
+   <td style="text-align:right;"> 1011781632 </td>
+   <td style="text-align:right;"> -0.860 </td>
+   <td style="text-align:right;"> 0.031 </td>
+   <td style="text-align:right;"> 595.258 </td>
+   <td style="text-align:left;"> &lt;2e-16 </td>
+   <td style="text-align:right;"> 593.258 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-1.4b </td>
+   <td style="text-align:right;"> 1414647808 </td>
+   <td style="text-align:right;"> -0.888 </td>
+   <td style="text-align:right;"> 0.032 </td>
+   <td style="text-align:right;"> 594.336 </td>
+   <td style="text-align:left;"> &lt;2e-16 </td>
+   <td style="text-align:right;"> 592.336 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-6.9b </td>
+   <td style="text-align:right;"> 6857302016 </td>
+   <td style="text-align:right;"> -0.972 </td>
+   <td style="text-align:right;"> 0.031 </td>
+   <td style="text-align:right;"> 723.229 </td>
+   <td style="text-align:left;"> &lt;2e-16 </td>
+   <td style="text-align:right;"> 721.229 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EleutherAI/pythia-12b </td>
+   <td style="text-align:right;"> 11846072320 </td>
+   <td style="text-align:right;"> -0.981 </td>
+   <td style="text-align:right;"> 0.031 </td>
+   <td style="text-align:right;"> 726.612 </td>
+   <td style="text-align:left;"> &lt;2e-16 </td>
+   <td style="text-align:right;"> 724.612 </td>
+  </tr>
 </tbody>
 </table>
 
@@ -1164,31 +2145,40 @@ developmental_results_rq3 %>%
     across(c(rq3_same_beta, rq3_same_se, 
              rq3_lrt_chi2, rq3_aic_delta), ~ round(.x, 3))
   ) %>%
-  select(model, n_params, rq3_same_beta, rq3_same_se, rq3_lrt_chi2, rq3_lrt_p, rq3_aic_delta) %>%
+  select(model, n_params, rq3_same_beta, rq3_same_se, rq3_lrt_chi2, rq3_lrt_p) %>%
   kable(
     format = "latex",
     booktabs = TRUE,
-    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$", "$\\Delta$AIC"),
+    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$"),
     escape = FALSE,
     caption = "RQ3: Sense Boundary predicting target surprisal (final checkpoint)"
   ) %>%
-  kable_styling(latex_options = c("hold_position"))
+  kable_styling(latex_options = c("hold_position")) %>%
+  cat()
 ```
 
-\begin{table}[!h]
-\centering
-\caption{\label{tab:tables_rq3}RQ3: Sense Boundary predicting target surprisal (final checkpoint)}
-\centering
-\begin{tabular}[t]{lrrrrlr}
-\toprule
-Model & Params & $\beta$ & SE & $\chi^2$ & $p$ & $\Delta$AIC\\
-\midrule
-EleutherAI/pythia-14m & 14067712 & -0.359 & 0.033 & 115.073 & <2e-16 & 113.073\\
-EleutherAI/pythia-70m & 70426624 & -0.426 & 0.030 & 190.472 & <2e-16 & 188.472\\
-EleutherAI/pythia-160m & 162322944 & -0.594 & 0.029 & 355.356 & <2e-16 & 353.356\\
-\bottomrule
-\end{tabular}
-\end{table}
+```
+## \begin{table}[!h]
+## \centering
+## \caption{\label{tab:tables_rq3}RQ3: Sense Boundary predicting target surprisal (final checkpoint)}
+## \centering
+## \begin{tabular}[t]{lrrrrl}
+## \toprule
+## Model & Params & $\beta$ & SE & $\chi^2$ & $p$\\
+## \midrule
+## EleutherAI/pythia-14m & 14067712 & -0.359 & 0.033 & 115.073 & <2e-16\\
+## EleutherAI/pythia-70m & 70426624 & -0.426 & 0.030 & 190.472 & <2e-16\\
+## EleutherAI/pythia-160m & 162322944 & -0.594 & 0.029 & 355.356 & <2e-16\\
+## EleutherAI/pythia-410m & 405334016 & -0.837 & 0.031 & 566.881 & <2e-16\\
+## EleutherAI/pythia-1b & 1011781632 & -0.860 & 0.031 & 595.258 & <2e-16\\
+## \addlinespace
+## EleutherAI/pythia-1.4b & 1414647808 & -0.888 & 0.032 & 594.336 & <2e-16\\
+## EleutherAI/pythia-6.9b & 6857302016 & -0.972 & 0.031 & 723.229 & <2e-16\\
+## EleutherAI/pythia-12b & 11846072320 & -0.981 & 0.031 & 726.612 & <2e-16\\
+## \bottomrule
+## \end{tabular}
+## \end{table}
+```
 
 We also visualize the coefficients.
 
@@ -1234,12 +2224,13 @@ df_pythia_models %>%
        y = NULL,
        fill = NULL) +
   theme_minimal(base_size = 13) +
-  theme(
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    legend.position = "top"
-  ) +
-  facet_wrap(~reorder(model_shorthand, n_params))
+theme(text = element_text(size = 15),
+      legend.position = "bottom",
+      legend.box = "vertical",          # stack the shape + color legends
+      legend.text = element_text(size = 11),   # shrink legend text
+      legend.key.width = unit(0.8, "cm")) +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  facet_wrap(~reorder(model_shorthand, n_params), nrow=2)
 ```
 
 ```
@@ -1252,6 +2243,26 @@ df_pythia_models %>%
 
 ```
 ## Picking joint bandwidth of 0.21
+```
+
+```
+## Picking joint bandwidth of 0.177
+```
+
+```
+## Picking joint bandwidth of 0.172
+```
+
+```
+## Picking joint bandwidth of 0.163
+```
+
+```
+## Picking joint bandwidth of 0.165
+```
+
+```
+## Picking joint bandwidth of 0.174
 ```
 
 ![](rawc_lm_analysis_files/figure-html/rq3_raw_data_final-1.png)<!-- -->
@@ -1268,7 +2279,7 @@ developmental_results_rq3 %>%
   geom_point(size = 6,
              alpha = .5) +
   scale_x_log10() +
-  geom_text_repel(aes(label=model), size=3) +
+  geom_text_repel(aes(label=model_shorthand), size=3) +
   labs(x = "Parameters",
        y = "AIC Delta") +
   theme_minimal() +
@@ -1286,7 +2297,7 @@ developmental_results_rq3 %>%
   geom_point(size = 6,
              alpha = .5) +
   scale_x_log10() +
-  geom_text_repel(aes(label=model), size=3) +
+  geom_text_repel(aes(label=model_shorthand), size=3) +
   labs(x = "Parameters",
        y = "Sense Boundary Coefficient") +
   theme_minimal() +
@@ -1309,17 +2320,19 @@ summary(lm(rq3_same_beta ~ log10(n_params),
 ##     filter(checkpoint == 143000))
 ## 
 ## Residuals:
-##        1        2        3 
-## -0.01930  0.05653 -0.03723 
+##      Min       1Q   Median       3Q      Max 
+## -0.12799 -0.05141  0.01355  0.04004  0.10381 
 ## 
 ## Coefficients:
-##                 Estimate Std. Error t value Pr(>|t|)
-## (Intercept)      1.11938    0.71420   1.567    0.362
-## log10(n_params) -0.20410    0.09218  -2.214    0.270
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)      1.32695    0.27322   4.857 0.002832 ** 
+## log10(n_params) -0.23658    0.03111  -7.606 0.000269 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.07038 on 1 degrees of freedom
-## Multiple R-squared:  0.8306,	Adjusted R-squared:  0.6612 
-## F-statistic: 4.903 on 1 and 1 DF,  p-value: 0.2701
+## Residual standard error: 0.08139 on 6 degrees of freedom
+## Multiple R-squared:  0.906,	Adjusted R-squared:  0.8904 
+## F-statistic: 57.85 on 1 and 6 DF,  p-value: 0.000269
 ```
 
 ``` r
@@ -1335,17 +2348,19 @@ summary(lm(rq3_aic_delta ~ log10(n_params),
 ##     filter(checkpoint == 143000))
 ## 
 ## Residuals:
-##      1      2      3 
-##  18.25 -53.44  35.19 
+##     Min      1Q  Median      3Q     Max 
+## -89.884 -24.930  -6.594  24.357 112.575 
 ## 
 ## Coefficients:
-##                 Estimate Std. Error t value Pr(>|t|)
-## (Intercept)     -1408.20     675.18  -2.086    0.285
-## log10(n_params)   210.27      87.14   2.413    0.250
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)     -1517.66     228.22  -6.650 0.000559 ***
+## log10(n_params)   228.86      25.98   8.808 0.000119 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 66.54 on 1 degrees of freedom
-## Multiple R-squared:  0.8534,	Adjusted R-squared:  0.7068 
-## F-statistic: 5.822 on 1 and 1 DF,  p-value: 0.2501
+## Residual standard error: 67.99 on 6 degrees of freedom
+## Multiple R-squared:  0.9282,	Adjusted R-squared:  0.9163 
+## F-statistic: 77.58 on 1 and 6 DF,  p-value: 0.0001188
 ```
 
 
@@ -1361,7 +2376,6 @@ developmental_results_rq3 %>%
   geom_point(aes(shape = significant),
              size = 4, alpha = .7) +
   geom_line(size = 1.3) +
-  geom_point(size = 4, alpha = .4) +
   theme_minimal() +
   labs(x = "Training Step (Log10)",
        y = "Coefficient (Sense Boundary)",
@@ -1373,15 +2387,18 @@ developmental_results_rq3 %>%
   scale_shape_manual(values = c("FALSE" = 1, "TRUE" = 16),
                      labels = c("n.s.", "p < .05"),
                      name = NULL) +
-  theme(text = element_text(size = 15),
-        legend.position = "bottom") +
-  scale_color_manual(values = viridisLite::viridis(4, option = "mako", 
+theme(text = element_text(size = 15),
+      legend.position = "bottom",
+      legend.box = "vertical",          # stack the shape + color legends
+      legend.text = element_text(size = 11),   # shrink legend text
+      legend.key.width = unit(0.8, "cm")) +
+guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
                                                 begin = 0.8, end = 0.15))
 ```
 
 ```
 ## Warning in scale_x_log10(): log-10 transformation introduced infinite values.
-## log-10 transformation introduced infinite values.
 ## log-10 transformation introduced infinite values.
 ```
 

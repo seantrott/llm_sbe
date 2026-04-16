@@ -137,15 +137,16 @@ developmental_results_rq1 %>%
     rq1_lrt_p = format.pval(rq1_lrt_p, digits = 3),
     across(c(rq1_dom_beta, rq1_dom_se, rq1_lrt_chi2, rq1_aic_delta), ~ round(.x, 3))
   ) %>%
-  select(model, n_params, rq1_dom_beta, rq1_dom_se, rq1_lrt_chi2, rq1_lrt_p, rq1_aic_delta) %>%
+  select(model, n_params, rq1_dom_beta, rq1_dom_se, rq1_lrt_chi2, rq1_lrt_p) %>%
   kable(
     format = "latex",
     booktabs = TRUE,
-    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$", "$\\Delta$AIC"),
+    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$"),
     escape = FALSE,
     caption = "RQ1: Dominance predicting target surprisal (final checkpoint)"
   ) %>%
-  kable_styling(latex_options = c("hold_position"))
+  kable_styling(latex_options = c("hold_position")) %>%
+  cat()
 ```
 
 We also visualize the coefficients.
@@ -186,7 +187,7 @@ df_merged %>%
   labs(x = "Human Dominance Rating",
        y = "Surprisal on Target") +
   theme_minimal(base_size = 13) +
-  facet_wrap(~reorder(model_shorthand, n_params))
+  facet_wrap(~reorder(model_shorthand, n_params), nrow=2)
 
 ```
 
@@ -262,8 +263,12 @@ developmental_results_rq1 %>%
                      labels = c("n.s.", "p < .05"),
                      name = NULL) +
   theme(text = element_text(size = 15),
-        legend.position = "bottom") +
-  scale_color_manual(values = viridisLite::viridis(7, option = "magma", 
+        legend.position = "bottom",
+        legend.box = "vertical",          # stack the shape + color legends
+        legend.text = element_text(size = 11),   # shrink legend text
+        legend.key.width = unit(0.8, "cm")) +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
                                                 begin = 0.8, end = 0.15))
 ```
 
@@ -326,15 +331,16 @@ developmental_results_rq3 %>%
     across(c(rq3_same_beta, rq3_same_se, 
              rq3_lrt_chi2, rq3_aic_delta), ~ round(.x, 3))
   ) %>%
-  select(model, n_params, rq3_same_beta, rq3_same_se, rq3_lrt_chi2, rq3_lrt_p, rq3_aic_delta) %>%
+  select(model, n_params, rq3_same_beta, rq3_same_se, rq3_lrt_chi2, rq3_lrt_p) %>%
   kable(
     format = "latex",
     booktabs = TRUE,
-    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$", "$\\Delta$AIC"),
+    col.names = c("Model", "Params", "$\\beta$", "SE", "$\\chi^2$", "$p$"),
     escape = FALSE,
     caption = "RQ3: Sense Boundary predicting target surprisal (final checkpoint)"
   ) %>%
-  kable_styling(latex_options = c("hold_position"))
+  kable_styling(latex_options = c("hold_position")) %>%
+  cat()
 ```
 
 We also visualize the coefficients.
@@ -377,31 +383,13 @@ df_pythia_models %>%
        y = NULL,
        fill = NULL) +
   theme_minimal(base_size = 13) +
-  theme(
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    legend.position = "top"
-  ) +
-  facet_wrap(~reorder(model_shorthand, n_params))
-
-
-df_pythia_models %>%
-  filter(model_shorthand == "pythia-2.8b") %>%
-  ggplot(aes(x = target_surprisal_mean,
-             fill = same_label,
-             y = ambiguity_type)) +
-  geom_density_ridges(color = NA, alpha = 0.7, scale = 0.9) +
-  scale_fill_manual(values = c("Same Sense" = "#4E79A7", "Different Sense" = "#E15759")) +
-  labs(x = "Mean target surprisal",
-       y = NULL,
-       fill = NULL) +
-  theme_minimal(base_size = 13) +
-  theme(
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    legend.position = "top"
-  ) +
-  facet_wrap(~checkpoint)
+theme(text = element_text(size = 15),
+      legend.position = "bottom",
+      legend.box = "vertical",          # stack the shape + color legends
+      legend.text = element_text(size = 11),   # shrink legend text
+      legend.key.width = unit(0.8, "cm")) +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  facet_wrap(~reorder(model_shorthand, n_params), nrow=2)
 
 ```
 
@@ -463,7 +451,6 @@ developmental_results_rq3 %>%
   geom_point(aes(shape = significant),
              size = 4, alpha = .7) +
   geom_line(size = 1.3) +
-  geom_point(size = 4, alpha = .4) +
   theme_minimal() +
   labs(x = "Training Step (Log10)",
        y = "Coefficient (Sense Boundary)",
@@ -475,10 +462,16 @@ developmental_results_rq3 %>%
   scale_shape_manual(values = c("FALSE" = 1, "TRUE" = 16),
                      labels = c("n.s.", "p < .05"),
                      name = NULL) +
-  theme(text = element_text(size = 15),
-        legend.position = "bottom") +
-  scale_color_manual(values = viridisLite::viridis(7, option = "magma", 
+theme(text = element_text(size = 15),
+      legend.position = "bottom",
+      legend.box = "vertical",          # stack the shape + color legends
+      legend.text = element_text(size = 11),   # shrink legend text
+      legend.key.width = unit(0.8, "cm")) +
+guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
                                                 begin = 0.8, end = 0.15))
+
+
 ```
 
 

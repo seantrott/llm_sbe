@@ -32,109 +32,197 @@ library(ggridges)
 ```{r}
 # setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/llm_sbe/src/analysis")
 
-df_pythia = read_csv("../../data/processed/leinenger/leinenger_pythia-2.8b_surprisals.csv")
-
+### First, load all pythia models
+directory_path <- "../../data/processed/leinenger/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_pythia_models <- bind_rows(csv_list) %>%
+  mutate(model_shorthand = sub("^EleutherAI/", "", model)) 
+nrow(df_pythia_models)
+table(df_pythia_models$model_shorthand)
 ```
 
 
 # Analysis
 
 ```{r}
-df_pythia %>%
-  group_by(condition, repeated) %>%
+
+df_pythia_models %>%
+  filter(repeated == "no") %>%
+  group_by(model_shorthand, condition, checkpoint, n_params) %>%
   summarise(
     mean_surprisal = mean(target_token_surprisal, na.rm = TRUE),
     se_surprisal = sd(target_token_surprisal, na.rm = TRUE) / sqrt(n()),
     .groups = "drop"
   ) %>%
-  ggplot(aes(x = condition,
+  ggplot(aes(x = checkpoint,
              y = mean_surprisal,
-             color = repeated)) +
-  geom_pointrange(aes(ymin = mean_surprisal - se_surprisal,
-                      ymax = mean_surprisal + se_surprisal),
-                  position = position_dodge(width = 0.2),
-                  size = 0.5) +
-  scale_color_manual(values = c("yes" = "#4E79A7", "no" = "#E15759")) +
-  labs(x = "Bias",
+             color = condition)) +
+  geom_line() +
+  geom_vline(xintercept = 1000, linetype = "dotted", size = 1.2) +
+  geom_ribbon(aes(ymin = mean_surprisal - se_surprisal,
+                  ymax = mean_surprisal + se_surprisal,
+                  fill = condition),
+              alpha = 0.15, color = NA) +
+  scale_x_log10(
+  ) +
+  scale_color_manual(values = c("dominant" = "#4E79A7", "subordinate" = "#E15759")) +
+  scale_fill_manual(values = c("dominant" = "#4E79A7", "subordinate" = "#E15759")) +
+  labs(x = "Checkpoint (log scale)",
        y = "Target token surprisal",
-       color = "Repeated") +
-  theme_minimal()
-
-
-df_pythia %>%
-  ggplot(aes(x = target_token_surprisal,
-             fill = repeated,
-             y = condition)) +
-  geom_density_ridges(color = NA, alpha = 0.7, scale = 0.9) +
-  scale_fill_manual(values = c("yes" = "#4E79A7", "no" = "#E15759")) +
-  labs(x = "Target token surprisal",
-       y = NULL,
-       fill = "Repeated") +
-  theme_minimal(base_size = 13) +
-  theme(
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    legend.position = "top"
-  )
-
-df_pythia %>%
-  ggplot(aes(x = target_span_surprisal_sum,
-             fill = repeated,
-             y = condition)) +
-  geom_density_ridges(color = NA, alpha = 0.7, scale = 0.9) +
-  scale_fill_manual(values = c("yes" = "#4E79A7", "no" = "#E15759")) +
-  labs(x = "Target span sum surprisal",
-       y = NULL,
-       fill = "Repeated") +
-  theme_minimal(base_size = 13) +
-  theme(
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    legend.position = "top"
-  )
-
-df_pythia %>%
-  ggplot(aes(x = spillover_1_surprisal,
-             fill = repeated,
-             y = condition)) +
-  geom_density_ridges(color = NA, alpha = 0.7, scale = 0.9) +
-  scale_fill_manual(values = c("yes" = "#4E79A7", "no" = "#E15759")) +
-  labs(x = "Spillover surprisal",
-       y = NULL,
-       fill = "Repeated") +
-  theme_minimal(base_size = 13) +
-  theme(
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    legend.position = "top"
-  )
-
-df_pythia %>%
-  ggplot(aes(x = spillover_2_surprisal,
-             fill = repeated,
-             y = condition)) +
-  geom_density_ridges(color = NA, alpha = 0.7, scale = 0.9) +
-  scale_fill_manual(values = c("yes" = "#4E79A7", "no" = "#E15759")) +
-  labs(x = "Spillover surprisal",
-       y = NULL,
-       fill = "Repeated") +
-  theme_minimal(base_size = 13) +
-  theme(
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    legend.position = "top"
-  )
+       color = "Condition",
+       fill = "Condition") +
+  theme_minimal() +
+  facet_wrap(~reorder(model_shorthand, n_params)) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom",
+        legend.box = "vertical",          # stack the shape + color legends
+        legend.text = element_text(size = 11),   # shrink legend text
+        legend.key.width = unit(0.8, "cm")) 
 
 
 
-mod = lmer(data = df_pythia,
-           target_token_surprisal ~ repeated * condition + (1|homophone))
-summary(mod)
+df_pythia_models %>%
+  group_by(model_shorthand, condition, repeated, checkpoint, n_params) %>%
+  summarise(
+    mean_surprisal = mean(target_token_surprisal, na.rm = TRUE),
+    se_surprisal = sd(target_token_surprisal, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  ) %>%
+  ggplot(aes(x = checkpoint,
+             y = mean_surprisal,
+             color = condition,
+             linetype = repeated)) +
+  geom_line(size = 1.5) +
+  geom_vline(xintercept = 1000, linetype = "dotted", size = 1.2) +
+  geom_ribbon(aes(ymin = mean_surprisal - se_surprisal,
+                  ymax = mean_surprisal + se_surprisal,
+                  fill = condition),
+              alpha = 0.15, color = NA) +
+  scale_x_log10(
+  ) +
+  scale_color_manual(values = c("dominant" = "#4E79A7", "subordinate" = "#E15759")) +
+  scale_fill_manual(values = c("dominant" = "#4E79A7", "subordinate" = "#E15759")) +
+  scale_linetype_manual(values = c("yes" = "solid", "no" = "dashed")) +
+  labs(x = "Checkpoint (log scale)",
+       y = "Target token surprisal",
+       color = "Condition",
+       fill = "Condition",
+       linetype = "Repeated") +
+  theme_minimal() +
+  facet_wrap(~reorder(model_shorthand, n_params)) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom",
+        legend.box = "vertical",          # stack the shape + color legends
+        legend.text = element_text(size = 11),   # shrink legend text
+        legend.key.width = unit(0.8, "cm")) 
 
 
 
 
 
+```
+
+
+Plot coefficients:
+
+```{r}
+
+
+
+dev_results_coefs <- df_pythia_models %>%
+  group_by(model, model_shorthand, n_params, checkpoint) %>%
+  group_map(~ {
+    rq3_full    <- tryCatch(lmer(target_token_surprisal ~ repeated*condition +
+                                   (1 | homophone), data = .x, REML = FALSE), 
+                            error = function(e) NULL)
+    
+    
+    tibble(
+      model            = .y$model,
+      model_shorthand  = .y$model_shorthand,
+      n_params         = .y$n_params,
+      checkpoint       = .y$checkpoint,
+      repeated_beta    = fixef(rq3_full)["repeatedyes"],
+      condition_beta    = fixef(rq3_full)["conditionsubordinate"],
+      interaction_beta    = fixef(rq3_full)["repeatedyes:conditionsubordinate"]
+    )
+  }) %>%
+  bind_rows() %>%
+  arrange(n_params)
+
+
+
+dev_results_coefs %>%
+  ggplot(aes(x = checkpoint,
+             y = repeated_beta,
+             color = reorder(model_shorthand, n_params))) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "Coefficient (Repeated: Yes)",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+theme(text = element_text(size = 15),
+      legend.position = "bottom",
+      legend.box = "vertical",          # stack the shape + color legends
+      legend.text = element_text(size = 11),   # shrink legend text
+      legend.key.width = unit(0.8, "cm")) +
+guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
+                                                begin = 0.8, end = 0.15))
+
+
+dev_results_coefs %>%
+  ggplot(aes(x = checkpoint,
+             y = condition_beta,
+             color = reorder(model_shorthand, n_params))) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "Coefficient (Condition: Subordinate)",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+theme(text = element_text(size = 15),
+      legend.position = "bottom",
+      legend.box = "vertical",          # stack the shape + color legends
+      legend.text = element_text(size = 11),   # shrink legend text
+      legend.key.width = unit(0.8, "cm")) +
+guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
+                                                begin = 0.8, end = 0.15))
+
+dev_results_coefs %>%
+  ggplot(aes(x = checkpoint,
+             y = interaction_beta,
+             color = reorder(model_shorthand, n_params))) +
+  geom_point(size = 4, alpha = .7) +
+  geom_line(size = 1.3) +
+  theme_minimal() +
+  labs(x = "Training Step (Log10)",
+       y = "Coefficient (Repeated:Yes x Condition:Subordinate)",
+       color = "") +
+  scale_x_log10() +
+  geom_vline(xintercept = 1000, 
+             linetype = "dotted", 
+             size = 1.2) +
+theme(text = element_text(size = 15),
+      legend.position = "bottom",
+      legend.box = "vertical",          # stack the shape + color legends
+      legend.text = element_text(size = 11),   # shrink legend text
+      legend.key.width = unit(0.8, "cm")) +
+guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
+                                                begin = 0.8, end = 0.15))
 ```
 
 
