@@ -33,7 +33,7 @@ library(lmerTest)
 
 df_pythia = read_csv("../../data/processed/static_dominance/static_dominance_pythia-14m.csv")
 
-df_pythia = read_csv("../../data/processed/static_dominance/static_dominance_pythia-2.8b.csv")
+# df_pythia = read_csv("../../data/processed/static_dominance/static_dominance_pythia-2.8b.csv")
 
 df_dominance = read_csv("../../data/human/dominance_norms_with_order.csv")
 
@@ -129,6 +129,11 @@ df_with_static <- df_with_static %>%
     static_dom_z = scale(target_static_dominance)[,1]
   )
 
+s = df_with_static %>%
+  filter(model_shorthand == "pythia-14m") %>%
+  distinct(target_surprisal_mean)
+  
+
 # 1. Human dominance predicting LM surprisal
 m_human <- lmer(target_surprisal_mean ~ dominance_z + ambiguity_type + 
                   (1|word), data = df_with_static)
@@ -154,6 +159,7 @@ AIC(m_human, m_static, m_both)
 
 cor.test(df_with_static$target_surprisal_mean, df_with_static$dominance_z)
 cor.test(df_with_static$target_surprisal_mean, df_with_static$static_dom_z)
+cor.test(df_with_static$dominance_z, df_with_static$static_dom_z)
 
 
 ```
