@@ -184,8 +184,11 @@ def run_checkpoint(model_name: str, revision: str, tokenizer, df: pd.DataFrame,
     out_df.to_csv(output_path, index=False)
     print(f"  Saved to {output_path}")
 
-    del model
-    torch.cuda.empty_cache()
+
+    if device == "cuda":
+        torch.cuda.empty_cache()
+    elif device == "mps":
+        torch.mps.empty_cache()
 
 
 def run_single_model(model_name, checkpoints, input_path, output_dir, device):
@@ -229,7 +232,12 @@ def main():
     args = parser.parse_args()
 
     if args.device is None:
-        device = "cuda" if torch.cuda.is_available() else "cpu"
+        if torch.cuda.is_available():
+            device = "cuda"
+        elif torch.backends.mps.is_available():
+            device = "mps"
+        else:
+            device = "cpu"
     else:
         device = args.device
     print(f"Using device: {device}")
@@ -238,6 +246,8 @@ def main():
         print(f"GPU: {torch.cuda.get_device_name(0)}")
         vram = torch.cuda.get_device_properties(0).total_memory / 1e9
         print(f"VRAM: {vram:.1f} GB")
+    elif device == "mps":
+        print("Using Apple Silicon GPU (MPS)")
 
     if args.output_dir is None:
         args.output_dir = "data/processed/leinenger/"
