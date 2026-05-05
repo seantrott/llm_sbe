@@ -36,3 +36,7 @@ All analyses were conducted in R and are included in `.Rmd` files in `src/analys
 - Pre-registered comparison of LM and human behavior on the RAW-C data in `rawc_lm_and_human_analysis.Rmd`.
 - Analysis of LM behavior on the Leinenger & Rayner (2013) data in `leinenger_analysis.Rmd`.
 
+
+## Contact
+
+Please reach out to Sean Trott with any questions about the code or data in this repository. 
