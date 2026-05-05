@@ -46,7 +46,16 @@ table(df_pythia_models$model_shorthand)
 
 # Analysis
 
-```{r}
+## Visualization over time
+
+```{r leinenger-dev, fig.width=12, fig.height=7, out.width="100%", dpi=300}
+
+
+cor.test(df_pythia_models$target_span_surprisal_mean, 
+         df_pythia_models$target_token_surprisal)
+
+cor.test(df_pythia_models$target_span_surprisal_sum, 
+         df_pythia_models$target_token_surprisal)
 
 df_pythia_models %>%
   filter(repeated == "no") %>%
@@ -74,7 +83,7 @@ df_pythia_models %>%
        color = "Condition",
        fill = "Condition") +
   theme_minimal() +
-  facet_wrap(~reorder(model_shorthand, n_params)) +
+  facet_wrap(~reorder(model_shorthand, n_params), ncol = 4) +
   theme(text = element_text(size = 15),
         legend.position = "bottom",
         legend.box = "vertical",          # stack the shape + color legends
@@ -111,8 +120,8 @@ df_pythia_models %>%
        fill = "Condition",
        linetype = "Repeated") +
   theme_minimal() +
-  facet_wrap(~reorder(model_shorthand, n_params)) +
-  theme(text = element_text(size = 15),
+  facet_wrap(~reorder(model_shorthand, n_params), ncol = 4) +
+  theme(text = element_text(size = 18),
         legend.position = "bottom",
         legend.box = "vertical",          # stack the shape + color legends
         legend.text = element_text(size = 11),   # shrink legend text
@@ -121,64 +130,211 @@ df_pythia_models %>%
 
 
 
-
 ```
 
 
-Plot coefficients:
+## Final checkpoint
 
-```{r}
+Plot effect at final level:
+
+```{r leinenger_final_checkpoint}
+### analysis of interaction at final checkpoint
 
 
+df_pythia_models %>%
+  filter(checkpoint == 143000) %>%
+  group_by(model_shorthand, n_params, condition, repeated) %>%
+  summarise(
+    mean_surprisal = mean(target_token_surprisal, na.rm = TRUE),
+    se = sd(target_token_surprisal, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  ) %>%
+  ggplot(aes(x = condition, 
+             y = mean_surprisal, 
+             fill = repeated)) +
+  geom_col(position = position_dodge(width = 0.8), width = 0.7, alpha = 0.85) +
+  geom_errorbar(aes(ymin = mean_surprisal - se, 
+                    ymax = mean_surprisal + se),
+                position = position_dodge(width = 0.8),
+                width = 0.2) +
+  facet_wrap(~reorder(model_shorthand, n_params), nrow = 2) +
+  scale_fill_manual(values = c("no" = "#B0B0B0", "yes" = "#4E79A7")) +
+  labs(x = "Condition", 
+       y = "Target token surprisal", 
+       fill = "Repeated") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom",
+        text = element_text(size = 14))
+
+df_pythia_models %>%
+  filter(checkpoint == 143000) %>%
+  group_by(model_shorthand, n_params, condition, repeated) %>%
+  summarise(
+    mean_surprisal = mean(target_token_surprisal, na.rm = TRUE),
+    se = sd(target_token_surprisal, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  ) %>%
+  ggplot(aes(x = repeated, 
+             y = mean_surprisal, 
+             color = condition,
+             group = condition)) +
+  geom_point(size = 3) +
+  geom_line(size = 1) +
+  geom_errorbar(aes(ymin = mean_surprisal - se, 
+                    ymax = mean_surprisal + se),
+                width = 0.15) +
+  facet_wrap(~reorder(model_shorthand, n_params), nrow = 2) +
+  scale_color_manual(values = c("dominant" = "#4E79A7", "subordinate" = "#E15759")) +
+  labs(x = "Repeated", 
+       y = "Mean target surprisal", 
+       color = "Condition") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom",
+        text = element_text(size = 14))
+```
+
+
+## By-model coefficients over training
+
+```{r leinenger_coef}
+## Set up contrast coding
+df_pythia_models <- df_pythia_models %>%
+  mutate(
+    condition_c = ifelse(condition == "subordinate", 0.5, -0.5),
+    repeated_c = ifelse(repeated == "yes", 0.5, -0.5)
+  )
+
+
+## Per-model coefficients with aligned LRT structure (contrast-coded)
 
 dev_results_coefs <- df_pythia_models %>%
   group_by(model, model_shorthand, n_params, checkpoint) %>%
   group_map(~ {
-    rq3_full    <- tryCatch(lmer(target_token_surprisal ~ repeated*condition +
-                                   (1 | homophone), data = .x, REML = FALSE), 
-                            error = function(e) NULL)
+    # Full interaction model
+    full_model <- tryCatch(
+      lmer(target_token_surprisal ~ condition_c * repeated_c +
+             (1 | homophone), data = .x, REML = FALSE),
+      error = function(e) NULL
+    )
     
+    # Additive model (main effects only) - no interaction
+    additive_model <- tryCatch(
+      lmer(target_token_surprisal ~ condition_c + repeated_c +
+             (1 | homophone), data = .x, REML = FALSE),
+      error = function(e) NULL
+    )
+    
+    # Models for testing main effects (compared against additive_model)
+    no_condition <- tryCatch(
+      lmer(target_token_surprisal ~ repeated_c +
+             (1 | homophone), data = .x, REML = FALSE),
+      error = function(e) NULL
+    )
+    no_repeated <- tryCatch(
+      lmer(target_token_surprisal ~ condition_c +
+             (1 | homophone), data = .x, REML = FALSE),
+      error = function(e) NULL
+    )
+    
+    # LRTs - structure mirrors the pooled analysis
+    lrt_interaction <- anova(additive_model, full_model)        # interaction: full vs additive
+    lrt_condition   <- anova(no_condition, additive_model)       # main effect of Dominance
+    lrt_repeated    <- anova(no_repeated, additive_model)        # main effect of Repetition
+    
+    # Extract coefficients and SEs from full model
+    coef_summary <- summary(full_model)$coefficients
     
     tibble(
-      model            = .y$model,
-      model_shorthand  = .y$model_shorthand,
-      n_params         = .y$n_params,
-      checkpoint       = .y$checkpoint,
-      repeated_beta    = fixef(rq3_full)["repeatedyes"],
-      condition_beta    = fixef(rq3_full)["conditionsubordinate"],
-      interaction_beta    = fixef(rq3_full)["repeatedyes:conditionsubordinate"]
+      model              = .y$model,
+      model_shorthand    = .y$model_shorthand,
+      n_params           = .y$n_params,
+      checkpoint         = .y$checkpoint,
+      
+      condition_beta     = fixef(full_model)["condition_c"],
+      condition_se       = coef_summary["condition_c", "Std. Error"],
+      condition_chisq    = lrt_condition$Chisq[2],
+      condition_p        = lrt_condition$`Pr(>Chisq)`[2],
+      
+      repeated_beta      = fixef(full_model)["repeated_c"],
+      repeated_se        = coef_summary["repeated_c", "Std. Error"],
+      repeated_chisq     = lrt_repeated$Chisq[2],
+      repeated_p         = lrt_repeated$`Pr(>Chisq)`[2],
+      
+      interaction_beta   = fixef(full_model)["condition_c:repeated_c"],
+      interaction_se     = coef_summary["condition_c:repeated_c", "Std. Error"],
+      interaction_chisq  = lrt_interaction$Chisq[2],
+      interaction_p      = lrt_interaction$`Pr(>Chisq)`[2]
     )
   }) %>%
   bind_rows() %>%
   arrange(n_params)
 
 
+## Final-checkpoint analyses
 
+dev_results_coefs_final <- dev_results_coefs %>%
+  filter(checkpoint == 143000)
+
+# Scaling: each effect against log params
+cor.test(log10(dev_results_coefs_final$n_params),
+         dev_results_coefs_final$condition_beta)
+cor.test(log10(dev_results_coefs_final$n_params),
+         dev_results_coefs_final$repeated_beta)
+cor.test(log10(dev_results_coefs_final$n_params),
+         dev_results_coefs_final$interaction_beta)
+
+
+## Sign tests
+binom.test(sum(dev_results_coefs_final$condition_beta > 0), n = 8)
+binom.test(sum(dev_results_coefs_final$repeated_beta < 0), n = 8)
+binom.test(sum(dev_results_coefs_final$interaction_beta < 0), n = 8)
+
+
+## Pooled mixed-effects model (across all LMs at final checkpoint)
+
+df_final <- df_pythia_models %>% filter(checkpoint == 143000)
+
+# Full interaction model
+pooled_full <- lmer(
+  target_token_surprisal ~ condition_c * repeated_c +
+    (1 | homophone) + (1 + condition_c | model_shorthand),
+  data = df_final, REML = FALSE
+)
+
+# Additive model (no interaction)
+pooled_additive <- lmer(
+  target_token_surprisal ~ condition_c + repeated_c +
+    (1 | homophone) + (1 + condition_c | model_shorthand),
+  data = df_final, REML = FALSE
+)
+
+# No Dominance (compared to additive)
+pooled_no_condition <- lmer(
+  target_token_surprisal ~ repeated_c +
+    (1 | homophone) + (1 + condition_c | model_shorthand),
+  data = df_final, REML = FALSE
+)
+
+# No Repetition (compared to additive)
+pooled_no_repeated <- lmer(
+  target_token_surprisal ~ condition_c +
+    (1 | homophone) + (1 + condition_c | model_shorthand),
+  data = df_final, REML = FALSE
+)
+
+# LRTs - same structure as per-model
+anova(pooled_additive, pooled_full)         # interaction
+anova(pooled_no_condition, pooled_additive)  # main effect of Dominance
+anova(pooled_no_repeated, pooled_additive)   # main effect of Repetition
+
+summary(pooled_full)
+
+
+## Developmental trajectory plots
+
+# Dominance effect across training
 dev_results_coefs %>%
-  ggplot(aes(x = checkpoint,
-             y = repeated_beta,
-             color = reorder(model_shorthand, n_params))) +
-  geom_point(size = 4, alpha = .7) +
-  geom_line(size = 1.3) +
-  theme_minimal() +
-  labs(x = "Training Step (Log10)",
-       y = "Coefficient (Repeated: Yes)",
-       color = "") +
-  scale_x_log10() +
-  geom_vline(xintercept = 1000, 
-             linetype = "dotted", 
-             size = 1.2) +
-theme(text = element_text(size = 15),
-      legend.position = "bottom",
-      legend.box = "vertical",          # stack the shape + color legends
-      legend.text = element_text(size = 11),   # shrink legend text
-      legend.key.width = unit(0.8, "cm")) +
-guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
-  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
-                                                begin = 0.8, end = 0.15))
-
-
-dev_results_coefs %>%
+  mutate(sig = condition_p < .05) %>%
   ggplot(aes(x = checkpoint,
              y = condition_beta,
              color = reorder(model_shorthand, n_params))) +
@@ -186,22 +342,22 @@ dev_results_coefs %>%
   geom_line(size = 1.3) +
   theme_minimal() +
   labs(x = "Training Step (Log10)",
-       y = "Coefficient (Condition: Subordinate)",
+       y = "Coefficient (Dominance)",
        color = "") +
   scale_x_log10() +
-  geom_vline(xintercept = 1000, 
-             linetype = "dotted", 
-             size = 1.2) +
-theme(text = element_text(size = 15),
-      legend.position = "bottom",
-      legend.box = "vertical",          # stack the shape + color legends
-      legend.text = element_text(size = 11),   # shrink legend text
-      legend.key.width = unit(0.8, "cm")) +
-guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
-  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
-                                                begin = 0.8, end = 0.15))
+  geom_vline(xintercept = 1000, linetype = "dotted", size = 1.2) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom",
+        legend.box = "vertical",
+        legend.text = element_text(size = 11),
+        legend.key.width = unit(0.8, "cm")) +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma",
+                                                   begin = 0.8, end = 0.15))
 
+# Interaction effect across training
 dev_results_coefs %>%
+  mutate(sig = interaction_p < .05) %>%
   ggplot(aes(x = checkpoint,
              y = interaction_beta,
              color = reorder(model_shorthand, n_params))) +
@@ -209,20 +365,75 @@ dev_results_coefs %>%
   geom_line(size = 1.3) +
   theme_minimal() +
   labs(x = "Training Step (Log10)",
-       y = "Coefficient (Repeated x Subordinate)",
+       y = "Coefficient (Repetition x Dominance)",
        color = "") +
   scale_x_log10() +
-  geom_vline(xintercept = 1000, 
-             linetype = "dotted", 
-             size = 1.2) +
-theme(text = element_text(size = 15),
-      legend.position = "bottom",
-      legend.box = "vertical",          # stack the shape + color legends
-      legend.text = element_text(size = 11),   # shrink legend text
-      legend.key.width = unit(0.8, "cm")) +
-guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
-  scale_color_manual(values = viridisLite::viridis(8, option = "magma", 
-                                                begin = 0.8, end = 0.15))
+  geom_vline(xintercept = 1000, linetype = "dotted", size = 1.2) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom",
+        legend.box = "vertical",
+        legend.text = element_text(size = 11),
+        legend.key.width = unit(0.8, "cm")) +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE)) +
+  scale_color_manual(values = viridisLite::viridis(8, option = "magma",
+                                                   begin = 0.8, end = 0.15))
+
+
+## LaTeX tables
+
+library(knitr)
+library(kableExtra)
+
+format_p <- function(p) {
+  case_when(
+    p < 2e-16 ~ "<2e-16",
+    p < 0.001 ~ formatC(p, format = "e", digits = 2),
+    TRUE ~ formatC(p, format = "f", digits = 3)
+  )
+}
+
+# Dominance table
+table_dominance <- dev_results_coefs_final %>%
+  arrange(n_params) %>%
+  mutate(p_formatted = format_p(condition_p)) %>%
+  select(
+    Model = model_shorthand,
+    `$\\beta$` = condition_beta,
+    SE = condition_se,
+    `$\\chi^2$` = condition_chisq,
+    `$p$` = p_formatted
+  )
+
+kable(table_dominance,
+      format = "latex",
+      booktabs = TRUE,
+      digits = 3,
+      escape = FALSE,
+      caption = "Dominance predicting target surprisal (final checkpoint).",
+      label = "tables_dominance_leinenger") %>%
+  kable_styling(latex_options = c("hold_position"))
+
+
+# Interaction table
+table_interaction <- dev_results_coefs_final %>%
+  arrange(n_params) %>%
+  mutate(p_formatted = format_p(interaction_p)) %>%
+  select(
+    Model = model_shorthand,
+    `$\\beta$` = interaction_beta,
+    SE = interaction_se,
+    `$\\chi^2$` = interaction_chisq,
+    `$p$` = p_formatted
+  )
+
+kable(table_interaction,
+      format = "latex",
+      booktabs = TRUE,
+      digits = 3,
+      escape = FALSE,
+      caption = "Repetition $\\times$ Dominance interaction predicting target surprisal (final checkpoint).",
+      label = "tables_interaction") %>%
+  kable_styling(latex_options = c("hold_position"))
 ```
 
 
